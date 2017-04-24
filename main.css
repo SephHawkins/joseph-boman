@@ -1,3 +1,7 @@
+body {
+    background-color: #F1FAEE;
+}
+
 header {
     height: 60px;
     background-color: #3F4851;
@@ -6,5 +10,5 @@ header {
 .front-page-top img {
     display: block;
     width: 160px;
-    margin: auto;
+    margin: 10px auto;
 }
