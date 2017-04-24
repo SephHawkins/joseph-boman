@@ -17,6 +17,10 @@ header {
     top: 60px;
 }
 
+.front-page-top {
+    margin-bottom: 20px;
+}
+
 .front-page-top img {
     display: block;
     width: 160px;
@@ -33,6 +37,16 @@ header {
     border-bottom: #3F4851 1px solid;
 }
 
+.projects h3 {
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+    color: #F1FAEE;
+    background-color: #3F4851;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
 
 .testing-scroll {
     height: 1000px;
