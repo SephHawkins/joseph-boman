@@ -10,6 +10,11 @@ header {
     top: 0px;
 }
 
+.contents {
+    position: relative;
+    top: 60px;
+}
+
 .front-page-top img {
     display: block;
     width: 160px;
