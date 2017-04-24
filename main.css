@@ -1,0 +1,10 @@
+header {
+    height: 60px;
+    background-color: #3F4851;
+}
+
+.front-page-top img {
+    display: block;
+    width: 160px;
+    margin: auto;
+}
