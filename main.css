@@ -4,7 +4,10 @@ body {
 
 header {
     height: 60px;
+    width: 100%;
     background-color: #3F4851;
+    position: fixed;
+    top: 0px;
 }
 
 .front-page-top img {
@@ -15,10 +18,10 @@ header {
 
 .front-page-top h1, .front-page-top h2 {
     text-align: center;
-    width: 80%;
     margin: 0 auto;
 }
 
 .front-page-top h1 {
+    width: 80%;
     border-bottom: #3F4851 1px solid;
 }
