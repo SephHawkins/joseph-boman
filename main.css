@@ -12,3 +12,13 @@ header {
     width: 160px;
     margin: 10px auto;
 }
+
+.front-page-top h1, .front-page-top h2 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.front-page-top h1 {
+    border-bottom: #3F4851 1px solid;
+}
