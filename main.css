@@ -1,11 +1,20 @@
+:root {
+    --dark-color: #3F4851;
+    --light-color: #F1FAEE;
+    --blue-tag-color: powderblue;
+    --green-tag-color: darkseagreen;
+    --purple-tag-color: mediumpurple;
+    --red-tag-color: palevioletred;
+}
+
 body {
-    background-color: #F1FAEE;
+    background-color: var(--light-color);
 }
 
 header {
     height: 60px;
     width: 100%;
-    background-color: #3F4851;
+    background-color: var(--dark-color);
     position: fixed;
     top: 0px;
     z-index: 1;
@@ -34,18 +43,103 @@ header {
 
 .front-page-top h1 {
     width: 80%;
-    border-bottom: #3F4851 1px solid;
+    border-bottom: var(--dark-color) 1px solid;
+}
+
+.projects {
+    overflow: hidden;
+    background-color: var(--dark-color);
 }
 
 .projects h3 {
-    width: 200px;
     line-height: 40px;
     text-align: center;
     color: #F1FAEE;
-    background-color: #3F4851;
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    margin: 10px 20%;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.project {
+    float: right;
+    background-color: var(--light-color);
+    width: 85%;
+    height: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.project h4 {
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 10px;
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+
+.project img {
+    height: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.project .arrow {
+    height: 40px;
+    left: -5px;
+    position: relative;
+    display: inline-block;
+}
+
+.details {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.col-1, .col-2 {
+    display: inline-block;
+}
+
+.tag {
+    height: 50%;
+    width: 20px;
+}
+
+.tag p {
+    margin: 0;
+    font-size: 13;
+    font-family: 'NTR', sans-serif;
+    font-weight: bold;
+}
+
+.designer-tag {
+    background-color: var(--red-tag-color);
+}
+.designer-tag p {
+    transform: rotate(-90deg) translate(-33px, 1px);
+}
+
+.coder-tag {
+    background-color: var(--blue-tag-color);
+}
+.coder-tag p {
+    transform: rotate(-90deg) translate(-26px, 1px);
+}
+
+.qa-tag {
+    background-color: var(--purple-tag-color);
+}
+.qa-tag p {
+    transform: rotate(-90deg) translate(-15px, 1px);
+}
+
+.modeler-tag {
+    background-color: var(--green-tag-color);
+}
+.modeler-tag p {
+    transform: rotate(-90deg) translate(-33px, 1px);
 }
 
 .testing-scroll {
