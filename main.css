@@ -88,11 +88,13 @@ a:hover {
 
 .project h4 {
     display: inline-block;
-    line-height: 120px;
+    line-height: 40px;
     margin: 0 10px;
     font-size: 30px;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
+    text-align: center;
+    white-space: normal;
 }
 
 .project img {
