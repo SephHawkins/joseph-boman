@@ -162,6 +162,13 @@ a:hover {
     transform: rotate(-90deg) translate(-33px, 2px);
 }
 
+.ui+ux-tag {
+    background-color: var(--yellow-tag-color);
+}
+.ui+ux-tag p {
+    transform: rotate(-90deg) translate(-21px, 2px);
+}
+
 .testing-scroll {
     height: 1000px;
 }

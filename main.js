@@ -6,8 +6,13 @@ var projectsJSON = [
     },
     {
         name: "A Walk in the Park",
-        image: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
+        image: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
         tags: ["designer","coder"]
+    },
+    {
+        name: "MonoVirus",
+        image: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+        tags: ["designer", "coder", "modeler", "ui+ux"]
     }
 
 ];
@@ -57,12 +62,12 @@ function Tags(props){
         return (
             <div className='details'>
                 <div className='col-1'>
-                    <Tag tag={props.tags[0]} />
                     <Tag tag={props.tags[1]} />
+                    <Tag tag={props.tags[0]} />
                 </div>
                 <div className='col-2'>
-                    <Tag tag={props.tags[2]} />
                     <Tag tag={props.tags[3]} />
+                    <Tag tag={props.tags[2]} />
                 </div>
             </div>
         );
@@ -70,8 +75,8 @@ function Tags(props){
         return (
             <div className='details'>
                 <div className='col-1'>
-                    <Tag tag={props.tags[0]} />
                     <Tag tag={props.tags[1]} />
+                    <Tag tag={props.tags[0]} />
                 </div>
             </div>
         );
