@@ -12,7 +12,7 @@ var projectsJSON = [
     {
         name: "MonoVirus",
         image: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
-        tags: ["designer", "coder", "modeler", "ui+ux"]
+        tags: ["designer", "coder", "modeler", "ui/ux"]
     }
 
 ];
@@ -50,7 +50,7 @@ function Project(props){
     return (
         <a href="#" className="project">
             <Tags tags={props.tags} />
-            <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px')}}>{props.name}</h4>
+            <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px'), width: ((props.tags.length > 2) ? '120px' : '140px')}}>{props.name}</h4>
             <img src={props.image} alt={props.name} />
             <img className='arrow' src="https://d30y9cdsu7xlg0.cloudfront.net/png/196764-200.png" alt='arrow' />
         </a>
@@ -85,7 +85,7 @@ function Tags(props){
 
 function Tag(props){
     return (
-        <div className={'tag ' + props.tag + '-tag'}>
+        <div className={'tag ' + props.tag.split('/')[0] + '-tag'}>
             <p>{props.tag.toUpperCase()}</p>
         </div>
     );
