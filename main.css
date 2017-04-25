@@ -107,10 +107,9 @@ a:hover {
 .project .arrow {
     height: 40px;
     left: -5px;
-    top: -5px;
+    top: -40px;
     position: relative;
     display: inline-block;
-    vertical-align: middle;
 }
 
 .details {
