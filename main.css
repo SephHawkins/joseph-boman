@@ -136,28 +136,28 @@ a:hover {
     background-color: var(--red-tag-color);
 }
 .designer-tag p {
-    transform: rotate(-90deg) translate(-33px, 1px);
+    transform: rotate(-90deg) translate(-33px, 2px);
 }
 
 .coder-tag {
     background-color: var(--blue-tag-color);
 }
 .coder-tag p {
-    transform: rotate(-90deg) translate(-26px, 1px);
+    transform: rotate(-90deg) translate(-26px, 2px);
 }
 
 .qa-tag {
     background-color: var(--purple-tag-color);
 }
 .qa-tag p {
-    transform: rotate(-90deg) translate(-15px, 1px);
+    transform: rotate(-90deg) translate(-15px, 2px);
 }
 
 .modeler-tag {
     background-color: var(--green-tag-color);
 }
 .modeler-tag p {
-    transform: rotate(-90deg) translate(-33px, 1px);
+    transform: rotate(-90deg) translate(-33px, 2px);
 }
 
 .testing-scroll {
