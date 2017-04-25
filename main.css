@@ -1,7 +1,7 @@
 :root {
     --dark-color: #3F4851;
     --light-color: #F1FAEE;
-    --link-hover-color: blue;
+    --link-hover-color: #1D2630;
     --blue-tag-color: powderblue;
     --green-tag-color: darkseagreen;
     --purple-tag-color: mediumpurple;
@@ -78,6 +78,7 @@ a:hover {
     white-space: nowrap;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    color: var(--dark-color);
 }
 
 .project h4 {
