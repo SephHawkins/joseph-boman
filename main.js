@@ -24,7 +24,7 @@ function FrontPage(props){
 function FrontPageTop(props){
     return (
         <div className="front-page-top">
-            <img src='http://josephboman.com/wp-content/themes/sephhawkins/images/joseph-boman.png'>
+            <img src='http://josephboman.com/wp-content/themes/sephhawkins/images/joseph-boman.png' />
             <h1>Joseph Boman</h1>
             <h2>Programmer + Designer</h2>
         </div>
