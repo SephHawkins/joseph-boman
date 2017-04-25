@@ -36,7 +36,7 @@ function Projects(props){
     return (
         <div className='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} image={project.image} tags={project.tags} />)}
+            {projects.map(project => <Project key={project.name} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
     );
 }
@@ -45,8 +45,8 @@ function Project(props){
     return (
         <a href="#" className="project">
             <Tags tags={props.tags} />
-            <h4>{props.key}</h4>
-            <img src={props.image} alt={props.key} />
+            <h4>{props.name}</h4>
+            <img src={props.image} alt={props.name} />
             <img className='arrow' src="https://d30y9cdsu7xlg0.cloudfront.net/png/196764-200.png" alt='arrow' />
         </a>
     );
