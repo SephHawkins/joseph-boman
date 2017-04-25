@@ -48,6 +48,10 @@ header {
     border-bottom: var(--dark-color) 1px solid;
 }
 
+.front-page-top h2 {
+    margin-top: 5px;
+}
+
 .projects {
     overflow: hidden;
     background-color: var(--dark-color);
@@ -79,6 +83,7 @@ a:hover {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: var(--dark-color);
+    margin-bottom: 20px;
 }
 
 .project h4 {
