@@ -89,6 +89,7 @@ a:hover {
 .project h4 {
     display: inline-block;
     line-height: 40px;
+    width: 140px;
     margin: 0 10px;
     font-size: 30px;
     font-family: "Josefin Sans", sans-serif;
