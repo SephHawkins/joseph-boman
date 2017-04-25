@@ -1,6 +1,7 @@
 :root {
     --dark-color: #3F4851;
     --light-color: #F1FAEE;
+    --link-hover-color: #4F5962;
     --blue-tag-color: powderblue;
     --green-tag-color: darkseagreen;
     --purple-tag-color: mediumpurple;
@@ -58,6 +59,14 @@ header {
     margin: 10px 20%;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
 }
 
 .project {
