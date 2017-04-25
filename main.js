@@ -46,8 +46,8 @@ function Project(props){
         <a href="#" className="project">
             <Tags tags={props.tags} />
             <h4>{props.key}</h4>
-            <img src={props.image} alt={props.key}>
-            <img className='arrow' src="https://d30y9cdsu7xlg0.cloudfront.net/png/196764-200.png" alt='arrow'>
+            <img src={props.image} alt={props.key} />
+            <img className='arrow' src="https://d30y9cdsu7xlg0.cloudfront.net/png/196764-200.png" alt='arrow' />
         </a>
     );
 }
