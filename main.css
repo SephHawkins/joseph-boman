@@ -39,6 +39,7 @@ header {
 .front-page-top h1, .front-page-top h2 {
     text-align: center;
     margin: 0 auto;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .front-page-top h1 {
@@ -53,8 +54,7 @@ header {
 
 .projects h3 {
     line-height: 40px;
-    text-align: center;
-    color: #F1FAEE;
+    color: var(--light-color);
     margin: 10px 20%;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
