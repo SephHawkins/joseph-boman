@@ -1,16 +1,19 @@
 var projectsJSON = [
     {
         name: "Chambara",
+        link: "chambara",
         image: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
         tags: ["qa","coder"]
     },
     {
         name: "A Walk in the Park",
+        link: "a-walk-in-the-park",
         image: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
         tags: ["designer","coder"]
     },
     {
         name: "MonoVirus",
+        link: "monovirus",
         image: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
         tags: ["modeler", "coder"]
     }
@@ -41,14 +44,14 @@ function Projects(props){
     return (
         <div className='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} name={project.name} image={project.image} tags={project.tags} />)}
+            {projects.map(project => <Project key={project.name} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
     );
 }
 
 function Project(props){
     return (
-        <a href="#" className="project">
+        <a href={props.link} className="project">
             <Tags tags={props.tags} />
             <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px')}}>{props.name}</h4>
             <img src={props.image} alt={props.name} />
@@ -79,3 +82,8 @@ ReactDOM.render(
     <FrontPage projects={projectsJSON} />,
     document.getElementById('contents')
 );
+
+$('.project').click(function(e){
+    e.preventDefault();
+    console.log($(this).href);
+});
