@@ -51,7 +51,7 @@ function Projects(props){
 
 function Project(props){
     return (
-        <a href={props.link} className="project">
+        <a href={"project/" + props.link} className="project">
             <Tags tags={props.tags} />
             <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px')}}>{props.name}</h4>
             <img src={props.image} alt={props.name} />
@@ -85,5 +85,5 @@ ReactDOM.render(
 
 $('.project').click(function(e){
     e.preventDefault();
-    console.log($(this).href);
+    console.log($(this).attr('href'));
 });
