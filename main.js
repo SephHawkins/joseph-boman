@@ -86,4 +86,5 @@ ReactDOM.render(
 $('.project').click(function(e){
     e.preventDefault();
     console.log($(this).attr('href'));
+    history.pushState('', 'testing', $(this).attr('href'));
 });
