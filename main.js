@@ -75,8 +75,10 @@ function Tag(props){
         </div>
     );
 }
-
-ReactDOM.render(
-    <FrontPage projects={projectsJSON} />,
-    document.getElementById('contents')
-);
+(function(){
+    var App = <FrontPage projects={projectsJSON} />
+    ReactDOM.render(
+        {App},
+        document.getElementById('contents')
+    );
+});
