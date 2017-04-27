@@ -53,8 +53,12 @@ class App extends React.Component {
     }
 
     handleBack(event) {
-        if(activePage=='right'){
-
+        NProgress.start();
+        if(event.state.page=='main'){
+            $('.active').animate({'left': '0'}, 1450);
+            $('.right-buffer').animate({'left': '100%'}, 1500, function(){
+                NProgress.done();
+            });
         }
     }
 
@@ -117,7 +121,7 @@ class Project extends React.Component {
     handleClick(e){
         NProgress.start();
         e.preventDefault();
-        history.pushState('', 'testing', this.state.href);
+        history.pushState({page: 'main'}, 'testing', this.state.href);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right");
     }
