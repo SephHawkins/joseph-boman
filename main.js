@@ -92,7 +92,7 @@ function FrontPage(props){
     return (
         <div>
             <FrontPageTop />
-            <Projects projects={props.projects} handleClick={props.handleClick} currentPage={this.props.currentPage} />
+            <Projects projects={props.projects} handleClick={props.handleClick} currentPage={props.currentPage} />
         </div>
     );
 }
@@ -112,7 +112,7 @@ function Projects(props){
     return (
         <div className='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} currentPage={this.props.currentPage} />)}
+            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} currentPage={props.currentPage} />)}
         </div>
     );
 }
