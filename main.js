@@ -157,6 +157,7 @@ function Tag(props){
     );
 }
 (function() {
+    history.replaceState({page: 'main'}, "Main Page", "");
     ReactDOM.render(
         <App />,
         document.getElementById('contents')
