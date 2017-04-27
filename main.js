@@ -36,7 +36,7 @@ class App extends React.Component {
     componentDidUpdate() {
         NProgress.done();
         $('.active').animate({'left': '-100%'}, 1000);
-        $('.right-buffer').animate({'left': '0%'}, 1000);
+        //$('.right-buffer').animate({'left': '0%'}, 1000);
     }
 
     handleNavigation(link, moveTo) {
