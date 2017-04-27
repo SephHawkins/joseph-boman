@@ -27,8 +27,9 @@ class App extends React.Component {
         this.state = {
             currentPage: 'Home'
         }
+        var _this = this;
         window.onpopstate = function() {
-            this.testFunction("Testing this thing");
+            _this.testFunction("Testing this thing");
         }
     }
 
