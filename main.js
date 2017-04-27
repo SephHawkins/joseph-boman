@@ -46,7 +46,7 @@ class App extends React.Component {
             });
         } else {
             $('.active').animate({'left': '0%'}, 1490, function(){
-                $('.active').removeClass('active');
+                this.state.activeLink.setState({active: false});
             });
             $('.right-buffer').animate({'left': '100%'}, 1500, function(){
                 NProgress.done();
@@ -54,10 +54,11 @@ class App extends React.Component {
         }
     }
 
-    handleNavigation(link, moveTo) {
+    handleNavigation(link, moveTo, activeLink) {
         this.setState({
             currentPage: link,
-            activePage: moveTo
+            activePage: moveTo,
+            activeLink: activeLink
         });
     }
 
@@ -78,7 +79,7 @@ class App extends React.Component {
                     <nav id="nav-bar"></nav>
                 </header>
                 <div className='main-page'>
-                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} currentPage={this.state.currentPage} />
+                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <div className='right-buffer'>
                     <h1>{this.state.currentPage}</h1>
@@ -92,7 +93,7 @@ function FrontPage(props){
     return (
         <div>
             <FrontPageTop />
-            <Projects projects={props.projects} handleClick={props.handleClick} currentPage={props.currentPage} />
+            <Projects projects={props.projects} handleClick={props.handleClick} />
         </div>
     );
 }
@@ -112,7 +113,7 @@ function Projects(props){
     return (
         <div className='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} currentPage={props.currentPage} />)}
+            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
     );
 }
@@ -121,9 +122,9 @@ class Project extends React.Component {
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        var active = (this.props.link === this.props.currentPage);
         this.state = {
             href: this.props.link,
+            active = false,
         }
     }
 
@@ -131,13 +132,13 @@ class Project extends React.Component {
         NProgress.start();
         e.preventDefault();
         history.pushState({page: 'main'}, 'testing', this.state.href);
-        // this.setState({active: true});
-        this.props.handleClick(this.state.href, "right");
+        this.setState({active: true});
+        this.props.handleClick(this.state.href, "right", this);
     }
 
     render() {
         return (
-            <a href={"/project/" + this.state.href} className={"project" + ((this.state.href === this.props.currentPage) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/project/" + this.state.href} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 style={{marginTop: ((this.props.name.length >= 10 ) ? '20px' : '40px')}}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
