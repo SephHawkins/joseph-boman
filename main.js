@@ -137,7 +137,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <a href={"/project/" + this.state.link} className={"project" + ((this.state.link === this.props.currentPage) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/project/" + this.state.href} className={"project" + ((this.state.href === this.props.currentPage) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 style={{marginTop: ((this.props.name.length >= 10 ) ? '20px' : '40px')}}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
