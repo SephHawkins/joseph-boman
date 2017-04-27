@@ -43,7 +43,14 @@ class App extends React.Component {
 
     render() {
         return (
-            <FrontPage projects={projectsJSON} handleClick={this.projectClick} />
+            <div>
+                <div className='main-page'>
+                    <FrontPage projects={projectsJSON} handleClick={this.projectClick} />
+                </div>
+                <div className='right-buffer'>
+                    <h1>This is a test</h1>
+                </div>
+            </div>
         );
     }
 }
@@ -93,6 +100,7 @@ class Project extends React.Component {
         history.pushState('', 'testing', this.state.href);
         this.setState({active: true});
     }
+
     render() {
         return (
             <a href={"project/" + this.props.link} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
