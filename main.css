@@ -96,6 +96,11 @@ a:hover {
     border-bottom-left-radius: 5px;
     color: var(--dark-color);
     margin-bottom: 20px;
+    transition: left 1.5s ease-out;
+}
+
+.project.active {
+    left: -100%;
 }
 
 .project h4 {
