@@ -25,7 +25,7 @@ class App extends React.Component {
         super(props);
         this.handleNavigation = this.handleNavigation.bind(this);
         this.state = {
-            currentPage: 'Home'
+            currentPage: ''
         }
         var _this = this;
         window.onpopstate = function(event) {
