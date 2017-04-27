@@ -83,11 +83,16 @@ function Tag(props){
         <FrontPage projects={projectsJSON} />,
         document.getElementById('contents')
     );
-    $('.loader').fadeOut();
+    $('.loader').fadeOut(function(){
+        $('.loader').css("left", "100%");
+        $('.loader').fadeIn();
+    });
 })();
 
 $('.project').click(function(e){
     e.preventDefault();
     console.log($(this).attr('href'));
     history.pushState('', 'testing', $(this).attr('href'));
+    $(this).animate({left, "-100%"});
+    $('.loader').animate({left, "0%"});
 });
