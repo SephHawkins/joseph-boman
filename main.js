@@ -40,7 +40,6 @@ class App extends React.Component {
     }
 
     handleNavigation(link, moveTo) {
-        e.preventDefault();
         this.setState({
             currentPage: link,
             activePage: moveTo
