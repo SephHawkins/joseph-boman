@@ -80,18 +80,22 @@ function Projects(props){
 class Project extends React.Component {
     constructor(props){
         super(props);
+        this.handleClick = this.handleClick.bind(this);
+        this.state = {
+            href: "project/" + this.props.link,
+            active: false
+        }
     }
 
     handleClick(e){
         NProgress.start();
         e.preventDefault();
-        console.log($(this).attr('href'));
-        history.pushState('', 'testing', $(this).attr('href'));
-        $(this).animate({"left": "-100%"}, 1000);
+        history.pushState('', 'testing', this.state.href);
+        this.setState({active: true});
     }
     render() {
         return (
-            <a href={"project/" + this.props.link} className="project" onClick={this.handleClick}>
+            <a href={"project/" + this.props.link} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 style={{marginTop: ((this.props.name.length >= 10 ) ? '20px' : '40px')}}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
