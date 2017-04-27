@@ -23,6 +23,7 @@ var projectsJSON = [
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.projectClick = this.projectClick.bind(this);
     }
 
     componentDidMount() {
@@ -39,9 +40,17 @@ class App extends React.Component {
         });
     }
 
+    projectClick(e) {
+        e.preventDefault();
+        console.log($(this).attr('href'));
+        history.pushState('', 'testing', $(this).attr('href'));
+        $(this).animate({"left": "-100%"}, 1000);
+        $('.loader').animate({"left": "0%"}, 1000);
+    }
+
     render() {
         return (
-            <FrontPage projects={projectsJSON} />
+            <FrontPage projects={projectsJSON} handleClick={this.projectClick} />
         );
     }
 }
@@ -50,7 +59,7 @@ function FrontPage(props){
     return (
         <div>
             <FrontPageTop />
-            <Projects projects={props.projects} />
+            <Projects projects={props.projects} handleClick={props.handleClick} />
         </div>
     );
 }
@@ -70,14 +79,27 @@ function Projects(props){
     return (
         <div className='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
+            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
     );
 }
 
-function Project(props){
+class Project extends React.Component {
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+        e.preventDefault();
+        console.log($(this).attr('href'));
+        history.pushState('', 'testing', $(this).attr('href'));
+        $(this).animate({"left": "-100%"}, 1000);
+        $('.loader').animate({"left": "0%"}, 1000);
+    }
+
     return (
-        <a href={"project/" + props.link} className="project">
+        <a href={"project/" + props.link} className="project" onClick={this.handleClick}>
             <Tags tags={props.tags} />
             <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px')}}>{props.name}</h4>
             <img src={props.image} alt={props.name} />
@@ -111,10 +133,14 @@ function Tag(props){
     );
 })();
 
-$('.project').click(function(e){
-    e.preventDefault();
-    console.log($(this).attr('href'));
-    history.pushState('', 'testing', $(this).attr('href'));
-    $(this).animate({"left": "-100%"});
-    $('.loader').animate({"left": "0%"});
-});
+// $('.project').click(function(e){
+//     e.preventDefault();
+//     console.log($(this).attr('href'));
+//     history.pushState('', 'testing', $(this).attr('href'));
+//     $(this).animate({"left": "-100%"}, 1000);
+//     $('.loader').animate({"left": "0%"}, 1000);
+// });
+
+window.onpopstate = function(event){
+
+}
