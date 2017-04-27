@@ -124,7 +124,7 @@ class Project extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.state = {
             href: this.props.link,
-            active = false,
+            active: false,
         }
     }
 
