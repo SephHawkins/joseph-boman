@@ -85,7 +85,7 @@ function FrontPage(props){
     return (
         <div>
             <FrontPageTop />
-            <Projects projects={props.projects} handleClick={props.handleClick} />
+            <Projects projects={props.projects} handleClick={props.handleClick} currentPage={this.props.currentPage} />
         </div>
     );
 }
@@ -105,7 +105,7 @@ function Projects(props){
     return (
         <div className='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
+            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} currentPage={this.props.currentPage} />)}
         </div>
     );
 }
@@ -114,9 +114,10 @@ class Project extends React.Component {
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        var active = (this.props.link === this.props.currentPage);
         this.state = {
             href: this.props.link,
-            active: false
+            active: active
         }
     }
 
