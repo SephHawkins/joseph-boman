@@ -40,7 +40,7 @@ class App extends React.Component {
     componentDidUpdate() {
         NProgress.set(0.6);
         $('.active').animate({'left': '-100%'}, 1500);
-        $('.right-buffer').animate({'left': '0%'}, 1450, function(){
+        $('.right-buffer').animate({'left': '0%'}, 1490, function(){
             NProgress.done();
         });
     }
@@ -55,7 +55,9 @@ class App extends React.Component {
     handleBack(event) {
         NProgress.start();
         if(event.state.page=='main'){
-            $('.active').animate({'left': '0'}, 1450);
+            $('.active').animate({'left': '0'}, 1490, function(){
+                $('.active').removeClass('active');
+            });
             $('.right-buffer').animate({'left': '100%'}, 1500, function(){
                 NProgress.done();
             });
