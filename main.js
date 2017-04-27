@@ -78,10 +78,13 @@ function Tag(props){
         </div>
     );
 }
-ReactDOM.render(
-    <FrontPage projects={projectsJSON} />,
-    document.getElementById('contents')
-);
+(function() {
+    ReactDOM.render(
+        <FrontPage projects={projectsJSON} />,
+        document.getElementById('contents')
+    );
+    $('.loader').fadeOut();
+});
 
 $('.project').click(function(e){
     e.preventDefault();

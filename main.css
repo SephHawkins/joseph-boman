@@ -19,8 +19,20 @@ header {
     background-color: var(--dark-color);
     position: fixed;
     top: 0px;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.4);
+}
+
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: var(--light-color);
+    z-index: 1;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-image: url(http://www.cuisson.co.uk/templates/cuisson/supersize/slideshow/img/progress.BAK-FOURTH.gif);
 }
 
 #contents {
