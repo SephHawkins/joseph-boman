@@ -84,7 +84,7 @@ function Tag(props){
         document.getElementById('contents')
     );
     $('.loader').fadeOut();
-});
+})();
 
 $('.project').click(function(e){
     e.preventDefault();
