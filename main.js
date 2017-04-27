@@ -121,24 +121,20 @@ class Project extends React.Component {
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        var active = (this.props.link === this.props.currentPage);
-        this.state = {
-            href: this.props.link,
-            active: active
-        }
+        // var active = (this.props.link === this.props.currentPage);
     }
 
     handleClick(e){
         NProgress.start();
         e.preventDefault();
-        history.pushState({page: 'main'}, 'testing', this.state.href);
-        this.setState({active: true});
+        history.pushState({page: 'main'}, 'testing', this.props.href);
+        // this.setState({active: true});
         this.props.handleClick(this.state.href, "right");
     }
 
     render() {
         return (
-            <a href={"/project/" + this.props.link} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/project/" + this.props.link} className={"project" + ((this.props.link === this.props.currentPage) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 style={{marginTop: ((this.props.name.length >= 10 ) ? '20px' : '40px')}}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
