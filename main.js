@@ -71,7 +71,7 @@ class App extends React.Component {
                     <nav id="nav-bar"></nav>
                 </header>
                 <div className='main-page'>
-                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
+                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} currentPage={this.state.currentPage} />
                 </div>
                 <div className='right-buffer'>
                     <h1>{this.state.currentPage}</h1>
@@ -115,7 +115,7 @@ class Project extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
-            href: "project/" + this.props.link,
+            href: this.props.link,
             active: false
         }
     }
