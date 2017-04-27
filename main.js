@@ -93,6 +93,6 @@ $('.project').click(function(e){
     e.preventDefault();
     console.log($(this).attr('href'));
     history.pushState('', 'testing', $(this).attr('href'));
-    $(this).animate({left, "-100%"});
-    $('.loader').animate({left, "0%"});
+    $(this).animate({"left": "-100%"});
+    $('.loader').animate({"left": "0%"});
 });
