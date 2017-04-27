@@ -34,9 +34,9 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        NProgress.done();
+        //NProgress.done();
         $('.active').animate({'left': '-100%'}, 1000);
-        //$('.right-buffer').animate({'left': '0%'}, 1000);
+        $('.right-buffer').animate({'left': '0%'}, 1000);
     }
 
     handleNavigation(link, moveTo) {
@@ -100,7 +100,7 @@ class Project extends React.Component {
     }
 
     handleClick(e){
-        NProgress.start();
+        //NProgress.start();
         e.preventDefault();
         history.pushState('', 'testing', this.state.href);
         this.setState({active: true});
