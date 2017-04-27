@@ -39,6 +39,7 @@ class App extends React.Component {
 
     componentDidUpdate() {
         NProgress.set(0.6);
+        var _this = this;
         if(this.state.activePage === 'right'){
             $('.active').animate({'left': '-100%'}, 1500);
             $('.right-buffer').animate({'left': '0%'}, 1490, function(){
@@ -46,7 +47,7 @@ class App extends React.Component {
             });
         } else {
             $('.active').animate({'left': '0%'}, 1490, function(){
-                this.state.activeLink.setState({active: false});
+                _this.state.activeLink.setState({active: false});
             });
             $('.right-buffer').animate({'left': '100%'}, 1500, function(){
                 NProgress.done();
