@@ -28,8 +28,8 @@ class App extends React.Component {
             currentPage: 'Home'
         }
         var _this = this;
-        window.onpopstate = function() {
-            _this.testFunction("Testing this thing");
+        window.onpopstate = function(event) {
+            _this.handleBack(event);
         }
     }
 
@@ -40,7 +40,7 @@ class App extends React.Component {
     componentDidUpdate() {
         NProgress.set(0.5);
         $('.active').animate({'left': '-100%'}, 1500);
-        $('.right-buffer').animate({'left': '0%'}, 1500, function(){
+        $('.right-buffer').animate({'left': '0%'}, 1450, function(){
             NProgress.done();
         });
     }
@@ -52,7 +52,7 @@ class App extends React.Component {
         });
     }
 
-    testFunction(string) {
+    handleBack(event) {
         console.log(string);
     }
 
