@@ -27,17 +27,11 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        $('.loader').fadeOut(function(){
-            $('.loader').css("left", "100%");
-            $('.loader').fadeIn();
-        });
+
     }
 
     componentDidUpdate() {
-        $('.loader').fadeOut(function(){
-            $('.loader').css("left", "100%");
-            $('.loader').fadeIn();
-        });
+        NProgress.done();
     }
 
     projectClick(e) {
@@ -45,7 +39,6 @@ class App extends React.Component {
         console.log($(this).attr('href'));
         history.pushState('', 'testing', $(this).attr('href'));
         $(this).animate({"left": "-100%"}, 1000);
-        $('.loader').animate({"left": "0%"}, 1000);
     }
 
     render() {
@@ -87,15 +80,14 @@ function Projects(props){
 class Project extends React.Component {
     constructor(props){
         super(props);
-        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e){
+        NProgress.start();
         e.preventDefault();
         console.log($(this).attr('href'));
         history.pushState('', 'testing', $(this).attr('href'));
         $(this).animate({"left": "-100%"}, 1000);
-        $('.loader').animate({"left": "0%"}, 1000);
     }
     render() {
         return (
