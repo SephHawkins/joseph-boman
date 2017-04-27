@@ -30,6 +30,7 @@ header {
 
 .right-buffer {
     position: fixed;
+    top: 60px;
     z-index: 1;
     left: 100%;
     width: 100%;
@@ -96,10 +97,6 @@ a:hover {
     color: var(--dark-color);
     margin-bottom: 20px;
     transition: left 1s ease-out;
-}
-
-.project.active {
-    left: -100%;
 }
 
 .project h4 {

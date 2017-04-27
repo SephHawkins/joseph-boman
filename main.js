@@ -23,7 +23,10 @@ var projectsJSON = [
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.projectClick = this.projectClick.bind(this);
+        this.handleNavigation = this.handleNavigation.bind(this);
+        this.state = {
+            currentPage: 'Home'
+        }
     }
 
     componentDidMount() {
@@ -32,23 +35,26 @@ class App extends React.Component {
 
     componentDidUpdate() {
         NProgress.done();
+        $('.active').animate({'left': '-100%'}, 1000);
+        $('.right-buffer').animate({'left': '0%'}, 1000);
     }
 
-    projectClick(e) {
+    handleNavigation(link, moveTo) {
         e.preventDefault();
-        console.log($(this).attr('href'));
-        history.pushState('', 'testing', $(this).attr('href'));
-        $(this).animate({"left": "-100%"}, 1000);
+        this.setState({
+            currentPage: link,
+            activePage: moveTo
+        });
     }
 
     render() {
         return (
             <div>
                 <div className='main-page'>
-                    <FrontPage projects={projectsJSON} handleClick={this.projectClick} />
+                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <div className='right-buffer'>
-                    <h1>This is a test</h1>
+                    <h1>{this.state.currentPage}</h1>
                 </div>
             </div>
         );
@@ -99,6 +105,7 @@ class Project extends React.Component {
         e.preventDefault();
         history.pushState('', 'testing', this.state.href);
         this.setState({active: true});
+        this.props.handleClick(this.state.href, "right");
     }
 
     render() {
