@@ -97,15 +97,16 @@ class Project extends React.Component {
         $(this).animate({"left": "-100%"}, 1000);
         $('.loader').animate({"left": "0%"}, 1000);
     }
-
-    return (
-        <a href={"project/" + props.link} className="project" onClick={this.handleClick}>
-            <Tags tags={props.tags} />
-            <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px')}}>{props.name}</h4>
-            <img src={props.image} alt={props.name} />
-            <img className='arrow' src="https://d30y9cdsu7xlg0.cloudfront.net/png/196764-200.png" alt='arrow' />
-        </a>
-    );
+    render() {
+        return (
+            <a href={"project/" + props.link} className="project" onClick={this.handleClick}>
+                <Tags tags={props.tags} />
+                <h4 style={{marginTop: ((props.name.length >= 10 ) ? '20px' : '40px')}}>{props.name}</h4>
+                <img src={props.image} alt={props.name} />
+                <img className='arrow' src="https://d30y9cdsu7xlg0.cloudfront.net/png/196764-200.png" alt='arrow' />
+            </a>
+        );
+    }
 }
 
 function Tags(props){
