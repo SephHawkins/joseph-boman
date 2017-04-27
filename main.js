@@ -38,7 +38,7 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        NProgress.set(0.5);
+        NProgress.set(0.6);
         $('.active').animate({'left': '-100%'}, 1500);
         $('.right-buffer').animate({'left': '0%'}, 1450, function(){
             NProgress.done();
@@ -53,7 +53,9 @@ class App extends React.Component {
     }
 
     handleBack(event) {
-        console.log(string);
+        if(activePage=='right'){
+
+        }
     }
 
     render() {
