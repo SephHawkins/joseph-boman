@@ -20,6 +20,32 @@ var projectsJSON = [
 
 ];
 
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        $('.loader').fadeOut(function(){
+            $('.loader').css("left", "100%");
+            $('.loader').fadeIn();
+        });
+    }
+
+    componentDidUpdate() {
+        $('.loader').fadeOut(function(){
+            $('.loader').css("left", "100%");
+            $('.loader').fadeIn();
+        });
+    }
+
+    render() {
+        return (
+            <FrontPage projects={projectsJSON} />
+        );
+    }
+}
+
 function FrontPage(props){
     return (
         <div>
@@ -80,13 +106,9 @@ function Tag(props){
 }
 (function() {
     ReactDOM.render(
-        <FrontPage projects={projectsJSON} />,
+        <App />,
         document.getElementById('contents')
     );
-    $('.loader').fadeOut(function(){
-        $('.loader').css("left", "100%");
-        $('.loader').fadeIn();
-    });
 })();
 
 $('.project').click(function(e){

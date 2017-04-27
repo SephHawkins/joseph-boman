@@ -89,6 +89,7 @@ a:hover {
 .project {
     float: right;
     background-color: var(--light-color);
+    position: relative;
     width: 85%;
     height: 120px;
     overflow: hidden;
