@@ -27,6 +27,9 @@ class App extends React.Component {
         this.state = {
             currentPage: 'Home'
         }
+        window.onpopstate = function() {
+            this.testFunction("Testing this thing");
+        }
     }
 
     componentDidMount() {
@@ -48,9 +51,16 @@ class App extends React.Component {
         });
     }
 
+    testFunction(string) {
+        console.log(string);
+    }
+
     render() {
         return (
             <div>
+                <header id="header">
+                    <nav id="nav-bar"></nav>
+                </header>
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
@@ -111,7 +121,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <a href={"project/" + this.props.link} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/project/" + this.props.link} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 style={{marginTop: ((this.props.name.length >= 10 ) ? '20px' : '40px')}}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
@@ -145,7 +155,3 @@ function Tag(props){
         document.getElementById('contents')
     );
 })();
-
-window.onpopstate = function(event){
-    history.pushState('', 'testing', '');
-}
