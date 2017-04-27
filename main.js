@@ -34,9 +34,11 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        //NProgress.done();
-        $('.active').animate({'left': '-100%'}, 1000);
-        $('.right-buffer').animate({'left': '0%'}, 1000);
+        NProgress.set(0.5);
+        $('.active').animate({'left': '-100%'}, 1500);
+        $('.right-buffer').animate({'left': '0%'}, 1500, function(){
+            NProgress.done();
+        });
     }
 
     handleNavigation(link, moveTo) {
@@ -100,7 +102,7 @@ class Project extends React.Component {
     }
 
     handleClick(e){
-        //NProgress.start();
+        NProgress.start();
         e.preventDefault();
         history.pushState('', 'testing', this.state.href);
         this.setState({active: true});
@@ -144,14 +146,6 @@ function Tag(props){
     );
 })();
 
-// $('.project').click(function(e){
-//     e.preventDefault();
-//     console.log($(this).attr('href'));
-//     history.pushState('', 'testing', $(this).attr('href'));
-//     $(this).animate({"left": "-100%"}, 1000);
-//     $('.loader').animate({"left": "0%"}, 1000);
-// });
-
 window.onpopstate = function(event){
-
+    history.pushState('', 'testing', '');
 }
