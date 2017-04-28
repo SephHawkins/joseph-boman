@@ -38,20 +38,18 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        NProgress.set(0.6);
+        NProgress.done();
         var _this = this;
         if(this.state.activePage === 'right'){
             $('.active').animate({'left': '-100%'}, 1500);
             $('.right-buffer').animate({'left': '0%'}, 1490, function(){
-                NProgress.done();
+                $('.main-page').css({'display': 'none'});
             });
         } else {
             $('.active').animate({'left': '0%'}, 1490, function(){
                 _this.state.activeLink.setState({active: false});
             });
-            $('.right-buffer').animate({'left': '100%'}, 1500, function(){
-                NProgress.done();
-            });
+            $('.right-buffer').animate({'left': '100%'}, 1500);
         }
     }
 
@@ -66,6 +64,7 @@ class App extends React.Component {
     handleBack(event) {
         NProgress.start();
         if(event.state.page=='main'){
+            $('.main-page').css({'display': 'none'});
             this.setState({
                 currentPage: '',
                 activePage: 'left'
