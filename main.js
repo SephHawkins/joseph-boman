@@ -90,16 +90,16 @@ class App extends React.Component {
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <div className='right-buffer'>
-                    <h1>Row 1</h1>
-                    <h1>Row 2</h1>
-                    <h1>Row 3</h1>
-                    <h1>Row 4</h1>
-                    <h1>Row 5</h1>
-                    <h1>Row 6</h1>
-                    <h1>Row 7</h1>
-                    <h1>Row 8</h1>
-                    <h1>Row 9</h1>
-                    <h1>Row 10</h1>
+                    <a className='arrow'>➣</a>
+                    <h1>MonoVirus</h1>
+                    <div class="circle-img">
+                        <img src="http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png" alt="Chambara">
+                    </div>
+                    <div class="img-selector">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
                 </div>
             </div>
         );

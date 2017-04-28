@@ -38,6 +38,64 @@ header {
     background-color: var(--light-color);
 }
 
+.right-buffer .arrow {
+    color: var(--dark-color);
+    transform: rotate(180deg);
+    float: left;
+    margin: 10px;
+    font-size: 40px;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.right-buffer h1 {
+    display: inline-block;
+    margin: 10px 5%;
+    line-height: 40px;
+    vertical-align: middle;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--dark-color);
+    font-size: 30px;
+    text-align: center;
+    width: 70%;
+}
+
+.circle-img {
+    border-radius: 100%;
+    margin: 0px auto 0px auto;
+    height: 160px;
+    width: 160px;
+    overflow: hidden;
+    display: block;
+}
+
+.circle-img img {
+    position: relative;
+    height: 160px;
+    left: -35px;
+    z-index: -1;
+}
+
+.img-selector {
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: var(--dark-color) 3px solid;
+    border-radius: 50%;
+    margin: 5px 4px;
+    cursor: pointer;
+}
+
+.dot.active, .dot:hover {
+    background-color: var(--dark-color);
+}
+
 .front-page-top {
     margin-bottom: 20px;
 }
