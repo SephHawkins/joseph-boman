@@ -92,13 +92,13 @@ class App extends React.Component {
                 <div className='right-buffer'>
                     <a className='arrow'>➣</a>
                     <h1>MonoVirus</h1>
-                    <div class="circle-img">
+                    <div className="circle-img">
                         <img src="http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png" alt="Chambara" />
                     </div>
-                    <div class="img-selector">
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                      <span class="dot"></span>
+                    <div className="img-selector">
+                      <span className="dot"></span>
+                      <span className="dot"></span>
+                      <span className="dot"></span>
                     </div>
                 </div>
             </div>
