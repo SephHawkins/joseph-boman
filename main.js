@@ -68,7 +68,8 @@ class App extends React.Component {
         if(event.state.page=='main'){
             $('.main-page').css({'display': 'block'});
             var newTop = $('.active').offset().top;
-            $('.right-buffer').css({'position': 'fixed', 'top': newTop + "px"});
+            var windowTop = $(window).scrollTop();
+            $('.right-buffer').css({'position': 'fixed', 'top': (newTop - windowTop) + "px"});
             $('html,body').scrollTop(newTop);
             this.setState({
                 currentPage: '',
