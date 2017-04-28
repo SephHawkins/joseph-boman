@@ -66,6 +66,7 @@ class App extends React.Component {
         NProgress.start();
         if(event.state.page=='main'){
             $('.main-page').css({'display': 'block'});
+            $('.right-buffer').css({'position': 'fixed', 'top': '60px'});
             this.setState({
                 currentPage: '',
                 activePage: 'left'
