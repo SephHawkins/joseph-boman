@@ -41,17 +41,17 @@ class App extends React.Component {
         NProgress.done();
         var _this = this;
         if(this.state.activePage === 'right'){
-            $('.active').animate({'left': '-100%'}, 1500);
-            $('.right-buffer').animate({'left': '0%'}, 1490, function(){
+            $('.active').animate({'left': '-100%'}, 1000);
+            $('.right-buffer').animate({'left': '0%'}, 990, function(){
                 $('.main-page').css({'display': 'none'});
                 $('.right-buffer').css({'position': 'absolute', 'top': '0px'});
                 $('html,body').scrollTop(0);
             });
         } else {
-            $('.active').animate({'left': '0%'}, 1490, function(){
+            $('.active').animate({'left': '0%'}, 990, function(){
                 _this.state.activeLink.setState({active: false});
             });
-            $('.right-buffer').animate({'left': '100%'}, 1500, function(){
+            $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px'});
             });
         }
