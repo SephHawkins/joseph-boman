@@ -44,6 +44,7 @@ class App extends React.Component {
             $('.active').animate({'left': '-100%'}, 1500);
             $('.right-buffer').animate({'left': '0%'}, 1490, function(){
                 $('.main-page').css({'display': 'none'});
+                $('.right-buffer').css({'position': 'absolute', 'top': '0px'});
             });
         } else {
             $('.active').animate({'left': '0%'}, 1490, function(){
@@ -64,7 +65,7 @@ class App extends React.Component {
     handleBack(event) {
         NProgress.start();
         if(event.state.page=='main'){
-            $('.main-page').css({'display': 'none'});
+            $('.main-page').css({'display': 'block'});
             this.setState({
                 currentPage: '',
                 activePage: 'left'
