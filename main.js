@@ -93,7 +93,7 @@ class App extends React.Component {
                     <a className='arrow'>➣</a>
                     <h1>MonoVirus</h1>
                     <div class="circle-img">
-                        <img src="http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png" alt="Chambara">
+                        <img src="http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png" alt="Chambara" />
                     </div>
                     <div class="img-selector">
                       <span class="dot"></span>
