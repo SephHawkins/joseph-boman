@@ -69,7 +69,7 @@ class App extends React.Component {
         NProgress.start();
         if(event.state.page=='main'){
             var windowTop = $(window).scrollTop();
-            $('.right-buffer').css({'position': 'fixed', 'top': "-" + (windowTop - 60) + "px"});
+            $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
             var newTop = $('.active').offset().top;
             $('html,body').scrollTop(newTop);
