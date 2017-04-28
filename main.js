@@ -66,8 +66,8 @@ class App extends React.Component {
     handleBack(event) {
         NProgress.start();
         if(event.state.page=='main'){
-            var newTop = $('.active').offset().top;
             $('.main-page').css({'display': 'block'});
+            var newTop = $('.active').offset().top;
             $('.right-buffer').css({'position': 'fixed', 'top': newTop + "px"});
             $('html,body').scrollTop(newTop);
             this.setState({
