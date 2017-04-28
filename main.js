@@ -69,7 +69,7 @@ class App extends React.Component {
             $('.main-page').css({'display': 'block'});
             var newTop = $('.active').offset().top;
             var windowTop = $(window).scrollTop();
-            $('.right-buffer').css({'position': 'fixed', 'top': (windowTop) + "px"});
+            $('.right-buffer').css({'position': 'fixed', 'top': "-" + (windowTop) + "px"});
             $('html,body').scrollTop(newTop);
             this.setState({
                 currentPage: '',
@@ -88,7 +88,16 @@ class App extends React.Component {
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <div className='right-buffer'>
-                    <h1>{this.state.currentPage}</h1>
+                    <h1>Row 1</h1>
+                    <h1>Row 2</h1>
+                    <h1>Row 3</h1>
+                    <h1>Row 4</h1>
+                    <h1>Row 5</h1>
+                    <h1>Row 6</h1>
+                    <h1>Row 7</h1>
+                    <h1>Row 8</h1>
+                    <h1>Row 9</h1>
+                    <h1>Row 10</h1>
                 </div>
             </div>
         );
