@@ -45,6 +45,7 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '0%'}, 1490, function(){
                 $('.main-page').css({'display': 'none'});
                 $('.right-buffer').css({'position': 'absolute', 'top': '0px'});
+                $('html,body').scrollTop(0);
             });
         } else {
             $('.active').animate({'left': '0%'}, 1490, function(){
@@ -67,6 +68,7 @@ class App extends React.Component {
         if(event.state.page=='main'){
             $('.main-page').css({'display': 'block'});
             $('.right-buffer').css({'position': 'fixed', 'top': '60px'});
+            $('html,body').scrollTop($('.active').css('top'));
             this.setState({
                 currentPage: '',
                 activePage: 'left'
