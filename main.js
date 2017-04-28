@@ -51,7 +51,9 @@ class App extends React.Component {
             $('.active').animate({'left': '0%'}, 1490, function(){
                 _this.state.activeLink.setState({active: false});
             });
-            $('.right-buffer').animate({'left': '100%'}, 1500);
+            $('.right-buffer').animate({'left': '100%'}, 1500, function(){
+                $('.right-buffer').css({'top': '60px'});
+            });
         }
     }
 
@@ -69,7 +71,7 @@ class App extends React.Component {
             $('.main-page').css({'display': 'block'});
             var newTop = $('.active').offset().top;
             var windowTop = $(window).scrollTop();
-            $('.right-buffer').css({'position': 'fixed', 'top': "-" + (windowTop) + "px"});
+            $('.right-buffer').css({'position': 'fixed', 'top': "-" + (windowTop - 60) + "px"});
             $('html,body').scrollTop(newTop);
             this.setState({
                 currentPage: '',
