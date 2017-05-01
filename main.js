@@ -189,7 +189,7 @@ class Dot extends React.Component {
 
     render() {
         return (
-            <span className={'dot' + ((active) ? ' active' : '')}></span>
+            <span className={'dot' + ((this.state.active) ? ' active' : '')}></span>
         );
     }
 }
