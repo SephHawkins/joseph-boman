@@ -50,14 +50,14 @@ header {
 
 .right-buffer h1 {
     display: inline-block;
-    margin: 10px 5%;
+    margin: 10px 10%;
     line-height: 40px;
     vertical-align: middle;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--dark-color);
     font-size: 30px;
     text-align: center;
-    width: 70%;
+    width: 80%;
 }
 
 .circle-img {
@@ -183,7 +183,7 @@ a:hover {
     height: 40px;
     left: -5px;
     top: 40px;
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 

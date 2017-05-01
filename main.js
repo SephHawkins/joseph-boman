@@ -105,8 +105,8 @@ class App extends React.Component {
                 </div>
                 <div className='right-buffer'>
                     <a className='arrow'>➣</a>
-                    <h1>MonoVirus</h1>
                     <ImageSlideshow images={images} />
+                    <h1>MonoVirus</h1>
                 </div>
             </div>
         );
