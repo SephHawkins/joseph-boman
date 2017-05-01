@@ -104,7 +104,7 @@ class App extends React.Component {
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <div className='right-buffer'>
-                    <a className='arrow' onClick={history.back}>➣</a>
+                    <a className='arrow' onClick={window.history.back()}>➣</a>
                     <ImageSlideshow images={images} />
                     <h1>MonoVirus</h1>
                     <h2>Action RPG Dungeon Crawler Game</h2>

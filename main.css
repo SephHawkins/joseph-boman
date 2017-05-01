@@ -74,6 +74,7 @@ header {
     height: 160px;
     width: 160px;
     overflow: hidden;
+    white-space: nowrap;
     display: block;
 }
 
