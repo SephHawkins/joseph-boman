@@ -163,10 +163,10 @@ class ImageSlideshow extends React.Component {
         return (
             <div>
                 <div className="circle-img">
-                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} className={(index === activeImage) ? 'active' : ''} />)}
+                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} className={(index === this.state.activeImage) ? 'active' : ''} />)}
                 </div>
                 <div className="img-selector">
-                    {images.map((image, index) => <Dot key={image.link + '-dot'} number={index} active={(index === activeImage) ? true : false} handleClick={this.switchImage} />)}
+                    {images.map((image, index) => <Dot key={image.link + '-dot'} number={index} active={(index === this.state.activeImage) ? true : false} handleClick={this.switchImage} />)}
                 </div>
             </div>
         );
