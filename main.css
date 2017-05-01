@@ -59,11 +59,12 @@ header {
     font-size: 30px;
     text-align: center;
     width: 80%;
+    border-bottom: var(--dark-color) 1px solid;
 }
 
 .circle-img {
     border-radius: 100%;
-    margin: 0px auto 0px auto;
+    margin: 20px auto 0px auto;
     height: 160px;
     width: 160px;
     overflow: hidden;
