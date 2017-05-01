@@ -46,6 +46,7 @@ header {
     font-size: 40px;
     line-height: 40px;
     display: inline-block;
+    position: absolute;
 }
 
 .right-buffer h1 {
@@ -183,7 +184,7 @@ a:hover {
     height: 40px;
     left: -5px;
     top: 40px;
-    position: absolute;
+    position: relative;
     display: inline-block;
 }
 
