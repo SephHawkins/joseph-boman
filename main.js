@@ -178,7 +178,6 @@ class Dot extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
-            active: this.props.active,
             number: this.props.number
         }
     }
@@ -189,7 +188,7 @@ class Dot extends React.Component {
 
     render() {
         return (
-            <span className={'dot' + ((this.state.active) ? ' current-dot' : '')} onClick={this.handleClick}></span>
+            <span className={'dot' + ((this.props.active) ? ' current-dot' : '')} onClick={this.handleClick}></span>
         );
     }
 }
