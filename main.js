@@ -154,6 +154,8 @@ class ImageSlideshow extends React.Component {
     }
 
     switchImage(activeImage){
+        var leftValue = (-150) * activeImage - 35;
+        $('.circle-img img').animate({'left': leftValue});
         this.setState({
             activeImage: activeImage
         });
@@ -164,7 +166,7 @@ class ImageSlideshow extends React.Component {
         return (
             <div>
                 <div className="circle-img">
-                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} className={(index === this.state.activeImage) ? 'current-img' : ''} />)}
+                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} />)}
                 </div>
                 <div className="img-selector">
                     {images.map((image, index) => <Dot key={image.link + '-dot'} number={index} active={(index === this.state.activeImage) ? true : false} handleClick={this.switchImage} />)}
