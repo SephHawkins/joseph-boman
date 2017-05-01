@@ -17,7 +17,21 @@ var projectsJSON = [
         image: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
         tags: ["modeler", "coder"]
     }
+];
 
+var images = [
+    {
+        link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+        alt: "Chambara-1"
+    },
+    {
+        link: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
+        alt: "Chambara-2"
+    },
+    {
+        link: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
+        alt: "Chambara-3"
+    }
 ];
 
 class App extends React.Component {
@@ -92,13 +106,15 @@ class App extends React.Component {
                 <div className='right-buffer'>
                     <a className='arrow'>➣</a>
                     <h1>MonoVirus</h1>
-                    <div className="circle-img">
-                        <img src="http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png" alt="Chambara" />
-                    </div>
-                    <div className="img-selector">
-                      <span className="dot"></span>
-                      <span className="dot"></span>
-                      <span className="dot"></span>
+                    <div>
+                        <div className="circle-img">
+                            <img src="http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png" alt="Chambara" />
+                        </div>
+                        <div className="img-selector">
+                          <span className="dot"></span>
+                          <span className="dot"></span>
+                          <span className="dot"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,6 +149,58 @@ function Projects(props){
             {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
     );
+}
+
+class ImageSlideshow extends React.Component {
+    constructor(props){
+        super(props);
+        this.switchImage = this.switchImage.bind(this);
+        this.state = {
+            activeImage: 0,
+            images: this.props.images,
+        }
+    }
+
+    switchImage(activeImage){
+        this.setState({
+            activeImage: activeImage
+        });
+    }
+
+    render() {
+        const images = this.state.images;
+        return (
+            <div>
+                <div className="circle-img">
+                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} className={(index === activeImage) ? 'active' : ''} />)}
+                </div>
+                <div className="img-selector">
+                    {images.map((image, index) => <Dot key={image.link + '-dot'} number={index} active={(index === activeImage) ? true : false} handleClick={this.switchImage} />)}
+                </div>
+            </div>
+        );
+    }
+}
+
+class Dot extends React.Component {
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+        this.state = {
+            active: this.props.active,
+            number: this.props.number
+        }
+    }
+
+    handleClick(e){
+        this.props.handleClick(this.state.number);
+    }
+
+    render() {
+        return (
+            <span className={'dot' + ((active) ? ' active' : '')}></span>
+        );
+    }
 }
 
 class Project extends React.Component {
@@ -183,6 +251,7 @@ function Tag(props){
         </div>
     );
 }
+
 (function() {
     history.replaceState({page: 'main'}, "Main Page", "");
     ReactDOM.render(

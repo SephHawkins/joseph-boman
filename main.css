@@ -74,6 +74,11 @@ header {
     height: 160px;
     left: -35px;
     z-index: -1;
+    display: none;
+}
+
+.circle-img img.active {
+    display: block;
 }
 
 .img-selector {
