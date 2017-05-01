@@ -77,7 +77,7 @@ header {
     display: none;
 }
 
-.circle-img img.active {
+.circle-img img.current-img {
     display: block;
 }
 
@@ -97,7 +97,7 @@ header {
     cursor: pointer;
 }
 
-.dot.active, .dot:hover {
+.dot.current-dot, .dot:hover {
     background-color: var(--dark-color);
 }
 

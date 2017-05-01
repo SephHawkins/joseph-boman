@@ -163,7 +163,7 @@ class ImageSlideshow extends React.Component {
         return (
             <div>
                 <div className="circle-img">
-                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} className={(index === this.state.activeImage) ? 'active' : 'hidden'} />)}
+                    {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} className={(index === this.state.activeImage) ? 'current-img' : ''} />)}
                 </div>
                 <div className="img-selector">
                     {images.map((image, index) => <Dot key={image.link + '-dot'} number={index} active={(index === this.state.activeImage) ? true : false} handleClick={this.switchImage} />)}
@@ -189,7 +189,7 @@ class Dot extends React.Component {
 
     render() {
         return (
-            <span className={'dot' + ((this.state.active) ? ' active' : '')} onClick={this.handleClick}></span>
+            <span className={'dot' + ((this.state.active) ? ' current-dot' : '')} onClick={this.handleClick}></span>
         );
     }
 }
