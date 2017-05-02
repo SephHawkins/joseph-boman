@@ -161,7 +161,7 @@ class ImageSlideshow extends React.Component {
     }
 
     switchImage(activeImage){
-        var leftValue = (-150) * activeImage - 35;
+        var leftValue = (-100) * activeImage + "%";
         $('.circle-img img').animate({'left': leftValue});
         this.setState({
             activeImage: activeImage
