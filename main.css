@@ -61,6 +61,10 @@ header {
     float: right;
 }
 
+svg {
+    cursor: pointer;
+}
+
 #contents {
     position: relative;
     top: 60px;
