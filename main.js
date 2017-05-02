@@ -117,7 +117,7 @@ class App extends React.Component {
         return (
             <div>
                 <header id="header">
-                    <nav id="nav-bar">
+                    <nav class="nav-bar">
                         <a href="/">
                             <img src="http://josephboman.com/wp-content/themes/sephhawkins/images/logo-min.png" />
                             <p><span>oseph</span> oman</p>
