@@ -34,6 +34,21 @@ var images = [
     }
 ];
 
+var tagDetails = [
+    {
+        name: "coder",
+        text: "Built in C# using XNA and MonoDevelop"
+    },
+    {
+        name: "modeler",
+        text: "Made player and enemy models in Maya"
+    },
+    {
+        name: "ui/ux",
+        text: "Created UI elements using GIMP"
+    }
+]
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -115,6 +130,7 @@ class App extends React.Component {
                     <ImageSlideshow images={images} />
                     <h1>MonoVirus</h1>
                     <h2>Action RPG Dungeon Crawler Game</h2>
+                    {tagDetails.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
                 </div>
             </div>
         );
@@ -248,6 +264,14 @@ function Tag(props){
     return (
         <div className={'tag ' + props.tag.split('/')[0] + '-tag'}>
             <p>{props.tag.toUpperCase()}</p>
+        </div>
+    );
+}
+
+function TagDetail(props){
+    return (
+        <div className={'tag-details ' + props.name.split('/')[0] + '-tag'}>
+            <p>{props.name.toUpperCase() + ": " + props.text}</p>
         </div>
     );
 }

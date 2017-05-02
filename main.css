@@ -91,6 +91,23 @@ header {
     margin-bottom: 10px;
 }
 
+
+.tag-details {
+    margin: 0 10%;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.tag-details p {
+    font-family: 'NTR', sans-serif;
+    margin: 5px 0px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    top: 2px;
+    position: relative;
+}
+
 .dot {
     width: 12px;
     height: 12px;
@@ -219,35 +236,35 @@ a:hover {
 .designer-tag {
     background-color: var(--red-tag-color);
 }
-.designer-tag p {
+.designer-tag.tag p {
     transform: rotate(-90deg) translate(-33px, 2px);
 }
 
 .coder-tag {
     background-color: var(--blue-tag-color);
 }
-.coder-tag p {
+.coder-tag.tag p {
     transform: rotate(-90deg) translate(-26px, 2px);
 }
 
 .qa-tag {
     background-color: var(--purple-tag-color);
 }
-.qa-tag p {
+.qa-tag.tag p {
     transform: rotate(-90deg) translate(-15px, 2px);
 }
 
 .modeler-tag {
     background-color: var(--green-tag-color);
 }
-.modeler-tag p {
+.modeler-tag.tag p {
     transform: rotate(-90deg) translate(-33px, 2px);
 }
 
 .ui-tag {
     background-color: var(--yellow-tag-color);
 }
-.ui-tag p {
+.ui-tag.tag p {
     transform: rotate(-90deg) translate(-21px, 2px);
 }
 
