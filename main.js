@@ -108,7 +108,10 @@ class App extends React.Component {
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <div className='right-buffer'>
-                    <a className='arrow' onClick={this.goBack}>➣</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 512 512" width="40" className='arrow' onClick={this.goBack}>
+                        <polygon points="512,392 0,256 400,256"></polygon>
+                        <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
+                    </svg>
                     <ImageSlideshow images={images} />
                     <h1>MonoVirus</h1>
                     <h2>Action RPG Dungeon Crawler Game</h2>
