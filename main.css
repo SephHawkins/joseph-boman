@@ -23,6 +23,44 @@ header {
     box-shadow: 0px 2px 6px rgba(0,0,0,0.4);
 }
 
+.nav-bar {
+    margin: 0px 5%;
+}
+
+.nav-bar a {
+    width: 90;
+    display: inline-block;
+    white-space: nowrap;
+}
+.nav-bar a img {
+    height: 60px;
+    display: inline-block;
+    vertical-align: top;
+}
+.nav-bar a p {
+    color: var(--light-color);
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 20px;
+    top: 11px;
+    position:relative;
+    font-size: 20px;
+    left: -32px;
+    display: inline-grid;
+    margin: 0;
+}
+.nav-bar a p span {
+    font-style: italic;
+    position: relative;
+    left: -4;
+    top: -2;
+}
+.nav-bar svg {
+    fill: var(--light-color);
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
 #contents {
     position: relative;
     top: 60px;
