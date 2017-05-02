@@ -39,8 +39,7 @@ header {
 }
 
 .right-buffer .arrow {
-    color: var(--dark-color);
-    transform: rotate(180deg);
+    fill: var(--dark-color);
     float: left;
     margin: 10px;
     font-size: 40px;
