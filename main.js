@@ -53,7 +53,37 @@ var project = {
         }
     ],
     downloadLink: "Windows"
-
+}
+var chambara = {
+    name: "Chambara",
+    tagline: "Two-color Stealth Action PS4 Game",
+    about: "Chambara was first created at the Dare to be Digital game jam, and quickly expanded with the goal of releasing on PlayStation 4. The game was developed by a team of around 25 USC Games students.\n\nChambara is, at its heart, a local multiplayer experience, in which players utilize minimally colored levels to hide their character, attempting to use strategy and stealth to trick and defeat their opponent",
+    lookBack: "As one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code",
+    images: [
+        {
+            link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara13x9-e1447699049873.png",
+            alt: "Chambara-1"
+        },
+        {
+            link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara2-13x9-e1447699059560.png",
+            alt: "Chambara-2"
+        },
+        {
+            link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara3-13x9-e1447699027993.png",
+            alt: "Chambara-3"
+        }
+    ],
+    tags: [
+        {
+            name: "coder",
+            text: "Built gameplay systems and controller logic in Unity for PS4"
+        },
+        {
+            name: "qa",
+            text: "Ran a ten person QA team and passed Sony's TRC"
+        }
+    ],
+    downloadLink: "PlayStation"
 }
 var images = [
     {
@@ -90,7 +120,8 @@ class App extends React.Component {
         super(props);
         this.handleNavigation = this.handleNavigation.bind(this);
         this.state = {
-            currentPage: 'Home'
+            currentPage: 'Home',
+            rightBuffer: project
         }
         var _this = this;
         window.onpopstate = function(event) {
@@ -123,10 +154,16 @@ class App extends React.Component {
     }
 
     handleNavigation(link, moveTo, activeLink) {
+        let rightBuffer = null;
+        if(link == 'chambara')
+            rightBuffer = chambara;
+        else
+            rightBuffer = project;
         this.setState({
             currentPage: link,
             activePage: moveTo,
-            activeLink: activeLink
+            activeLink: activeLink,
+            rightBuffer: rightBuffer
         });
     }
 
@@ -166,7 +203,7 @@ class App extends React.Component {
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
-                <RightBuffer type="project" data={project} handleBack={this.goBack} />
+                <RightBuffer type="project" data={this.state.rightBuffer} handleBack={this.goBack} />
             </div>
         );
     }
