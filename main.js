@@ -175,10 +175,8 @@ class App extends React.Component {
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
-            var newTop = $('.active').offset().top;
-            //$('html,body').scrollTop(newTop);
             this.setState({
-                currentPage: '',
+                currentPage: 'main',
                 activePage: 'left'
             });
         } else {
@@ -197,7 +195,12 @@ class App extends React.Component {
     }
 
     goBack() {
-        window.history.back();
+        NProgress.start();
+        history.pushState({page: 'main'}, 'main-page', 'joseph-boman/');
+        this.setState({
+            currentPage: 'main',
+            activePage: 'left'
+        });
     }
 
     render() {
