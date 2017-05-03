@@ -140,12 +140,11 @@ class App extends React.Component {
         NProgress.done();
         var _this = this;
         if(this.state.activePage === 'right'){
-            $(window).scrollTop(this.state.scrollTop);
             $('.active').animate({'left': '-100%'}, 1000);
             $('.right-buffer').animate({'left': '0%'}, 990, function(){
                 $('.main-page').css({'display': 'none'});
                 $('.right-buffer').css({'position': 'absolute', 'top': '0px'});
-                $('html,body').scrollTop(0);
+                $(window).scrollTop(0);
             });
         } else {
             $('.active').animate({'left': '0%'}, 990, function(){
