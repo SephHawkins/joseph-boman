@@ -22,18 +22,20 @@ var projectsJSON = [
 var project = {
     name: "MonoVirus",
     tagline: "Action RPG Dungeon Crawler Game",
+    about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
+    lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
     images: [
         {
             link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
-            alt: "Chambara-1"
+            alt: "MonoVirus-1"
         },
         {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
-            alt: "Chambara-2"
+            link: "http://josephboman.com/wp-content/uploads/2015/11/Monovirus13x9-e1447699039893.png",
+            alt: "MonoVirus-2"
         },
         {
-            link: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
-            alt: "Chambara-3"
+            link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus2-13x9-e1447698995565.png",
+            alt: "MonoVirus-3"
         }
     ],
     tags: [
@@ -49,7 +51,8 @@ var project = {
             name: "ui/ux",
             text: "Created UI elements using GIMP"
         }
-    ]
+    ],
+    downloadLink: "Windows"
 
 }
 var images = [
@@ -248,8 +251,8 @@ class RightBuffer extends React.Component {
                     <h3>ABOUT</h3>
                     <p>{this.props.data.about}</p>
                     <h3>LOOKING BACK</h3>
-                    <p>{this.props.data.about}</p>
-                    <DownloadLink type="Windows" />
+                    <p>{this.props.data.lookingBack}</p>
+                    <DownloadLink type={this.props.data.downloadLink} />
                 </div>
             </div>
         );
