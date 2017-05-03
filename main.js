@@ -383,7 +383,7 @@ function DownloadLink(props) {
             linkText = <p>Download</p>;
     }
     return (
-        <a href={props.link} className="downloadLink">
+        <a target="_blank" href={props.link} className="downloadLink">
             <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 512 512" width="40" className="downloadIcon">
                 <polygon points="512,392 0,256 400,256"></polygon>
                 <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
