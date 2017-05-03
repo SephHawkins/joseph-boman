@@ -198,6 +198,9 @@ class App extends React.Component {
     goBack() {
         NProgress.start();
         history.pushState({page: 'main'}, 'main-page', 'joseph-boman/');
+        var windowTop = $(window).scrollTop();
+        $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
+        $('.main-page').css({'display': 'block'});
         this.setState({
             currentPage: 'main',
             activePage: 'left'
