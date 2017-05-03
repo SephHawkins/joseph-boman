@@ -144,8 +144,13 @@ svg {
     font-family: "Lato", sans-serif;
 }
 
+.downloadLink {
+    margin: 20 auto;
+    width: 70%;
+    display: block;
+}
+
 .downloadLink svg {
-    margin-left: 20%;
     fill: var(--light-color);
 }
 
@@ -154,16 +159,17 @@ svg {
 }
 
 .downloadLink .downloadMiniIcon {
-    position: absolute;
-    left: 35px;
+    position: relative;
+    left: -5px;
+    top: -10px;
 }
 
 .downloadLink p {
     color: var(--light-color);
     margin: 0 5px;
     position: relative;
-    top: 5px;
-    left: -2px;
+    top: 15px;
+    left: -16px;
     font-family: "Josefin Sans", sans-serif;
     display: inline-block;
 }
