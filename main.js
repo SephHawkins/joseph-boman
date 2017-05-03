@@ -191,7 +191,7 @@ class App extends React.Component {
             this.setState({
                 currentPage: event.state.page,
                 activePage: 'right',
-                rightBuffer: rightBuffer;
+                rightBuffer: rightBuffer
             });
         }
     }
