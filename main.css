@@ -167,11 +167,11 @@ svg {
 .downloadLink p {
     color: var(--light-color);
     margin: 0 5px;
-    position: relative;
     top: 15px;
     left: -16px;
     font-family: "Josefin Sans", sans-serif;
     display: inline-block;
+    position: relative;
 }
 
 .img-selector {
