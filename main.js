@@ -121,6 +121,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.handleNavigation = this.handleNavigation.bind(this);
+        this.goBack = this.goBack.bind(this);
         this.state = {
             currentPage: 'Home',
             rightBuffer: project
