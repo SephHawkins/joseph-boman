@@ -326,7 +326,7 @@ function DownloadLink(props) {
             linkText = <p>Download for Windows</p>;
             break;
         default:
-            <p>Download</p>
+            linkText = <p>Download</p>;
     }
     return (
         <a href="link" className="downloadLink">
