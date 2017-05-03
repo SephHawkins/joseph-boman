@@ -359,7 +359,7 @@ function DownloadLink(props) {
     let miniIcon = null;
     switch(props.type){
         case "Windows":
-            miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 0 88 88" width="15" className="downloadMiniIcon">
+            miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 88 88" width="20" className="downloadMiniIcon">
                 <path d="M0 12.49l35.7-4.9v34.5H0M40 6.91L87.3 0V41.8H40M0 45.74h35.7v34.6L0 75.34M40 46.2H87.3v41.4L40 80.9"></path>
                 </svg>;
             linkText = <p>Download for Windows</p>;
