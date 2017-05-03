@@ -144,7 +144,7 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '0%'}, 990, function(){
                 $('.main-page').css({'display': 'none'});
                 $('.right-buffer').css({'position': 'absolute', 'top': '0px'});
-                $(window).scrollTop(0);
+                //$(window).scrollTop(0);
             });
         } else {
             $('.active').animate({'left': '0%'}, 990, function(){
@@ -174,7 +174,6 @@ class App extends React.Component {
 
     handleBack(event) {
         NProgress.start();
-        event.preventDefault();
         if(event.state.page=='main'){
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
