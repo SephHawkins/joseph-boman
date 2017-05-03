@@ -174,6 +174,7 @@ class App extends React.Component {
 
     handleBack(event) {
         NProgress.start();
+        e.preventDefault();
         if(event.state.page=='main'){
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
@@ -201,6 +202,7 @@ class App extends React.Component {
     }
 
     goBack() {
+        e.preventDefault();
         NProgress.start();
         history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');
         var windowTop = $(window).scrollTop();
