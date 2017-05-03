@@ -52,7 +52,8 @@ var project = {
             text: "Created UI elements using GIMP"
         }
     ],
-    downloadType: "Windows"
+    downloadType: "Windows",
+    downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPOWQ4MExTWXRYZmc&export=download"
 }
 var chambara = {
     name: "Chambara",
@@ -83,7 +84,8 @@ var chambara = {
             text: "Ran a ten person QA team and passed Sony's TRC"
         }
     ],
-    downloadType: "PlayStation"
+    downloadType: "PlayStation",
+    downloadLink: "https://store.playstation.com/#!/en-us/games/chambara/cid=UP1279-CUSA05224_00-CHAMBARA00000000"
 }
 var images = [
     {
@@ -288,7 +290,7 @@ class RightBuffer extends React.Component {
                     <p>{this.props.data.about}</p>
                     <h3>LOOKING BACK</h3>
                     <p>{this.props.data.lookBack}</p>
-                    <DownloadLink type={this.props.data.downloadType} />
+                    <DownloadLink type={this.props.data.downloadType} link={this.props.data.downloadLink} />
                 </div>
             </div>
         );
@@ -381,7 +383,7 @@ function DownloadLink(props) {
             linkText = <p>Download</p>;
     }
     return (
-        <a href="link" className="downloadLink">
+        <a href={props.link} className="downloadLink">
             <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 512 512" width="40" className="downloadIcon">
                 <polygon points="512,392 0,256 400,256"></polygon>
                 <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
