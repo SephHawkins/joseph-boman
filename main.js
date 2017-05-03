@@ -52,7 +52,7 @@ var project = {
             text: "Created UI elements using GIMP"
         }
     ],
-    downloadLink: "Windows"
+    downloadType: "Windows"
 }
 var chambara = {
     name: "Chambara",
@@ -83,7 +83,7 @@ var chambara = {
             text: "Ran a ten person QA team and passed Sony's TRC"
         }
     ],
-    downloadLink: "PlayStation"
+    downloadType: "PlayStation"
 }
 var images = [
     {
@@ -244,7 +244,6 @@ class ImageSlideshow extends React.Component {
         this.switchImage = this.switchImage.bind(this);
         this.state = {
             activeImage: 0,
-            images: this.props.images,
         }
     }
 
@@ -257,7 +256,7 @@ class ImageSlideshow extends React.Component {
     }
 
     render() {
-        const images = this.state.images;
+        const images = this.props.images;
         return (
             <div>
                 <div className="circle-img">
@@ -289,7 +288,7 @@ class RightBuffer extends React.Component {
                     <p>{this.props.data.about}</p>
                     <h3>LOOKING BACK</h3>
                     <p>{this.props.data.lookBack}</p>
-                    <DownloadLink type={this.props.data.downloadLink} />
+                    <DownloadLink type={this.props.data.downloadType} />
                 </div>
             </div>
         );
