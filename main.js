@@ -364,7 +364,10 @@ class Project extends React.Component {
     handleClick(e){
         NProgress.start();
         e.preventDefault();
+        var scrollTop = $(window).scrollTop();
+        $(window).scrollTop(0);
         history.pushState({page: '/joseph-boman/' + this.state.href}, 'testing', this.state.href);
+        $(window).scrollTop(scrollTop);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right", this);
     }
