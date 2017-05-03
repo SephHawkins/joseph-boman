@@ -19,6 +19,39 @@ var projectsJSON = [
     }
 ];
 
+var project = {
+    name: "MonoVirus",
+    tagline: "Action RPG Dungeon Crawler Game",
+    images: [
+        {
+            link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+            alt: "Chambara-1"
+        },
+        {
+            link: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
+            alt: "Chambara-2"
+        },
+        {
+            link: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
+            alt: "Chambara-3"
+        }
+    ],
+    tags: [
+        {
+            name: "coder",
+            text: "Built in C# using XNA and MonoDevelop"
+        },
+        {
+            name: "modeler",
+            text: "Made player and enemy models in Maya"
+        },
+        {
+            name: "ui/ux",
+            text: "Created UI elements using GIMP"
+        }
+    ]
+
+}
 var images = [
     {
         link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
@@ -130,16 +163,7 @@ class App extends React.Component {
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
-                <div className='right-buffer'>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 512 512" width="40" className='arrow' onClick={this.goBack}>
-                        <polygon points="512,392 0,256 400,256"></polygon>
-                        <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
-                    </svg>
-                    <ImageSlideshow images={images} />
-                    <h1>MonoVirus</h1>
-                    <h2>Action RPG Dungeon Crawler Game</h2>
-                    {tagDetails.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
-                </div>
+                <RightBuffer type="project" data={project} handleBack={this.goBack} />
             </div>
         );
     }
@@ -205,6 +229,33 @@ class ImageSlideshow extends React.Component {
             </div>
         );
     }
+}
+
+class RightBuffer extends React.Component {
+    constructor(props){
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className='right-buffer'>
+                <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                <ImageSlideshow images={this.props.data.images} />
+                <h1>{this.props.data.name}</h1>
+                <h2>{this.props.data.tagline}</h2>
+                {this.props.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+            </div>
+        );
+    }
+}
+
+function BackArrow(props) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" height={props.height} viewBox="0 0 512 512" width={props.width} className='arrow' onClick={props.handleBack}>
+            <polygon points="512,392 0,256 400,256"></polygon>
+            <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
+        </svg>
+    );
 }
 
 class Dot extends React.Component {
