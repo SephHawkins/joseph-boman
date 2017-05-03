@@ -157,7 +157,7 @@ class App extends React.Component {
 
     handleNavigation(link, moveTo, activeLink) {
         let rightBuffer = null;
-        if(link == 'chambara')
+        if(link == 'chambara') // TODO: Replace this with AJAX
             rightBuffer = chambara;
         else
             rightBuffer = project;
@@ -180,6 +180,18 @@ class App extends React.Component {
             this.setState({
                 currentPage: '',
                 activePage: 'left'
+            });
+        } else {
+            this.state.activeLink.setState({active: true});
+            let rightBuffer = null;
+            if(event.state.page == 'chambara') // TODO: Replace this with AJAX
+                rightBuffer = chambara;
+            else
+                rightBuffer = project;
+            this.setState({
+                currentPage: event.state.page,
+                activePage: 'right',
+                rightBuffer: rightBuffer;
             });
         }
     }
@@ -339,7 +351,7 @@ class Project extends React.Component {
     handleClick(e){
         NProgress.start();
         e.preventDefault();
-        history.pushState({page: 'main'}, 'testing', this.state.href);
+        history.pushState({page: this.state.href}, 'testing', this.state.href);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right", this);
     }
