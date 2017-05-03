@@ -52,7 +52,7 @@ var project = {
             text: "Created UI elements using GIMP"
         }
     ],
-    downloadLink: "None"
+    downloadLink: "Windows"
 
 }
 var images = [
