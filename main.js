@@ -243,7 +243,7 @@ class RightBuffer extends React.Component {
                 <ImageSlideshow images={this.props.data.images} />
                 <h1>{this.props.data.name}</h1>
                 <h2>{this.props.data.tagline}</h2>
-                {this.props.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+                {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
             </div>
         );
     }
