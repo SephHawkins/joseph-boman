@@ -157,6 +157,7 @@ class App extends React.Component {
     }
 
     handleNavigation(link, moveTo, activeLink) {
+        var scrollTop = $(window).scrollTop();
         let rightBuffer = null;
         if(link == 'chambara') // TODO: Replace this with AJAX
             rightBuffer = chambara;
@@ -166,7 +167,8 @@ class App extends React.Component {
             currentPage: link,
             activePage: moveTo,
             activeLink: activeLink,
-            rightBuffer: rightBuffer
+            rightBuffer: rightBuffer,
+            scrollTop: scrollTop
         });
     }
 
@@ -176,11 +178,13 @@ class App extends React.Component {
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
+            $(window).scrollTop(this.state.scrollTop);
             this.setState({
                 currentPage: 'main',
                 activePage: 'left'
             });
         } else {
+            var scrollTop = $(window).scrollTop();
             this.state.activeLink.setState({active: true});
             let rightBuffer = null;
             if(event.state.page == 'chambara') // TODO: Replace this with AJAX
@@ -190,17 +194,18 @@ class App extends React.Component {
             this.setState({
                 currentPage: event.state.page,
                 activePage: 'right',
-                rightBuffer: rightBuffer
+                rightBuffer: rightBuffer,
+                scrollTop: scrollTop
             });
         }
     }
 
     goBack() {
         NProgress.start();
-        history.pushState({page: 'main'}, 'main-page', 'joseph-boman/');
-        var windowTop = $(window).scrollTop();
+        history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
         $('.main-page').css({'display': 'block'});
+        $(window).scrollTop(this.state.scrollTop);
         this.setState({
             currentPage: 'main',
             activePage: 'left'
@@ -358,14 +363,14 @@ class Project extends React.Component {
     handleClick(e){
         NProgress.start();
         e.preventDefault();
-        history.pushState({page: this.state.href}, 'testing', this.state.href);
+        history.pushState({page: '/joseph-boman/' + this.state.href}, 'testing', this.state.href);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right", this);
     }
 
     render() {
         return (
-            <a href={"/project/" + this.state.href} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/joseph-boman/" + this.state.href} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 style={{marginTop: ((this.props.name.length >= 10 ) ? '20px' : '40px')}}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
