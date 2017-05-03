@@ -244,6 +244,13 @@ class RightBuffer extends React.Component {
                 <h1>{this.props.data.name}</h1>
                 <h2>{this.props.data.tagline}</h2>
                 {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+                <div className='text-body'>
+                    <h3>ABOUT</h3>
+                    <p>{this.props.data.about}</p>
+                    <h3>LOOKING BACK</h3>
+                    <p>{this.props.data.about}</p>
+                    <DownloadLink type="Windows" />
+                </div>
             </div>
         );
     }
@@ -306,6 +313,29 @@ class Project extends React.Component {
             </a>
         );
     }
+}
+
+function DownloadLink(props) {
+    let linkExtra = null;
+    switch(props.type){
+        case "Windows":
+            linkExtra = <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 0 88 88" width="15" className="downloadMiniIcon">
+                <path d="M0 12.49l35.7-4.9v34.5H0M40 6.91L87.3 0V41.8H40M0 45.74h35.7v34.6L0 75.34M40 46.2H87.3v41.4L40 80.9"></path>
+                </svg><p>Download for Windows</p>;
+            break;
+        default:
+            <p>Download</p>
+    }
+    return (
+        <a href="link" className="downloadLink">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 512 512" width="40" className="downloadIcon">
+                <polygon points="512,392 0,256 400,256"></polygon>
+                <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
+                <polygon points="0,0 200,0 50,50 20,256 50,462 200,512 0,512"></polygon>
+            </svg>
+            {linkExtra}
+        </a>
+    )
 }
 
 function Tags(props){
