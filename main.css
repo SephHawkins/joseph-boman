@@ -142,6 +142,7 @@ svg {
 .text-body p {
     margin: 0 10% 20 15%;
     font-family: "Lato", sans-serif;
+    white-space: pre;
 }
 
 .downloadLink {

@@ -22,8 +22,8 @@ var projectsJSON = [
 var project = {
     name: "MonoVirus",
     tagline: "Action RPG Dungeon Crawler Game",
-    about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.<br><br>To do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
-    lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.<br><br>Despite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
+    about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
+    lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
     images: [
         {
             link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
@@ -52,7 +52,7 @@ var project = {
             text: "Created UI elements using GIMP"
         }
     ],
-    downloadLink: "Testing"
+    downloadLink: "None"
 
 }
 var images = [
@@ -329,6 +329,8 @@ function DownloadLink(props) {
             linkText = <p>Download for Windows</p>;
             break;
         default:
+            miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 0 88 88" width="15" className="downloadMiniIcon">
+            </svg>;
             linkText = <p>Download</p>;
     }
     return (
