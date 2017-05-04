@@ -239,9 +239,20 @@ class App extends React.Component {
 function FrontPage(props){
     return (
         <div>
-            <FrontPageTop />
-            <Projects projects={props.projects} handleClick={props.handleClick} />
-            <About />
+            <PageBody topSection={<FrontPageTop />} bottomSection={<About /><Projects projects={props.projects} handleClick={props.handleClick} />} />
+        </div>
+    );
+}
+
+function PageBody(props){
+    return (
+        <div className='page'>
+            <div className='page-top'>
+                {props.topSection}
+            </div>
+            <div className='page-bottom'>
+                {props.bottomSection}
+            </div>
         </div>
     );
 }
