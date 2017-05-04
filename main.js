@@ -137,7 +137,9 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-
+        if(this.state.activePage === 'right'){
+            $('.main-page').css({'display': 'none'});
+        }
     }
 
     componentDidUpdate() {
