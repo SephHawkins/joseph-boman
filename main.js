@@ -326,18 +326,20 @@ class RightBuffer extends React.Component {
     render() {
         return (
             <div className='right-buffer'>
-                <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
-                <ImageSlideshow images={this.props.data.images} />
-                <h1>{this.props.data.name}</h1>
-                <h2>{this.props.data.tagline}</h2>
-                {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
-                <div className='text-body'>
+                <PageBody topSection={<div>
+                    <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                    <ImageSlideshow images={this.props.data.images} />
+                    <h1>{this.props.data.name}</h1>
+                    <h2>{this.props.data.tagline}</h2>
+                    {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+                </div>}
+                bottomSection={<div>
                     <h3>ABOUT</h3>
                     <p>{this.props.data.about}</p>
                     <h3>LOOKING BACK</h3>
                     <p>{this.props.data.lookBack}</p>
                     <DownloadLink type={this.props.data.downloadType} link={this.props.data.downloadLink} />
-                </div>
+                </div>} />
             </div>
         );
     }
