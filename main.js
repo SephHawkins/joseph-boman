@@ -122,9 +122,13 @@ class App extends React.Component {
         super(props);
         this.handleNavigation = this.handleNavigation.bind(this);
         this.goBack = this.goBack.bind(this);
+        var activePage = 'left';
+        if(window.location.href.contains('chambara')) // TODO: Generalize this check
+            activePage = 'right';
         this.state = {
             currentPage: 'Home',
-            rightBuffer: project
+            rightBuffer: project,
+            activePage: activePage
         }
         var _this = this;
         window.onpopstate = function(event) {
