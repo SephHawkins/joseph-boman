@@ -228,6 +228,7 @@ svg {
     text-align: center;
     margin: 0 auto;
     font-family: "Josefin Sans", sans-serif;
+    display: block;
 }
 
 .page-top h1 {
