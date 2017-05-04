@@ -259,7 +259,7 @@ function PageBody(props){
 
 function FrontPageTop(props){
     return (
-        <div className="front-page-top">
+        <div>
             <img src='http://josephboman.com/wp-content/themes/sephhawkins/images/joseph-boman.png' />
             <h1>Joseph Boman</h1>
             <h2>Programmer + Designer</h2>

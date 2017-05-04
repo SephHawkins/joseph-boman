@@ -127,19 +127,19 @@ svg {
     display: inline-block;
 }
 
-.text-body {
+.page-bottom {
     background-color: var(--dark-color);
     color: var(--light-color);
     overflow: hidden;
     margin-top: 10px;
 }
 
-.text-body h3 {
+.page-bottom h3 {
     font-family: "Josefin Sans", sans-serif;
     margin: 20px 10% 5px;
 }
 
-.text-body p {
+.page-bottom p {
     margin: 0 10% 20 15%;
     font-family: "Lato", sans-serif;
     white-space: pre-line;
@@ -215,28 +215,28 @@ svg {
     height: 16px;
 }
 
-.front-page-top {
+.page-top {
     margin-bottom: 20px;
 }
 
-.front-page-top img {
+.page-top img {
     display: block;
     width: 160px;
     margin: 10px auto;
 }
 
-.front-page-top h1, .front-page-top h2 {
+.page-top h1, .page-top h2 {
     text-align: center;
     margin: 0 auto;
     font-family: "Josefin Sans", sans-serif;
 }
 
-.front-page-top h1 {
+.page-top h1 {
     width: 80%;
     border-bottom: var(--dark-color) 1px solid;
 }
 
-.front-page-top h2 {
+.page-top h2 {
     margin-top: 5px;
 }
 
@@ -272,7 +272,7 @@ a:hover {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: var(--dark-color);
-    margin-bottom: 20px;
+    margin: 10px 0px;
 }
 
 .project h4 {
