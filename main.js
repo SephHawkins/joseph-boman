@@ -241,6 +241,7 @@ function FrontPage(props){
         <div>
             <FrontPageTop />
             <Projects projects={props.projects} handleClick={props.handleClick} />
+            <About />
         </div>
     );
 }
@@ -253,6 +254,13 @@ function FrontPageTop(props){
             <h2>Programmer + Designer</h2>
         </div>
     );
+}
+
+function About(props){
+    <div className="about">
+        <h3>ABOUT ME</h3>
+        <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a href='/joseph-boman/resume'>Resume</a> And that's about it</p>
+    </div>
 }
 
 function Projects(props){
