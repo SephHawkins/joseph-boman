@@ -269,7 +269,7 @@ function FrontPageTop(props){
 
 function About(props){
     return (
-    <div className="about">
+    <div>
         <h3>ABOUT ME</h3>
         <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a href='/joseph-boman/resume'>Resume</a> And that's about it</p>
     </div>
@@ -279,7 +279,7 @@ function About(props){
 function Projects(props){
     const projects = props.projects;
     return (
-        <div className='projects'>
+        <div>
             <h3>PROJECTS</h3>
             {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
