@@ -82,7 +82,7 @@ svg {
 .right-buffer .arrow {
     fill: var(--dark-color);
     float: left;
-    margin: 10px 15px;
+    margin: 0px 15px;
     font-size: 40px;
     line-height: 40px;
     display: inline-block;
