@@ -123,7 +123,7 @@ class App extends React.Component {
         this.handleNavigation = this.handleNavigation.bind(this);
         this.goBack = this.goBack.bind(this);
         var activePage = 'left';
-        if(window.location.href.contains('chambara')) // TODO: Generalize this check
+        if(window.location.href.indexOf('chambara') > -1) // TODO: Generalize this check
             activePage = 'right';
         this.state = {
             currentPage: 'Home',
