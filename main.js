@@ -139,6 +139,7 @@ class App extends React.Component {
     componentDidMount() {
         if(this.state.activePage === 'right'){
             $('.main-page').css({'display': 'none'});
+            $('.right-buffer').css({'position': 'absolute', 'top': '0px', 'left': '0%'});
         }
     }
 
