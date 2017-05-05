@@ -79,13 +79,20 @@ svg {
     background-color: var(--light-color);
 }
 
-.right-buffer .arrow {
+.right-buffer .page-top .arrow {
     fill: var(--dark-color);
     float: left;
     margin: 0px 15px;
     font-size: 40px;
     line-height: 40px;
     display: inline-block;
+    position: absolute;
+}
+
+.right-buffer .page-bottom .arrow {
+    fill: var(--light-color);
+    float: left;
+    margin: 0px 15px;
     position: absolute;
 }
 

@@ -352,6 +352,7 @@ class RightBuffer extends React.Component {
                     <h3>LOOKING BACK</h3>
                     <p>{this.props.data.lookBack}</p>
                     <DownloadLink type={this.props.data.downloadType} link={this.props.data.downloadLink} />
+                    <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                 </div>} />
             </div>
         );
