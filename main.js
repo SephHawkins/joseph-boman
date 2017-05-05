@@ -157,7 +157,6 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '0%'}, 990, function(){
                 $('.main-page').css({'display': 'none'});
                 $('.right-buffer').css({'position': 'relative', 'top': '0px'});
-                $('#footer').css({'position': 'fixed', 'bottom': '0', 'height': '60px'});
                 $(window).scrollTop(0);
             });
         } else {
@@ -166,7 +165,6 @@ class App extends React.Component {
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px'});
-                $('#footer').css({'position': 'fixed', 'bottom': '0', 'height': '60px'});
             });
         }
     }
@@ -219,7 +217,6 @@ class App extends React.Component {
         NProgress.start();
         var windowTop = $(window).scrollTop();
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
-        $('#footer').css({'position': 'relative', 'bottom': '60px', 'height': '0'});
         $('.main-page').css({'display': 'block'});
         $(window).scrollTop(this.state.scrollTop);
         history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');

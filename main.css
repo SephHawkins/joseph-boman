@@ -101,7 +101,12 @@ svg {
     fill: var(--light-color);
     float: left;
     margin: 0px 15px;
-    position: absolute;
+    position: relative;
+    top: -20px;
+}
+
+.right-buffer .page-bottom {
+    margin-bottom: 0px;
 }
 
 .right-buffer h1 {
