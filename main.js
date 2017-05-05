@@ -143,6 +143,9 @@ class App extends React.Component {
         if(this.state.activePage === 'right'){
             $('.main-page').css({'display': 'none'});
             $('.right-buffer').css({'position': 'absolute', 'top': '0px', 'left': '0%'});
+            history.replaceState({page: this.state.currentPage}, "Right Page", "");
+        } else {
+            history.replaceState({page: 'main'}, "Main Page", "");
         }
     }
 
@@ -484,7 +487,6 @@ function TagDetail(props){
 }
 
 (function() {
-    history.replaceState({page: 'main'}, "Main Page", "");
     ReactDOM.render(
         <App />,
         document.getElementById('contents')
