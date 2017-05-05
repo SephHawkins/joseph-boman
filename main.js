@@ -142,7 +142,7 @@ class App extends React.Component {
     componentDidMount() {
         if(this.state.activePage === 'right'){
             $('.main-page').css({'display': 'none'});
-            $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%'});
+            $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
             history.replaceState({page: this.state.currentPage}, "Right Page", "");
         } else {
             history.replaceState({page: 'main'}, "Main Page", "");
@@ -164,13 +164,14 @@ class App extends React.Component {
                 _this.state.activeLink.setState({active: false});
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
-                $('.right-buffer').css({'top': '60px'});
+                $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
             });
         }
     }
 
     handleNavigation(link, moveTo, activeLink) {
         var scrollTop = $(window).scrollTop();
+        $('.right-buffer').css({'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
         let rightBuffer = null;
         if(link == 'chambara') // TODO: Replace this with AJAX
             rightBuffer = chambara;
