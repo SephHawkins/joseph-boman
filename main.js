@@ -142,7 +142,7 @@ class App extends React.Component {
     componentDidMount() {
         if(this.state.activePage === 'right'){
             $('.main-page').css({'display': 'none'});
-            $('.right-buffer').css({'position': 'absolute', 'top': '0px', 'left': '0%'});
+            $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%'});
             history.replaceState({page: this.state.currentPage}, "Right Page", "");
         } else {
             history.replaceState({page: 'main'}, "Main Page", "");
@@ -156,7 +156,8 @@ class App extends React.Component {
             $('.active').animate({'left': '-100%'}, 1000);
             $('.right-buffer').animate({'left': '0%'}, 990, function(){
                 $('.main-page').css({'display': 'none'});
-                $('.right-buffer').css({'position': 'absolute', 'top': '0px'});
+                $('.right-buffer').css({'position': 'relative', 'top': '0px'});
+                $('#footer').css({'position': 'fixed', 'bottom': '0', 'height': '60px'});
                 $(window).scrollTop(0);
             });
         } else {
@@ -165,6 +166,7 @@ class App extends React.Component {
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px'});
+                $('#footer').css({'position': 'fixed', 'bottom': '0', 'height': '60px'});
             });
         }
     }
@@ -217,6 +219,7 @@ class App extends React.Component {
         NProgress.start();
         var windowTop = $(window).scrollTop();
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
+        $('#footer').css({'position': 'relative', 'bottom': '60px', 'height': '0'});
         $('.main-page').css({'display': 'block'});
         $(window).scrollTop(this.state.scrollTop);
         history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');
@@ -244,6 +247,9 @@ class App extends React.Component {
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
                 <RightBuffer type="project" data={this.state.rightBuffer} handleBack={this.goBack} />
+                <footer id="footer">
+                    <a href="#">Joseph Boman</a>
+                </footer>
             </div>
         );
     }
