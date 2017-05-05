@@ -45,7 +45,12 @@ footer h4 {
     font-weight: bold;
 }
 
-footer a {
+footer .email {
+    display: block;
+    text-align: center;
+}
+
+footer .linkedIn, footer .gitHub {
     margin: 0 20%;
 }
 

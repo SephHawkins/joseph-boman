@@ -247,7 +247,7 @@ class App extends React.Component {
                 <footer id="footer">
                     <p className='copyright'>Joseph Boman</p>
                     <h4>Contact Me</h4>
-                    <a href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
+                    <a className='email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
                     <a className='linkedIn' href='#'>LinkedIn</a>
                     <a className='gitHub' href='#'>GitHub</a>
                 </footer>
