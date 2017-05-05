@@ -368,10 +368,12 @@ class RightBuffer extends React.Component {
 
 function BackArrow(props) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" height={props.height} viewBox="0 0 512 512" width={props.width} className='arrow' onClick={props.handleBack}>
-            <polygon points="512,392 0,256 400,256"></polygon>
-            <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
-        </svg>
+        <div className='arrow-button'>
+            <svg xmlns="http://www.w3.org/2000/svg" height={props.height} viewBox="0 0 512 512" width={props.width} className='arrow' onClick={props.handleBack}>
+                <polygon points="512,392 0,256 400,256"></polygon>
+                <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>
+            </svg>
+        </div>
     );
 }
 

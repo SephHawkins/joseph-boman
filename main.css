@@ -1,6 +1,7 @@
 :root {
     --dark-color: #3F4851;
     --light-color: #F1FAEE;
+    --accent-color: #D46A6A;
     --link-hover-color: #1D2630;
     --blue-tag-color: powderblue;
     --green-tag-color: darkseagreen;
@@ -20,7 +21,7 @@ header {
     position: fixed;
     top: 0px;
     z-index: 2;
-    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 footer {
@@ -115,22 +116,28 @@ svg {
     background-color: var(--light-color);
 }
 
-.right-buffer .page-top .arrow {
-    fill: var(--dark-color);
-    float: left;
-    margin: 0px 15px;
-    font-size: 40px;
-    line-height: 40px;
-    display: inline-block;
+.arrow-button {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: var(--accent-color);
+}
+
+.page-top .arrow-button {
     position: absolute;
 }
 
-.right-buffer .page-bottom .arrow {
-    fill: var(--light-color);
-    float: left;
-    margin: 0px 15px;
+.page-bottom .arrow-button {
     position: relative;
-    top: -20px;
+    bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.right-buffer .arrow {
+    fill: var(--dark-color);
+    margin: 5px;
 }
 
 .right-buffer .page-bottom {
@@ -164,7 +171,7 @@ svg {
     overflow: hidden;
     white-space: nowrap;
     display: block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .circle-img img {
@@ -180,10 +187,11 @@ svg {
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .page-bottom h3 {
+    color: var(--accent-color);
     font-family: "Josefin Sans", sans-serif;
     margin: 20px 10% 5px;
 }
@@ -195,13 +203,18 @@ svg {
 }
 
 .downloadLink {
-    margin: 20 0 20 20%;
-    width: 80%;
+    margin: 15 auto 15 auto;
+    padding: 5px;
+    white-space: nowrap;
+    width: 70%;
     display: block;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: var(--accent-color);
+    border-radius: 5px;
 }
 
 .downloadLink svg {
-    fill: var(--light-color);
+    fill: var(--dark-color);
 }
 
 .downloadLink .downloadIcon {
@@ -215,7 +228,7 @@ svg {
 }
 
 .downloadLink p {
-    color: var(--light-color);
+    color: var(--dark-color);
     margin: 0 5px;
     top: 15px;
     left: -21px;
@@ -235,6 +248,7 @@ svg {
     margin: 0 10%;
     border-radius: 5px;
     padding: 0px 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .tag-details p {
@@ -262,6 +276,7 @@ svg {
     background-color: var(--dark-color);
     width: 16px;
     height: 16px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .page-top {
@@ -297,7 +312,6 @@ svg {
 
 .projects h3 {
     line-height: 40px;
-    color: var(--light-color);
     margin: 10px 10%;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
@@ -323,6 +337,7 @@ a:hover {
     border-bottom-left-radius: 5px;
     color: var(--dark-color);
     margin: 10px 0px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .project h4 {
