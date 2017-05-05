@@ -245,7 +245,7 @@ class App extends React.Component {
                 </div>
                 <RightBuffer type="project" data={this.state.rightBuffer} handleBack={this.goBack} />
                 <footer id="footer">
-                    <p className='copyright'>Joseph Boman</p>
+                    <p className='copyright'>Created by Joseph Boman</p>
                     <h4>Contact Me</h4>
                     <a className='email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
                     <a className='linkedIn' href='#'>LinkedIn</a>

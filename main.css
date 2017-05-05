@@ -20,7 +20,7 @@ header {
     position: fixed;
     top: 0px;
     z-index: 2;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
 }
 
 footer {
@@ -50,12 +50,13 @@ footer .email {
     text-align: center;
 }
 
-footer .linkedIn, footer .gitHub {
-    margin: 0 20%;
+footer .linkedIn {
+    margin-left: 20%;
 }
 
 footer .gitHub {
     float:right;
+    margin-right: 20%;
 }
 
 .nav-bar {
@@ -179,7 +180,7 @@ svg {
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
 }
 
 .page-bottom h3 {
