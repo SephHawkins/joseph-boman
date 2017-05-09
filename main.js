@@ -370,11 +370,11 @@ function PageBody(props){
 function MobileMenu(props) {
     return (
         <div className="mobile-menu">
-            <BasicLink link='#about' sublink=false handleClick={props.handleClick} name="ABOUT" />
-            <BasicLink link='#projects' sublink=false handleClick={props.handleClick} name="PROJECTS" />
-            {props.projects.map(project => <BasicLink key={project.name} sublink=true link={project.link} handleClick={props.handleClick} name={project.name} />)}
-            <BasicLink link='resume' sublink=false handleClick={props.handleClick} name="RESUME" />
-            <BasicLink link='#contact' sublink=false handleClick={props.handleClick} name="CONTACT" />
+            <BasicLink link='#about' sublink="false" handleClick={props.handleClick} name="ABOUT" />
+            <BasicLink link='#projects' sublink="false" handleClick={props.handleClick} name="PROJECTS" />
+            {props.projects.map(project => <BasicLink key={project.name} sublink="true" link={project.link} handleClick={props.handleClick} name={project.name} />)}
+            <BasicLink link='resume' sublink="false" handleClick={props.handleClick} name="RESUME" />
+            <BasicLink link='#contact' sublink="false" handleClick={props.handleClick} name="CONTACT" />
         </div>
     );
 }
@@ -396,7 +396,7 @@ class BasicLink extends React.Component {
 
     render() {
         return (
-            <a href={this.props.link} className={this.props.sublink ? 'sub-link' : ''} onClick={this.handleClick}>{this.props.name}</a>
+            <a href={this.props.link} className={(this.props.sublink === "true") ? 'sub-link' : ''} onClick={this.handleClick}>{this.props.name}</a>
         )
     }
 }
