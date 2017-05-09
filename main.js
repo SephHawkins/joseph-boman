@@ -308,7 +308,7 @@ class App extends React.Component {
                 activePage: 'right',
                 rightBuffer: rightBuffer,
                 scrollTop: scrollTop,
-                bufferType: 'project'
+                bufferType: bufferType
             });
         }
     }
