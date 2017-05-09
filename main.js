@@ -204,7 +204,14 @@ class App extends React.Component {
             history.replaceState({page: arr[arr.length - 2]}, "Right Page", "");
             this.state.activeLink = this.state[arr[arr.length - 2]];
         } else {
-            history.replaceState({page: 'main'}, "Main Page", "");
+            if(window.location.href.indexOf('#') != -1){
+                var link = '#' + window.location.href.split('#')[1];
+                var scrollTarget = $(link).offset().top - 80;
+                $(window).scrollTop(scrollTarget);
+                history.replaceState({page: link}, "Main Page", "");
+            } else {
+                history.replaceState({page: 'main'}, "Main Page", "");
+            }
         }
     }
 
@@ -275,6 +282,7 @@ class App extends React.Component {
                 this.handleNavigation(link, activePage, null);
             } else {
                 $(window).scrollTop(scrollTarget);
+                this.state.scrollTarget = scrollTarget;
                 NProgress.done();
             }
         }
