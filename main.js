@@ -258,8 +258,10 @@ class App extends React.Component {
         this.toggleMobileMenu();
         if(activePage === 'right'){
             NProgress.start();
-            if(link !== this.state.currentPage)
+            if(link !== this.state.currentPage) {
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
+                this.state[link].setState({active: true});
+            }
             this.handleNavigation(link, activePage, this.state[link]);
         } else {
             NProgress.start();
@@ -273,6 +275,7 @@ class App extends React.Component {
                 this.handleNavigation(link, activePage, null);
             } else {
                 $(window).scrollTop(scrollTarget);
+                NProgress.done();
             }
         }
 }
