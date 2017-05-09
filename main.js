@@ -299,6 +299,7 @@ class App extends React.Component {
                         </svg>
                     </nav>
                 </header>
+                <MobileMenu projects={projectsJSON} handleClikc={this.handleNavigation} />
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
@@ -336,6 +337,29 @@ function PageBody(props){
     );
 }
 
+class MobileMenu extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+
+    }
+
+    render(){
+        return (
+            <div className="mobile-menu">
+                <a href='#about' onClick={this.handleClick}>ABOUT</a>
+                <a href='#projects' onClick={this.handleClick}>PROJECTS</a>
+                {this.props.projects.map(project => <a key={project.name} className='sub-link' href={project.link} onClick={this.handleClick}>{project.name}</a>)}
+                <a href='resume' onClick={this.handleClick}>RESUME</a>
+                <a href='#contact' onClick={this.handleClick}>CONTACT</a>
+            </div>
+        );
+    }
+}
+
 function FrontPageTop(props){
     return (
         <div>
@@ -364,7 +388,7 @@ class About extends React.Component{
 
     render() {
         return (
-        <div>
+        <div id='about'>
             <h3>ABOUT ME</h3>
             <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a href='/joseph-boman/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
         </div>
@@ -375,7 +399,7 @@ class About extends React.Component{
 function Projects(props){
     const projects = props.projects;
     return (
-        <div>
+        <div id='projects'>
             <h3>PROJECTS</h3>
             {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
