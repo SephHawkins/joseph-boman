@@ -367,33 +367,37 @@ function PageBody(props){
     );
 }
 
-class MobileMenu extends React.Component {
+function MobileMenu(props) {
+    return (
+        <div className="mobile-menu">
+            <BasicLink link='#about' handleClick={this.props.handleClick} name="ABOUT" />
+            <BasicLink link='#projects' handleClick={this.props.handleClick} name="PROJECTS" />
+            {this.props.projects.map(project => <a key={project.name} className='sub-link' href={project.link} onClick={this.handleClick}>{project.name}</a>)}
+            <BasicLink link='resume' handleClick={this.props.handleClick} name="RESUME" />
+            <BasicLink link='#contact' handleClick={this.props.handleClick} name="CONTACT" />
+        </div>
+    );
+}
+class BasicLink extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(e){
+    handleClick(e) {
         NProgress.start();
         e.preventDefault();
-        var href = e.target.href;
-        if(href.indexOf('#') === -1){
-            this.props.handleClick(href, 'left');
+        if(this.props.link.indexOf('#') !== -1){
+            this.props.handleClick(this.props.link, 'left');
         } else {
-            this.props.handleClick(href, 'right');
+            this.props.handleClick(this.props.link, 'right');
         }
     }
 
-    render(){
+    render() {
         return (
-            <div className="mobile-menu">
-                <a href='#about' onClick={this.handleClick}>ABOUT</a>
-                <a href='#projects' onClick={this.handleClick}>PROJECTS</a>
-                {this.props.projects.map(project => <a key={project.name} className='sub-link' href={project.link} onClick={this.handleClick}>{project.name}</a>)}
-                <a href='resume' onClick={this.handleClick}>RESUME</a>
-                <a href='#contact' onClick={this.handleClick}>CONTACT</a>
-            </div>
-        );
+            <a href={this.props.link} onClick={this.handleClick}>{this.props.name}</a>
+        )
     }
 }
 
