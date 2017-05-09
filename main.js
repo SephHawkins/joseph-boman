@@ -175,6 +175,7 @@ class App extends React.Component {
         this.handleNavigation = this.handleNavigation.bind(this);
         this.goBack = this.goBack.bind(this);
         this.handleMobileMenu = this.handleMobileMenu.bind(this);
+        this.registerLink = this.registerLink.bind(this);
         var activePage = 'left';
         var rightBuffer = project;
         if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
@@ -317,6 +318,10 @@ class App extends React.Component {
         $('.mobile-menu').toggleClass('down');
     }
 
+    registerLink(name, object){
+        this.state[name] = object;
+    }
+
     render() {
         return (
             <div>
@@ -333,7 +338,7 @@ class App extends React.Component {
                 </header>
                 <MobileMenu projects={projectsJSON} handleClick={this.handleMobileMenu} />
                 <div className='main-page'>
-                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
+                    <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} registerLink={this.registerLink} />
                 </div>
                 <RightBuffer type={this.state.bufferType} data={this.state.rightBuffer} handleBack={this.goBack} />
                 <footer id="footer">
@@ -351,7 +356,7 @@ class App extends React.Component {
 function FrontPage(props){
     return (
         <div>
-            <PageBody topSection={<FrontPageTop />} bottomSection={<div><About handleClick={props.handleClick} /><Projects projects={props.projects} handleClick={props.handleClick} /></div>} />
+            <PageBody topSection={<FrontPageTop />} bottomSection={<div><About handleClick={props.handleClick} /><Projects projects={props.projects} handleClick={props.handleClick} registerLink={props.registerLink} /></div>} />
         </div>
     );
 }
@@ -444,7 +449,7 @@ function Projects(props){
     return (
         <div id='projects'>
             <h3>PROJECTS</h3>
-            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
+            {projects.map(project => <Project key={project.name} handleClick={props.handleClick} registerLink={props.registerLink} link={project.link} name={project.name} image={project.image} tags={project.tags} />)}
         </div>
     );
 }
@@ -570,6 +575,7 @@ class Dot extends React.Component {
 class Project extends React.Component {
     constructor(props){
         super(props);
+        this.props.registerLink(this.props.link, this);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
             href: this.props.link,
