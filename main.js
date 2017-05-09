@@ -443,7 +443,7 @@ class RightBuffer extends React.Component {
                     <h2>{this.props.data.tagline}</h2>
                     </div>}
                     bottomSection={<div>
-                        {this.props.data.sections.map(section => <ResumeSection key={section.name} name={section.name} data={section.data} />}
+                        {this.props.data.sections.map(section => <ResumeSection key={section.name} name={section.name} data={section.data} />)}
                         <DownloadLink type="pdf" link={this.props.data.downloadLink} />
                         <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                         </div>} />
