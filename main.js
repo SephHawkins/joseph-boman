@@ -554,6 +554,12 @@ function DownloadLink(props) {
             miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 88 88" width="20" className="downloadMiniIcon">
             </svg>;
             linkText = <p>Download the Rules</p>;
+            break;
+        case "pdf":
+            miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 88 88" width="20" className="downloadMiniIcon">
+            </svg>;
+            linkText = <p>Download as PDF</p>;
+            break;
         default:
             miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 88 88" width="20" className="downloadMiniIcon">
             </svg>;
