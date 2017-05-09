@@ -260,9 +260,10 @@ class App extends React.Component {
             NProgress.start();
             if(link !== this.state.currentPage) {
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
-                this.state[link].setState({active: true});
+                if(typeof this.state[link] != 'undefined')
+                    this.state[link].setState({active: true});
             }
-            this.handleNavigation(link, activePage, this.state[link]);
+            this.handleNavigation(link, activePage, ((typeof this.state[link] != 'undefined') ? this.state[link] : null));
         } else {
             NProgress.start();
             history.pushState({page: link}, link, '/joseph-boman/' + link);
