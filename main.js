@@ -283,7 +283,7 @@ class App extends React.Component {
 
     handleBack(event) {
         NProgress.start();
-        if(event.state.page=='main'){
+        if(event.state.page=='main' || event.state.page.indexOf('#') != -1){
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
