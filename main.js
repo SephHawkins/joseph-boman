@@ -249,23 +249,23 @@ class App extends React.Component {
         });
     }
 
-    handleMobileMenu(link, activePage, e) {
+    handleMobileMenu(link, activePage) {
         toggleMobileMenu();
         if(activePage === 'right'){
             NProgress.start();
-            e.preventDefault();
             if(link !== this.state.currentPage)
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
             handleNavigation(link, activePage, null)
         } else {
-            if(this.state.activePage === 'right'){
                 NProgress.start();
-                e.preventDefault();
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
                 var scrollTarget = $(link).offset().top - 80;
-                this.setState({
-                    scrollTarget: scrollTarget,
-                });
+                if(this.state.activePage === 'right'){
+                    this.state.scrollTarget = scrollTarget;
+                    handleNavigation(link, activePage, null);
+                } else {
+                    $(window).scrollTop(scrollTarget);
+                }
             }
         }
     }
@@ -375,11 +375,12 @@ class MobileMenu extends React.Component {
 
     handleClick(e){
         NProgress.start();
+        e.preventDefault();
         var href = e.target.href;
         if(href.indexOf('#') === -1){
-            this.props.handleClick(href, 'left', e);
+            this.props.handleClick(href, 'left');
         } else {
-            this.props.handleClick(href, 'right', e);
+            this.props.handleClick(href, 'right');
         }
     }
 
