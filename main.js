@@ -225,7 +225,7 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '0%'}, 990, function(){
                 $('.main-page').css({'display': 'none'});
                 $('.right-buffer').css({'position': 'relative', 'top': '0px'});
-                $(window).scrollTop(0);
+                //$(window).scrollTop(0);
             });
         } else {
             $('.active').animate({'left': '0%'}, 990, function(){
@@ -234,7 +234,7 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
                 if(_this.state.scrollTarget !== 0) {
-                    $(window).scrollTop(_this.state.scrollTarget);
+                    //$(window).scrollTop(_this.state.scrollTarget);
                 }
             });
         }
@@ -283,7 +283,7 @@ class App extends React.Component {
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
                 this.handleNavigation(link, activePage, null);
             } else {
-                $(window).scrollTop(scrollTarget);
+                //$(window).scrollTop(scrollTarget);
                 this.state.scrollTarget = scrollTarget;
                 NProgress.done();
             }
@@ -296,7 +296,7 @@ class App extends React.Component {
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
-            $(window).scrollTop(this.state.scrollTarget);
+            //$(window).scrollTop(this.state.scrollTarget);
             this.setState({
                 currentPage: 'main',
                 activePage: 'left'
@@ -327,7 +327,7 @@ class App extends React.Component {
         var windowTop = $(window).scrollTop();
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
         $('.main-page').css({'display': 'block'});
-        $(window).scrollTop(this.state.scrollTarget);
+        //$(window).scrollTop(this.state.scrollTarget);
         history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');
         this.setState({
             currentPage: 'main',
@@ -449,9 +449,9 @@ class About extends React.Component{
         NProgress.start();
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
-        $(window).scrollTop(0);
+        //$(window).scrollTop(0);
         history.pushState({page: 'resume'}, 'Resume', '/joseph-boman/resume');
-        $(window).scrollTop(scrollTop);
+        //$(window).scrollTop(scrollTop);
         this.props.handleClick('resume', "right", this);
     }
 
@@ -608,9 +608,9 @@ class Project extends React.Component {
         NProgress.start();
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
-        $(window).scrollTop(0);
+        //$(window).scrollTop(0);
         history.pushState({page: this.state.href}, 'testing', this.state.href);
-        $(window).scrollTop(scrollTop);
+        //$(window).scrollTop(scrollTop);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right", this);
     }
