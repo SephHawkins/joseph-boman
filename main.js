@@ -446,7 +446,7 @@ class RightBuffer extends React.Component {
                 <div className='right-buffer'>
                     <PageBody topSection={<div>
                     <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
-                    <h1>{this.props.data.name}</h1>
+                    <h1 style='margin-top: 10px; padding-top: 20px;'>{this.props.data.name}</h1>
                     <h2>{this.props.data.tagline}</h2>
                     </div>}
                     bottomSection={<div>
