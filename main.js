@@ -199,7 +199,9 @@ class App extends React.Component {
         if(this.state.activePage === 'right'){
             $('.main-page').css({'display': 'none'});
             $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
-            history.replaceState({page: this.state.currentPage}, "Right Page", "");
+            var arr = window.location.href.split('/');
+            history.replaceState({page: arr[arr.length - 1]}, "Right Page", "");
+            this.state.activeLink = this.state[arr[arr.length - 1]];
         } else {
             history.replaceState({page: 'main'}, "Main Page", "");
         }
@@ -257,7 +259,7 @@ class App extends React.Component {
             NProgress.start();
             if(link !== this.state.currentPage)
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
-            this.handleNavigation(link, activePage, null);
+            this.handleNavigation(link, activePage, this.state[link]);
         } else {
             NProgress.start();
             history.pushState({page: link}, link, '/joseph-boman/' + link);
@@ -266,7 +268,7 @@ class App extends React.Component {
                 this.state.scrollTarget = scrollTarget;
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
                 $('.main-page').css({'display': 'block'});
-                this.handleNavigation(link, activePage, null);
+                this.handleNavigation(link, activePage, this.state[link]);
             } else {
                 $(window).scrollTop(scrollTarget);
             }
