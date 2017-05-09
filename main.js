@@ -221,7 +221,7 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
                 if(_this.state.scrollTarget !== 0) {
-                    $(window).scrollTop(this.state.scrollTarget);
+                    $(window).scrollTop(_this.state.scrollTarget);
                     _this.state.scrollTarget = 0;
                 }
             });
