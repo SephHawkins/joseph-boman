@@ -457,7 +457,7 @@ function ResumeSection(props) {
     return (
         <div>
             <h3>{props.name}</h3>
-            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right'>{section.time}</h4><p>{section.details}</p></div>)}
+            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right'>{section.time}</span></h4><p>{section.details}</p></div>)}
         </div>
     );
 }
