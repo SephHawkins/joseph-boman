@@ -87,6 +87,53 @@ var chambara = {
     downloadType: "PlayStation",
     downloadLink: "https://store.playstation.com/#!/en-us/games/chambara/cid=UP1279-CUSA05224_00-CHAMBARA00000000"
 }
+
+var resume = {
+    name: "Joseph Boman",
+    tagline: "Technical Associate at Kaiser Permanente",
+    sections: [
+        {
+            name: "EDUCATION",
+            data: [
+                {
+                    name: "University of Southern California",
+                    time: "2012-2016",
+                    details: "B.S. in Computer Science (Games)"
+                }
+            ]
+        },
+        {
+            name: "WORK EXPERIENCE",
+            data: [
+                {
+                    name: "Kaiser Permanente",
+                    time: "2016-Present",
+                    details: "Rotation Program at Kaiser Permanente. Rotated through four teams over two years"
+                },
+                {
+                    name: "Information Sciences Institute",
+                    time: "2015-2016",
+                    details: "Worked on various Dev-Ops roles at USC's ISI. Worked under Ted Faber. Cool stuff"
+                }
+            ]
+        },
+        {
+            name: "PROJECTS",
+            data: [
+                {
+                    name: "Chambara",
+                    time: "2016",
+                    details: "Did a bunch of work for QA stuff. Had a fun time. Tons of fun."
+                },
+                {
+                    name: "MonoVirus",
+                    time: "2015",
+                    details: "Writing stuff for all of these for testing is hard. Should've just lorum ipsemed it."
+                }
+            ]
+        }
+    ]
+}
 var images = [
     {
         link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
@@ -173,10 +220,14 @@ class App extends React.Component {
         var scrollTop = $(window).scrollTop();
         $('.right-buffer').css({'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
         let rightBuffer = null;
-        if(link == 'chambara') // TODO: Replace this with AJAX
+        if(link == 'resume') {// TODO: Replace this with AJAX
+            rightBuffer = resume;
+            bufferType = 'resume';
+        }
+        else {
             rightBuffer = chambara;
-        else
-            rightBuffer = project;
+            bufferType = 'project';
+        }
         this.setState({
             currentPage: link,
             activePage: moveTo,
@@ -260,7 +311,7 @@ class App extends React.Component {
 function FrontPage(props){
     return (
         <div>
-            <PageBody topSection={<FrontPageTop />} bottomSection={<div><About /><Projects projects={props.projects} handleClick={props.handleClick} /></div>} />
+            <PageBody topSection={<FrontPageTop />} bottomSection={<div><About handleClick={props.handleClick} /><Projects projects={props.projects} handleClick={props.handleClick} /></div>} />
         </div>
     );
 }
@@ -288,11 +339,26 @@ function FrontPageTop(props){
     );
 }
 
-function About(props){
+class About extends React.Component(props){
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+        NProgress.start();
+        e.preventDefault();
+        var scrollTop = $(window).scrollTop();
+        $(window).scrollTop(0);
+        history.pushState({page: 'resume'}, 'Resume', '/joseph-boman/resume');
+        $(window).scrollTop(scrollTop);
+        this.props.handleClick('resume', "right", this);
+    }
+
     return (
     <div>
         <h3>ABOUT ME</h3>
-        <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a href='/joseph-boman/resume'>Resume</a> And that's about it</p>
+        <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a href='/joseph-boman/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
     </div>
     );
 }
@@ -345,26 +411,53 @@ class RightBuffer extends React.Component {
     }
 
     render() {
-        return (
-            <div className='right-buffer'>
-                <PageBody topSection={<div>
+        switch(this.props.type) {
+            case "project":
+            return (
+                <div className='right-buffer'>
+                    <PageBody topSection={<div>
+                        <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                        <ImageSlideshow images={this.props.data.images} />
+                        <h1>{this.props.data.name}</h1>
+                        <h2>{this.props.data.tagline}</h2>
+                        {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+                    </div>}
+                    bottomSection={<div>
+                        <h3>ABOUT</h3>
+                        <p>{this.props.data.about}</p>
+                        <h3>LOOKING BACK</h3>
+                        <p>{this.props.data.lookBack}</p>
+                        <DownloadLink type={this.props.data.downloadType} link={this.props.data.downloadLink} />
+                        <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                    </div>} />
+                </div>
+            );
+            case "resume":
+            return (
+                <div className='right-buffer'>
+                    <PageBody topSection={<div>
                     <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
-                    <ImageSlideshow images={this.props.data.images} />
                     <h1>{this.props.data.name}</h1>
                     <h2>{this.props.data.tagline}</h2>
-                    {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
-                </div>}
-                bottomSection={<div>
-                    <h3>ABOUT</h3>
-                    <p>{this.props.data.about}</p>
-                    <h3>LOOKING BACK</h3>
-                    <p>{this.props.data.lookBack}</p>
-                    <DownloadLink type={this.props.data.downloadType} link={this.props.data.downloadLink} />
-                    <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
-                </div>} />
-            </div>
-        );
+                    </div>}
+                    bottomSection={<div>
+                        {this.props.data.sections.map(section => <ResumeSection key={section.name} name={section.name} data={section.data} />}
+                        <DownloadLink type="pdf" link={this.props.data.downloadLink} />
+                        <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                        </div>} />
+                </div>
+            );
+        }
     }
+}
+
+function ResumeSection(props) {
+    return (
+        <div>
+            <h3>{props.name}</h3>
+            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right'>{section.time}</h4><p>{section.details}</p></div>)}
+        </div>
+    );
 }
 
 function BackArrow(props) {
@@ -413,7 +506,7 @@ class Project extends React.Component {
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
         $(window).scrollTop(0);
-        history.pushState({page: '/joseph-boman/' + this.state.href}, 'testing', this.state.href);
+        history.pushState({page: this.state.href}, 'testing', this.state.href);
         $(window).scrollTop(scrollTop);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right", this);
