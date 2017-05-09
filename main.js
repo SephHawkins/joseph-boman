@@ -299,7 +299,7 @@ class App extends React.Component {
                         </svg>
                     </nav>
                 </header>
-                <MobileMenu projects={projectsJSON} handleClikc={this.handleNavigation} />
+                <MobileMenu projects={projectsJSON} handleClick={this.handleNavigation} />
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
