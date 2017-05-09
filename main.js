@@ -185,7 +185,8 @@ class App extends React.Component {
             currentPage: 'Home',
             rightBuffer: rightBuffer,
             bufferType: 'project', // TODO: This should be defined by the URL
-            activePage: activePage
+            activePage: activePage,
+            scrollTarget: 0
         }
         var _this = this;
         window.onpopstate = function(event) {
