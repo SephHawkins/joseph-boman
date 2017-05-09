@@ -247,7 +247,7 @@ class App extends React.Component {
         this.setState({
             currentPage: link,
             activePage: moveTo,
-            activeLink: activeLink,
+            activeLink: (activeLink == null ? this.state.activeLink : activeLink),
             rightBuffer: rightBuffer,
             bufferType: bufferType,
             scrollTop: scrollTop
@@ -270,7 +270,7 @@ class App extends React.Component {
                 var windowTop = $(window).scrollTop();
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
                 $('.main-page').css({'display': 'block'});
-                this.handleNavigation(link, activePage, this.state[link]);
+                this.handleNavigation(link, activePage, null);
             } else {
                 $(window).scrollTop(scrollTarget);
             }
@@ -381,7 +381,7 @@ function PageBody(props){
 function MobileMenu(props) {
     return (
         <div className="mobile-menu">
-            <BasicLink link='#about' sublink="false" handleClick={props.handleClick} name="ABOUT" />
+            <BasicLink link='#about' sublink="false" handleClick={props.handleClick} name="ABOUT ME" />
             <BasicLink link='#projects' sublink="false" handleClick={props.handleClick} name="PROJECTS" />
             {props.projects.map(project => <BasicLink key={project.name} sublink="true" link={project.link} handleClick={props.handleClick} name={project.name} />)}
             <BasicLink link='resume' sublink="false" handleClick={props.handleClick} name="RESUME" />
