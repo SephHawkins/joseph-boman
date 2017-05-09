@@ -226,7 +226,6 @@ class App extends React.Component {
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
                 if(_this.state.scrollTarget !== 0) {
                     $(window).scrollTop(_this.state.scrollTarget);
-                    _this.state.scrollTarget = 0;
                 }
             });
         }
@@ -287,7 +286,7 @@ class App extends React.Component {
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
-            $(window).scrollTop(this.state.scrollTop);
+            $(window).scrollTop(this.state.scrollTarget);
             this.setState({
                 currentPage: 'main',
                 activePage: 'left'
@@ -318,7 +317,7 @@ class App extends React.Component {
         var windowTop = $(window).scrollTop();
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
         $('.main-page').css({'display': 'block'});
-        $(window).scrollTop(this.state.scrollTop);
+        $(window).scrollTop(this.state.scrollTarget);
         history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');
         this.setState({
             currentPage: 'main',
