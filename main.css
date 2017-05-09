@@ -39,6 +39,10 @@ header {
     padding-bottom: 10px;
 }
 
+.mobile-menu.down {
+    top: 60px;
+}
+
 .mobile-menu a {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
