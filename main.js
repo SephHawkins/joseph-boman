@@ -250,7 +250,7 @@ class App extends React.Component {
     }
 
     handleMobileMenu(link, activePage) {
-        toggleMobileMenu();
+        this.toggleMobileMenu();
         if(activePage === 'right'){
             NProgress.start();
             if(link !== this.state.currentPage)
