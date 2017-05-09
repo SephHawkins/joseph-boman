@@ -98,7 +98,8 @@ var resume = {
                 {
                     name: "University of Southern California",
                     time: "2012-2016",
-                    details: "B.S. in Computer Science (Games)"
+                    subname: "B.S. in Computer Science (Games)",
+                    details: ""
                 }
             ]
         },
@@ -106,12 +107,14 @@ var resume = {
             name: "WORK EXPERIENCE",
             data: [
                 {
-                    name: "Kaiser Permanente",
+                    name: "Technical Associate",
+                    subname: "Kaiser Permanente",
                     time: "2016-Present",
                     details: "Rotation Program at Kaiser Permanente. Rotated through four teams over two years"
                 },
                 {
-                    name: "Information Sciences Institute",
+                    name: "Undergraduate Researcher",
+                    subname: "Information Sciences Institute",
                     time: "2015-2016",
                     details: "Worked on various Dev-Ops roles at USC's ISI. Worked under Ted Faber. Cool stuff"
                 }
@@ -122,11 +125,13 @@ var resume = {
             data: [
                 {
                     name: "Chambara",
+                    subname: "team ok",
                     time: "2016",
                     details: "Did a bunch of work for QA stuff. Had a fun time. Tons of fun."
                 },
                 {
                     name: "MonoVirus",
+                    subname: "",
                     time: "2015",
                     details: "Writing stuff for all of these for testing is hard. Should've just lorum ipsemed it."
                 }
@@ -459,7 +464,7 @@ function ResumeSection(props) {
     return (
         <div>
             <h3>{props.name}</h3>
-            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right'>{section.time}</span></h4><p>{section.details}</p></div>)}
+            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right'>{section.time}</span></h4><h5>{section.subname}</h5><p>{section.details}</p></div>)}
         </div>
     );
 }

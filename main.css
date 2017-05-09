@@ -194,6 +194,23 @@ svg {
     color: var(--accent-color);
     font-family: "Josefin Sans", sans-serif;
     margin: 20px 10% 5px;
+    font-size: 20px;
+}
+
+.page-bottom h4 {
+    margin: 5px 10% 0px 10%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+}
+
+.right {
+    float: right;
+}
+
+.page-bottom h5 {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0 12%;
+    font-size: 14px;
 }
 
 .page-bottom p {
