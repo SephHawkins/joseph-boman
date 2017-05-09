@@ -178,6 +178,7 @@ class App extends React.Component {
         this.state = {
             currentPage: 'Home',
             rightBuffer: rightBuffer,
+            bufferType: 'project', // TODO: This should be defined by the URL
             activePage: activePage
         }
         var _this = this;
@@ -219,7 +220,7 @@ class App extends React.Component {
     handleNavigation(link, moveTo, activeLink) {
         var scrollTop = $(window).scrollTop();
         $('.right-buffer').css({'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
-        let rightBuffer = null;
+        let rightBuffer = null, bufferType = null;
         if(link == 'resume') {// TODO: Replace this with AJAX
             rightBuffer = resume;
             bufferType = 'resume';
@@ -233,6 +234,7 @@ class App extends React.Component {
             activePage: moveTo,
             activeLink: activeLink,
             rightBuffer: rightBuffer,
+            bufferType: bufferType,
             scrollTop: scrollTop
         });
     }
@@ -295,7 +297,7 @@ class App extends React.Component {
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
-                <RightBuffer type="project" data={this.state.rightBuffer} handleBack={this.goBack} />
+                <RightBuffer type={this.state.bufferType} data={this.state.rightBuffer} handleBack={this.goBack} />
                 <footer id="footer">
                     <p className='copyright'>Created by Joseph Boman</p>
                     <h4>Contact Me</h4>
