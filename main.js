@@ -174,6 +174,7 @@ class App extends React.Component {
         super(props);
         this.handleNavigation = this.handleNavigation.bind(this);
         this.goBack = this.goBack.bind(this);
+        this.handleMobileMenu = this.handleMobileMenu.bind(this);
         var activePage = 'left';
         var rightBuffer = project;
         if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
@@ -218,6 +219,10 @@ class App extends React.Component {
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
+                if(this.state.scrollTarget !== 0) {
+                    $(window).scrollTop(this.state.scrollTarget);
+                    this.state.scrollTarget = 0;
+                }
             });
         }
     }
@@ -242,6 +247,27 @@ class App extends React.Component {
             bufferType: bufferType,
             scrollTop: scrollTop
         });
+    }
+
+    handleMobileMenu(link, activePage, e) {
+        toggleMobileMenu();
+        if(activePage === 'right'){
+            NProgress.start();
+            e.preventDefault();
+            if(link !== this.state.currentPage)
+                history.pushState({page: link}, link, '/joseph-boman/' + link);
+            handleNavigation(link, activePage, null)
+        } else {
+            if(this.state.activePage === 'right'){
+                NProgress.start();
+                e.preventDefault();
+                history.pushState({page: link}, link, '/joseph-boman/' + link);
+                var scrollTarget = $(link).offset().top - 80;
+                this.setState({
+                    scrollTarget: scrollTarget,
+                });
+            }
+        }
     }
 
     handleBack(event) {
@@ -303,7 +329,7 @@ class App extends React.Component {
                         </svg>
                     </nav>
                 </header>
-                <MobileMenu projects={projectsJSON} handleClick={this.handleNavigation} />
+                <MobileMenu projects={projectsJSON} handleClick={this.handleMobileMenu} />
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} />
                 </div>
@@ -348,7 +374,13 @@ class MobileMenu extends React.Component {
     }
 
     handleClick(e){
-        e.preventDefault();
+        NProgress.start();
+        var href = e.target.href;
+        if(href.indexOf('#') === -1){
+            this.props.handleClick(href, 'left', e);
+        } else {
+            this.props.handleClick(href, 'right', e);
+        }
     }
 
     render(){

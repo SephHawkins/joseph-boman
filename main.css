@@ -50,6 +50,10 @@ header {
     display: block;
 }
 
+.mobile-menu a:hover {
+    color: var(--accent-color);
+}
+
 .mobile-menu .sub-link {
     margin: 10px 0px 10px 15%;
 }
