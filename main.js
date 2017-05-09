@@ -295,16 +295,20 @@ class App extends React.Component {
         } else {
             var scrollTop = $(window).scrollTop();
             this.state.activeLink.setState({active: true});
-            let rightBuffer = null;
-            if(event.state.page == 'chambara') // TODO: Replace this with AJAX
+            let rightBuffer = null, bufferType = null;
+            if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
                 rightBuffer = chambara;
-            else
-                rightBuffer = project;
+                bufferType = 'project'
+            } else {
+                rightBuffer = resume;
+                bufferType = 'resume';
+            }
             this.setState({
                 currentPage: event.state.page,
                 activePage: 'right',
                 rightBuffer: rightBuffer,
-                scrollTop: scrollTop
+                scrollTop: scrollTop,
+                bufferType: 'project'
             });
         }
     }
