@@ -339,7 +339,7 @@ function FrontPageTop(props){
     );
 }
 
-class About extends React.Component(props){
+class About extends React.Component{
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
