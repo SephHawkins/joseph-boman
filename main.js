@@ -200,7 +200,6 @@ class App extends React.Component {
             $('.main-page').css({'display': 'none'});
             $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
             var arr = window.location.href.split('/');
-            console.log(arr);
             history.replaceState({page: arr[arr.length - 2]}, "Right Page", "");
             this.state.activeLink = this.state[arr[arr.length - 2]];
         } else {
@@ -208,7 +207,7 @@ class App extends React.Component {
                 var link = '#' + window.location.href.split('#')[1];
                 var scrollTarget = $(link).offset().top - 80;
                 this.state.scrollTarget = scrollTarget;
-                //$(window).scrollTop(scrollTarget);
+                console.log(scrollTarget);
                 window.scrollTo(0, scrollTarget);
                 history.replaceState({page: link}, "Main Page", "");
             } else {
