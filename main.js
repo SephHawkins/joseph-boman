@@ -255,14 +255,14 @@ class App extends React.Component {
             NProgress.start();
             if(link !== this.state.currentPage)
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
-            handleNavigation(link, activePage, null);
+            this.handleNavigation(link, activePage, null);
         } else {
             NProgress.start();
             history.pushState({page: link}, link, '/joseph-boman/' + link);
             var scrollTarget = $(link).offset().top - 80;
             if(this.state.activePage === 'right'){
                 this.state.scrollTarget = scrollTarget;
-                handleNavigation(link, activePage, null);
+                this.handleNavigation(link, activePage, null);
             } else {
                 $(window).scrollTop(scrollTarget);
             }
