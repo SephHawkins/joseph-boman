@@ -220,9 +220,9 @@ class App extends React.Component {
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
-                if(this.state.scrollTarget !== 0) {
+                if(_this.state.scrollTarget !== 0) {
                     $(window).scrollTop(this.state.scrollTarget);
-                    this.state.scrollTarget = 0;
+                    _this.state.scrollTarget = 0;
                 }
             });
         }
