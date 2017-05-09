@@ -200,8 +200,9 @@ class App extends React.Component {
             $('.main-page').css({'display': 'none'});
             $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
             var arr = window.location.href.split('/');
-            history.replaceState({page: arr[arr.length - 1]}, "Right Page", "");
-            this.state.activeLink = this.state[arr[arr.length - 1]];
+            console.log(arr);
+            history.replaceState({page: arr[arr.length - 2]}, "Right Page", "");
+            this.state.activeLink = this.state[arr[arr.length - 2]];
         } else {
             history.replaceState({page: 'main'}, "Main Page", "");
         }
