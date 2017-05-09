@@ -209,7 +209,7 @@ class App extends React.Component {
                 var scrollTarget = $(link).offset().top - 80;
                 this.state.scrollTarget = scrollTarget;
                 //$(window).scrollTop(scrollTarget);
-                window.scrollTo(scrollTarget);
+                window.scrollTo(0, scrollTarget);
                 history.replaceState({page: link}, "Main Page", "");
             } else {
                 history.replaceState({page: 'main'}, "Main Page", "");
