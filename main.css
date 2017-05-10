@@ -513,6 +513,9 @@ a.project:hover {
         max-width: 1200px;
         margin: 0px auto;
     }
+    .nav-bar svg {
+        display: none;
+    }
     .page-top > div, .page-bottom > div {
         max-width: 1440px;
         margin: 0px auto;
