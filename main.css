@@ -425,6 +425,14 @@ a.project:hover {
     white-space: normal;
 }
 
+.project h4.thin-margin {
+    margin-top: 20px;
+}
+
+.project h4.thick-margin {
+    margin-top: 40px;
+}
+
 .project img {
     height: 120px;
     display: inline-block;
@@ -551,15 +559,25 @@ a.project:hover {
         line-height: 60px;
     }
 
+    .project h4.thin-margin {
+        margin-top: 0px;
+    }
+
+    .project h4.thick-margin {
+        margin-top: 0px;
+    }
+
     .project:hover img {
         filter: none;
     }
 
     .project img {
         width: 100%;
+        height: auto;
         left: 29px;
         z-index: 1;
         filter: grayscale(20%);
         transition: filter 0.5s ease-out;
+        position: absolute;
     }
 }
