@@ -67,6 +67,7 @@ footer {
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--dark-color);
+    padding-top: 5;
 }
 
 footer p {

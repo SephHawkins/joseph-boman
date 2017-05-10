@@ -2,7 +2,7 @@ var projectsJSON = [
     {
         name: "Chambara",
         link: "chambara",
-        image: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
+        image: "http://josephboman.com/wp-content/uploads/2015/11/Chambara13x9-e1447699049873.png",
         tags: ["qa","coder"]
     },
     {
