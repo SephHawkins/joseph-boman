@@ -355,29 +355,13 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <header id="header">
-                    <nav className="nav-bar">
-                        <a href="/">
-                            <img src="http://josephboman.com/wp-content/themes/sephhawkins/images/logo-min.png" />
-                            <p><span>oseph</span> oman</p>
-                        </a>
-                        <svg onClick={this.toggleMobileMenu} height="60" width="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"></path>
-                        </svg>
-                    </nav>
-                </header>
+                <Header toggleMobileMenu={this.toggleMobileMenu} />
                 <MobileMenu projects={projectsJSON} handleClick={this.handleMobileMenu} />
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} registerLink={this.registerLink} />
                 </div>
                 <RightBuffer type={this.state.bufferType} data={this.state.rightBuffer} handleBack={this.goBack} />
-                <footer id="footer">
-                    <p className='copyright'>Created by Joseph Boman</p>
-                    <h4 id='contact'>Contact Me</h4>
-                    <a className='email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
-                    <a className='linkedIn' href='#'>LinkedIn</a>
-                    <a className='gitHub' href='#'>GitHub</a>
-                </footer>
+                <Footer />
             </div>
         );
     }
@@ -388,6 +372,34 @@ function FrontPage(props){
         <div>
             <PageBody topSection={<FrontPageTop />} bottomSection={<div><About handleClick={props.handleClick} /><Projects projects={props.projects} handleClick={props.handleClick} registerLink={props.registerLink} /></div>} />
         </div>
+    );
+}
+
+function Header(props){
+    return (
+        <header id="header">
+            <nav className="nav-bar">
+                <a href="/">
+                    <img src="http://josephboman.com/wp-content/themes/sephhawkins/images/logo-min.png" />
+                    <p><span>oseph</span> oman</p>
+                </a>
+                <svg onClick={props.toggleMobileMenu} height="60" width="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"></path>
+                </svg>
+            </nav>
+        </header>
+    );
+}
+
+function Footer(props){
+    return (
+        <footer id="footer">
+            <p className='copyright'>Created by Joseph Boman - 2017</p>
+            <h4 id='contact'>Contact Me</h4>
+            <a className='email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
+            <a className='linkedIn' href='#'>LinkedIn</a>
+            <a className='gitHub' href='#'>GitHub</a>
+        </footer>
     );
 }
 
