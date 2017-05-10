@@ -640,7 +640,7 @@ class Project extends React.Component {
         return (
             <a href={"/joseph-boman/" + this.state.href} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
-                <h4 className={((this.props.name.length >= 10 ) ? 'thick-margin' : 'thin-margin')}>{this.props.name}</h4>
+                <h4 className={((this.props.name.length >= 10 ) ? 'thin-margin' : 'thick-margin')}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
             </a>
         );

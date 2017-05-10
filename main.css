@@ -512,7 +512,7 @@ a.project:hover {
     .project {
         width: 35%;
         float: left;
-        margin: 10 10%;
+        margin: 10 0 10 10%;
         border-radius: 0px;
         height: 300px;
         transition: box-shadow 0.5s ease-out, color 0.5s ease-out;
