@@ -251,6 +251,8 @@ class App extends React.Component {
             rightBuffer = chambara;
             bufferType = 'project';
         }
+        if(this.state.activeLink !== activeLink && this.state.activeLink !== null)
+            this.state.activeLink.setState({active: false});
         this.setState({
             currentPage: link,
             activePage: moveTo,
