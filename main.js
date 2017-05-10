@@ -207,7 +207,6 @@ class App extends React.Component {
                 var link = '#' + window.location.href.split('#')[1];
                 var scrollTarget = $(link).offset().top - 80;
                 this.state.scrollTarget = scrollTarget;
-                console.log(scrollTarget);
                 window.scrollTo(0, scrollTarget);
                 history.replaceState({page: link}, "Main Page", "");
             } else {
@@ -233,7 +232,8 @@ class App extends React.Component {
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
                 if(typeof _this.state.scrollTarget !== 'undefined' && _this.state.scrollTarget !== null) {
-                    $(window).scrollTop(_this.state.scrollTarget);
+                    $('html, body').animate({scrollTop: _this.state.scrollTarget}, 500);
+                    //$(window).scrollTop(_this.state.scrollTarget);
                     _this.state.scrollTarget = null;
                 }
             });
@@ -291,7 +291,8 @@ class App extends React.Component {
                 //window.scrollTo(0, scrollTarget);
                 this.handleNavigation(link, activePage, null);
             } else {
-                window.scrollTo(0, scrollTarget);
+                $('html, body').animate({scrollTop: scrollTarget}, 500);
+                //window.scrollTo(0, scrollTarget);
                 this.state.scrollTarget = scrollTarget;
                 NProgress.done();
             }
