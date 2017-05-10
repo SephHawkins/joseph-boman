@@ -285,6 +285,7 @@ class App extends React.Component {
                 this.state.scrollTarget = scrollTarget;
                 var windowTop = $(window).scrollTop();
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
+                window.scrollTo(0, scrollTarget);
                 this.handleNavigation(link, activePage, null);
             } else {
                 window.scrollTo(0, scrollTarget);
