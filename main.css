@@ -509,6 +509,14 @@ a.project:hover {
 }
 
 @media only screen and (min-width: 961px) {
+    nav {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+    .page-top > div, .page-bottom > div {
+        max-width: 1440px;
+        margin: 0px auto;
+    }
     .project {
         width: 35%;
         float: left;
