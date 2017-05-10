@@ -509,7 +509,7 @@ a.project:hover {
 }
 
 @media only screen and (min-width: 961px) {
-    nav {
+    .nav-bar {
         max-width: 1200px;
         margin: 0px auto;
     }
