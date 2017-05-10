@@ -234,6 +234,7 @@ class App extends React.Component {
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
                 if(typeof _this.state.scrollTarget !== 'undefined' && _this.state.scrollTarget !== null) {
                     $(window).scrollTop(_this.state.scrollTarget);
+                    _this.state.scrollTarget = null;
                 }
             });
         }
