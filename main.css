@@ -499,3 +499,67 @@ a.project:hover {
 .testing-scroll {
     height: 1000px;
 }
+
+@media only screen and (min-width: 961px) {
+    .project {
+        width: 35%;
+        float: left;
+        margin: 10 10%;
+        border-radius: 0px;
+        height: 300px;
+        transition: box-shadow 0.5s ease-out, color 0.5s ease-out;
+    }
+
+    a.project hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .details {
+        position: relative;
+        z-index: 3;
+    }
+
+    .tag {
+        width: 30px;
+    }
+
+    .coder-tag.tag p {
+        transform: rotate(-90deg) translate(-64px, 1px);
+    }
+
+    .designer-tag.tag p {
+        transform: rotate(-90deg) translate(-72px, 1px);
+    }
+
+    .qa-tag.tag p {
+        transform: rotate(-90deg) translate(-56px, 1px);
+    }
+
+    .modeler-tag.tag p {
+        transform: rotate(-90deg) translate(-72px, 1px);
+    }
+
+    .project h4 {
+        background-color: var(--light-color);
+        height: 60px;
+        margin-left: 15px;
+        z-index: 2;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        top: 240px;
+        line-height: 60px;
+    }
+
+    .project:hover img {
+        filter: none;
+    }
+
+    .project img {
+        width: 100%;
+        left: 29px;
+        z-index: 1;
+        filter: grayscale(20%);
+        transition: filter 0.5s ease-out;
+    }
+}
