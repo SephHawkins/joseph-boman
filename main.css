@@ -388,11 +388,11 @@ a:hover {
     font-weight: bold;
 }
 
-.project a {
+a.project {
     color: var(--dark-color);
 }
 
-.project a:hover {
+a.project:hover {
     color: black;
 }
 
