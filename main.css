@@ -80,6 +80,14 @@ footer h4 {
     font-weight: bold;
 }
 
+footer a {
+    color: var(--accent-color);
+}
+
+footer a:hover {
+    font-weight: bold;
+}
+
 footer .email {
     display: block;
     text-align: center;
