@@ -516,6 +516,7 @@ a.project:hover {
         border-radius: 0px;
         height: 300px;
         transition: box-shadow 0.5s ease-out, color 0.5s ease-out;
+        display: inline-block;
     }
 
     a.project hover {
