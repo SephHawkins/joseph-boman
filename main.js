@@ -251,8 +251,6 @@ class App extends React.Component {
             rightBuffer = chambara;
             bufferType = 'project';
         }
-        if(this.state.activeLink !== activeLink && typeof this.state.activeLink !== 'undefined')
-            this.state.activeLink.setState({active: false});
         this.setState({
             currentPage: link,
             activePage: moveTo,
@@ -269,8 +267,13 @@ class App extends React.Component {
             NProgress.start();
             if(link !== this.state.currentPage) {
                 history.pushState({page: link}, link, '/joseph-boman/' + link);
-                if(typeof this.state[link] != 'undefined')
+                if(typeof this.state.activeLink !== 'undefined') {
+                    $('.active').css({'left': '0%'});
+                    this.state.activeLink.setState({active: false});
+                }
+                if(typeof this.state[link] != 'undefined') {
                     this.state[link].setState({active: true});
+                }
             }
             this.handleNavigation(link, activePage, ((typeof this.state[link] != 'undefined') ? this.state[link] : null));
         } else {
@@ -285,7 +288,6 @@ class App extends React.Component {
                 this.handleNavigation(link, activePage, null);
             } else {
                 window.scrollTo(0, scrollTarget);
-                //$(window).scrollTop(scrollTarget);
                 this.state.scrollTarget = scrollTarget;
                 NProgress.done();
             }
