@@ -232,8 +232,8 @@ class App extends React.Component {
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
-                if(_this.state.scrollTarget !== 0) {
-                    //$(window).scrollTop(_this.state.scrollTarget);
+                if(typeof _this.state.scrollTarget !== 'undefined' && _this.state.scrollTarget !== null) {
+                    $(window).scrollTop(_this.state.scrollTarget);
                 }
             });
         }
@@ -281,11 +281,13 @@ class App extends React.Component {
             history.pushState({page: link}, link, '/joseph-boman/' + link);
             $('.main-page').css({'display': 'block'});
             var scrollTarget = $(link).offset().top - 80;
+            if(link === '#contact')
+                scrollTarget = document.body.scrollHeight;
             if(this.state.activePage === 'right'){
                 this.state.scrollTarget = scrollTarget;
                 var windowTop = $(window).scrollTop();
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
-                window.scrollTo(0, scrollTarget);
+                //window.scrollTo(0, scrollTarget);
                 this.handleNavigation(link, activePage, null);
             } else {
                 window.scrollTo(0, scrollTarget);
