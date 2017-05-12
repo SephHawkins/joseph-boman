@@ -396,9 +396,9 @@ function Footer(props){
         <footer id="footer">
             <p className='copyright'>Created by Joseph Boman - 2017</p>
             <h4 id='contact'>Contact Me</h4>
-            <a className='email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
-            <a className='linkedIn' href='#'>LinkedIn</a>
-            <a className='gitHub' href='#'>GitHub</a>
+            <a className='text-link email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
+            <a className='text-link linkedIn' href='#'>LinkedIn</a>
+            <a className='text-link gitHub' href='#'>GitHub</a>
         </footer>
     );
 }
@@ -445,7 +445,7 @@ class BasicLink extends React.Component {
 
     render() {
         return (
-            <a href={this.props.link} className={(this.props.sublink === "true") ? 'sub-link' : ''} onClick={this.handleClick}>{this.props.name}</a>
+            <a href={this.props.link} className={"text-link" + (this.props.sublink === "true") ? ' sub-link' : ''} onClick={this.handleClick}>{this.props.name}</a>
         )
     }
 }
@@ -480,7 +480,7 @@ class About extends React.Component{
         return (
         <div id='about'>
             <h3>ABOUT ME</h3>
-            <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a href='/joseph-boman/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
+            <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a className='text-link' href='/joseph-boman/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
         </div>
         );
     }
@@ -638,7 +638,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <a href={"/joseph-boman/" + this.state.href} className={"project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/joseph-boman/" + this.state.href} className={"block-link project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 className={((this.props.name.length >= 10 ) ? 'thin-margin' : 'thick-margin')}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />
@@ -680,7 +680,7 @@ function DownloadLink(props) {
             linkText = <p>Download</p>;
     }
     return (
-        <a target="_blank" href={props.link} className="downloadLink">
+        <a target="_blank" href={props.link} className="block-link downloadLink">
             <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 512 512" width="40" className="downloadIcon">
                 <polygon points="512,392 0,256 400,256"></polygon>
                 <polygon points="512,120 0,256 100,256 432,170 360,256 400,256"></polygon>

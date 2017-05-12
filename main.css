@@ -28,10 +28,30 @@ a {
     transition: box-shadow 0.5s ease-out, color 0.5s ease-out, fill 0.5s, ease-out;
 }
 
-a:hover {
+.block-link:hover {
     color: black;
     fill: black;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.block-link:hover svg {
+    fill: black;
+}
+
+.arrow-button {
+    transition: box-shadow 0.5s ease-out;
+}
+
+svg {
+    transition: fill 0.5s ease-out;
+}
+
+.arrow-button:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.arrow-button:hover svg {
+    fill: black;
 }
 
 .mobile-menu {
@@ -53,14 +73,14 @@ a:hover {
     top: 60px;
 }
 
-.mobile-menu a {
+.mobile-menu .text-link {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
     color: var(--light-color);
     display: block;
 }
 
-.mobile-menu a:hover {
+.mobile-menu .text-link:hover {
     color: var(--accent-color);
 }
 
@@ -91,11 +111,11 @@ footer h4 {
     font-weight: bold;
 }
 
-footer a {
+footer .text-link {
     color: var(--accent-color);
 }
 
-footer a:hover {
+footer .text-link:hover {
     font-weight: bold;
     color: var(--accent-color);
 }
@@ -392,10 +412,9 @@ svg {
 
 a {
     text-decoration: none;
-    color: var(--accent-color);
 }
 
-a:hover {
+.text-link:hover {
     color: var(--accent-color);
     font-weight: bold;
 }
@@ -629,6 +648,10 @@ a.project:hover {
         filter: grayscale(20%);
         transition: filter 0.5s ease-out;
         position: absolute;
+    }
+
+    .page-top .arrow-button {
+        margin-top: 10px;
     }
 }
 
