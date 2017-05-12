@@ -541,7 +541,7 @@ class RightBuffer extends React.Component {
                     <PageBody topSection={<div>
                         <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                         <ImageSlideshow images={this.props.data.images} />
-                        <div className="project-header">
+                        <div className={"project-header" + ((this.props.data.tags.length > 2) ? " thin-margin" : " thick-margin")}>
                             <h1>{this.props.data.name}</h1>
                             <h2>{this.props.data.tagline}</h2>
                             {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}

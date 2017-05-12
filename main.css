@@ -587,6 +587,10 @@ a.project:hover {
         width: 400px;
     }
 
+    .project-header.thick-margin {
+        margin-top: 60px;
+    }
+
     .right-buffer .page-top h1 {
         width: 70%;
     }
