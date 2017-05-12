@@ -516,7 +516,7 @@ class ImageSlideshow extends React.Component {
     render() {
         const images = this.props.images;
         return (
-            <div>
+            <div className="img-slideshow">
                 <div className="circle-img">
                     {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} />)}
                 </div>
@@ -541,9 +541,11 @@ class RightBuffer extends React.Component {
                     <PageBody topSection={<div>
                         <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                         <ImageSlideshow images={this.props.data.images} />
-                        <h1>{this.props.data.name}</h1>
-                        <h2>{this.props.data.tagline}</h2>
-                        {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+                        <div className="project-header">
+                            <h1>{this.props.data.name}</h1>
+                            <h2>{this.props.data.tagline}</h2>
+                            {this.props.data.tags.map(detail => <TagDetail key={detail.name} name={detail.name} text={detail.text} />)}
+                        </div>
                     </div>}
                     bottomSection={<div>
                         <h3>ABOUT</h3>
@@ -629,9 +631,7 @@ class Project extends React.Component {
         NProgress.start();
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
-        //$(window).scrollTop(0);
         history.pushState({page: this.state.href}, 'testing', this.state.href);
-        //$(window).scrollTop(scrollTop);
         this.setState({active: true});
         this.props.handleClick(this.state.href, "right", this);
     }
