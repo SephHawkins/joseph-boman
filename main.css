@@ -552,7 +552,7 @@ a.project:hover {
 @media only screen and (min-width: 961px) {
     .nav-bar {
         max-width: 1200px;
-        margin: 0px auto;
+        margin: 0px 5%;
     }
     .nav-bar svg {
         display: none;
@@ -703,5 +703,8 @@ a.project:hover {
     }
     .project-header.thick-margin {
         margin-top: 40px;
+    }
+    .nav-bar {
+        margin: 0px auto;
     }
 }
