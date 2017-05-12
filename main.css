@@ -626,11 +626,11 @@ a.project:hover {
     }
 
     .coder-tag.tag p {
-        transform: rotate(-90deg) translate(-64px, 1px);
+        transform: rotate(-90deg) translate(-70px, 1px);
     }
 
     .designer-tag.tag p {
-        transform: rotate(-90deg) translate(-72px, 1px);
+        transform: rotate(-90deg) translate(-82px, 1px);
     }
 
     .qa-tag.tag p {
@@ -638,7 +638,7 @@ a.project:hover {
     }
 
     .modeler-tag.tag p {
-        transform: rotate(-90deg) translate(-72px, 1px);
+        transform: rotate(-90deg) translate(-82px, 1px);
     }
 
     .project h4 {
