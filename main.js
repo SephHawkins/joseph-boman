@@ -445,7 +445,7 @@ class BasicLink extends React.Component {
 
     render() {
         return (
-            <a href={this.props.link} className={"text-link" + (this.props.sublink === "true") ? ' sub-link' : ''} onClick={this.handleClick}>{this.props.name}</a>
+            <a href={this.props.link} className={"text-link" + ((this.props.sublink === "true") ? ' sub-link' : '')} onClick={this.handleClick}>{this.props.name}</a>
         )
     }
 }
