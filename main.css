@@ -221,7 +221,6 @@ svg {
 .circle-img {
     border-radius: 10%;
     margin: 20px auto 0px auto;
-    height: 180px;
     width: 260px;
     overflow: hidden;
     white-space: nowrap;
@@ -231,7 +230,8 @@ svg {
 
 .circle-img img {
     position: relative;
-    height: 180px;
+    width: 260px;
+    height: auto;
     z-index: -1;
     display: inline-block;
 }
@@ -557,10 +557,14 @@ a.project:hover {
         width: 300px;
     }
 
+    .circle-img img {
+        width: 300px;
+    }
+
     .project-header {
         display:inline-block;
         vertical-align: top;
-        margin: 0px 30px 15% 0px;
+        margin: 30px 0px 0px 10%;
         width: 400px;
     }
 
@@ -625,5 +629,11 @@ a.project:hover {
         filter: grayscale(20%);
         transition: filter 0.5s ease-out;
         position: absolute;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-header {
+        margin: 30px 0px 0px 15%;
     }
 }
