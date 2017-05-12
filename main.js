@@ -90,7 +90,7 @@ var chambara = {
 
 var resume = {
     name: "Joseph Boman",
-    address: "San Francisco, CA\n(619)792-6512\tjoseph.j.boman@gmail.com",
+    address: "joseph.j.boman@gmail.com",
     tagline: "Technical Associate at Kaiser Permanente",
     sections: [
         {
