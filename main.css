@@ -657,6 +657,32 @@ a.project:hover {
     .page-top .arrow-button {
         margin-top: 10px;
     }
+
+    .page-bottom h3 {
+        font-size: 28px;
+    }
+
+    .page-bottom p {
+        font-size: 20px;
+    }
+
+    .page-top h1 {
+        font-size: 36px;
+        width: 70%;
+    }
+
+    .page-top h2 {
+        font-size: 28px;
+    }
+
+    .tag-details {
+        margin: 5px 5%;
+        padding: 1px 5px;
+    }
+
+    .tag-details p {
+        font-size: 24px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
