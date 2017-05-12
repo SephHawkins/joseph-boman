@@ -414,6 +414,14 @@ a {
     text-decoration: none;
 }
 
+.block-link {
+    color: var(--dark-color);
+}
+
+.block-link:hover {
+    color: black;
+}
+
 .text-link {
     color: var(--accent-color);
 }
