@@ -493,7 +493,7 @@ a.project:hover {
     display: inline-block;
 }
 
-.long-time {
+.longTime {
     display: none;
 }
 
@@ -713,7 +713,7 @@ a.project:hover {
         font-size: 24px;
     }
 
-    .long-time {
+    .longTime {
         display: inline;
     }
 
