@@ -414,6 +414,10 @@ a {
     text-decoration: none;
 }
 
+.text-link {
+    color: var(--accent-color);
+}
+
 .text-link:hover {
     color: var(--accent-color);
     font-weight: bold;
