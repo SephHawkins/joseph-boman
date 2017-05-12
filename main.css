@@ -321,7 +321,6 @@ svg {
 }
 
 .downloadLink p {
-    color: var(--dark-color);
     margin: 0 5px;
     top: 15px;
     left: -21px;
