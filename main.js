@@ -90,6 +90,7 @@ var chambara = {
 
 var resume = {
     name: "Joseph Boman",
+    address: "San Francisco, CA\n(619)792-6512\tjoseph.j.boman@gmail.com",
     tagline: "Technical Associate at Kaiser Permanente",
     sections: [
         {
@@ -563,6 +564,7 @@ class RightBuffer extends React.Component {
                     <PageBody topSection={<div>
                     <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                     <h1 style={{marginTop: "10px", paddingTop: "20px"}}>{this.props.data.name}</h1>
+                    <h4>{this.props.data.address}</h4>
                     <h2>{this.props.data.tagline}</h2>
                     </div>}
                     bottomSection={<div>
