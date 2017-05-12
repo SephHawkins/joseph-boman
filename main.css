@@ -493,6 +493,10 @@ a.project:hover {
     display: inline-block;
 }
 
+.long-time {
+    display: none;
+}
+
 .details {
     display: inline-block;
     vertical-align: top;
@@ -707,6 +711,14 @@ a.project:hover {
 
     .tag-details p {
         font-size: 24px;
+    }
+
+    .long-time {
+        display: inline;
+    }
+
+    .time {
+        display: none;
     }
 }
 

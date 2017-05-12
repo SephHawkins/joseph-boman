@@ -99,6 +99,7 @@ var resume = {
                 {
                     name: "University of Southern California",
                     time: "2012-2016",
+                    longTime: "September 2012 - May 2016",
                     subname: "B.S. in Computer Science (Games)",
                     details: ""
                 }
@@ -111,12 +112,14 @@ var resume = {
                     name: "Technical Associate",
                     subname: "Kaiser Permanente",
                     time: "2016-Present",
+                    longTime: "July 2016 - Present",
                     details: "Rotation Program at Kaiser Permanente. Rotated through four teams over two years"
                 },
                 {
                     name: "Undergraduate Researcher",
                     subname: "Information Sciences Institute",
                     time: "2015-2016",
+                    longTime: "May 2015 - December 2016",
                     details: "Worked on various Dev-Ops roles at USC's ISI. Worked under Ted Faber. Cool stuff"
                 }
             ]
@@ -127,13 +130,15 @@ var resume = {
                 {
                     name: "Chambara",
                     subname: "team ok",
-                    time: "2016",
+                    time: "2015-2016",
+                    longTime: "August 2015 - May 2016",
                     details: "Did a bunch of work for QA stuff. Had a fun time. Tons of fun."
                 },
                 {
                     name: "MonoVirus",
                     subname: "",
                     time: "2015",
+                    longTime: "March 2015 - May 2015",
                     details: "Writing stuff for all of these for testing is hard. Should've just lorum ipsemed it."
                 }
             ]
@@ -582,7 +587,7 @@ function ResumeSection(props) {
     return (
         <div>
             <h3>{props.name}</h3>
-            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right'>{section.time}</span></h4><h5>{section.subname}</h5><p>{section.details}</p></div>)}
+            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right time'>{section.time}</span><span className='right longTime'>{section.longTime}</span></h4><h5>{section.subname}</h5><p>{section.details}</p></div>)}
         </div>
     );
 }
