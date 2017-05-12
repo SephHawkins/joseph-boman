@@ -569,8 +569,8 @@ class RightBuffer extends React.Component {
                     <PageBody topSection={<div>
                     <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                     <h1 style={{marginTop: "10px", paddingTop: "20px"}}>{this.props.data.name}</h1>
-                    <h4>{this.props.data.address}</h4>
                     <h2>{this.props.data.tagline}</h2>
+                    <h4>{this.props.data.address}</h4>
                     </div>}
                     bottomSection={<div>
                         {this.props.data.sections.map(section => <ResumeSection key={section.name} name={section.name} data={section.data} />)}
