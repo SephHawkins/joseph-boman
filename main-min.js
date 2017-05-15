@@ -444,7 +444,7 @@ var App = function (_React$Component) {
                 var rightBuffer = null,
                     bufferType = null;
                 rightBuffer = rightBufferDetails[event.state.page.replace(/-/g, '')];
-                bufferType = rightBufferDetails[event.state.page.replace(/-/g, '')];
+                bufferType = rightBufferDetails[event.state.page.replace(/-/g, '')].bufferType;
                 // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
                 //     rightBuffer = chambara;
                 //     bufferType = 'project'

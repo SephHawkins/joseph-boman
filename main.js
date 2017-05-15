@@ -496,7 +496,7 @@ class App extends React.Component {
                 this.state.activeLink.setState({active: true});
             let rightBuffer = null, bufferType = null;
             rightBuffer = rightBufferDetails[(event.state.page.replace(/-/g, ''))];
-            bufferType = rightBufferDetails[(event.state.page.replace(/-/g, ''))];
+            bufferType = rightBufferDetails[(event.state.page.replace(/-/g, ''))].bufferType;
             // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
             //     rightBuffer = chambara;
             //     bufferType = 'project'
