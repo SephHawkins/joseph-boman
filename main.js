@@ -19,6 +19,174 @@ var projectsJSON = [
     }
 ];
 
+var rightBufferDetails = {
+    chambara: {
+        name: "Chambara",
+        tagline: "Two-color Stealth Action PS4 Game",
+        about: "Chambara was first created at the Dare to be Digital game jam, and quickly expanded with the goal of releasing on PlayStation 4. The game was developed by a team of around 25 USC Games students.\n\nChambara is, at its heart, a local multiplayer experience, in which players utilize minimally colored levels to hide their character, attempting to use strategy and stealth to trick and defeat their opponent",
+        lookBack: "As one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code\n\nAs one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code\n\nAs one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code",
+        images: [
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara13x9-e1447699049873.png",
+                alt: "Chambara-1"
+            },
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara2-13x9-e1447699059560.png",
+                alt: "Chambara-2"
+            },
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara3-13x9-e1447699027993.png",
+                alt: "Chambara-3"
+            }
+        ],
+        tags: [
+            {
+                name: "coder",
+                text: "Built gameplay systems and controller logic in Unity for PS4"
+            },
+            {
+                name: "qa",
+                text: "Ran a ten person QA team and passed Sony's TRC"
+            }
+        ],
+        downloadType: "PlayStation",
+        downloadLink: "https://store.playstation.com/#!/en-us/games/chambara/cid=UP1279-CUSA05224_00-CHAMBARA00000000",
+        bufferType: 'project'
+    },
+    resume: {
+        name: "Joseph Boman",
+        address: "joseph.j.boman@gmail.com",
+        tagline: "Technical Associate at Kaiser Permanente",
+        sections: [
+            {
+                name: "EDUCATION",
+                data: [
+                    {
+                        name: "University of Southern California",
+                        time: "2012-2016",
+                        longTime: "September 2012 - May 2016",
+                        subname: "B.S. in Computer Science (Games)",
+                        details: ""
+                    }
+                ]
+            },
+            {
+                name: "WORK EXPERIENCE",
+                data: [
+                    {
+                        name: "Technical Associate",
+                        subname: "Kaiser Permanente",
+                        time: "2016-Present",
+                        longTime: "July 2016 - Present",
+                        details: "Rotation Program at Kaiser Permanente. Rotated through four teams over two years"
+                    },
+                    {
+                        name: "Undergraduate Researcher",
+                        subname: "Information Sciences Institute",
+                        time: "2015-2016",
+                        longTime: "May 2015 - December 2016",
+                        details: "Worked on various Dev-Ops roles at USC's ISI. Worked under Ted Faber. Cool stuff"
+                    }
+                ]
+            },
+            {
+                name: "PROJECTS",
+                data: [
+                    {
+                        name: "Chambara",
+                        subname: "team ok",
+                        time: "2015-2016",
+                        longTime: "August 2015 - May 2016",
+                        details: "Did a bunch of work for QA stuff. Had a fun time. Tons of fun."
+                    },
+                    {
+                        name: "MonoVirus",
+                        subname: "",
+                        time: "2015",
+                        longTime: "March 2015 - May 2015",
+                        details: "Writing stuff for all of these for testing is hard. Should've just lorum ipsemed it."
+                    }
+                ]
+            }
+        ],
+        bufferType: 'resume'
+    },
+    monovirus: {
+        name: "MonoVirus",
+        tagline: "Action RPG Dungeon Crawler Game",
+        about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
+        lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
+        images: [
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+                alt: "MonoVirus-1"
+            },
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/Monovirus13x9-e1447699039893.png",
+                alt: "MonoVirus-2"
+            },
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus2-13x9-e1447698995565.png",
+                alt: "MonoVirus-3"
+            }
+        ],
+        tags: [
+            {
+                name: "coder",
+                text: "Built in C# using XNA and MonoDevelop"
+            },
+            {
+                name: "modeler",
+                text: "Made player and enemy models in Maya"
+            },
+            {
+                name: "ui/ux",
+                text: "Created UI elements using GIMP"
+            }
+        ],
+        downloadType: "Windows",
+        downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPOWQ4MExTWXRYZmc&export=download",
+        bufferType: 'project'
+    },
+    awalkinthepark: {
+        name: "A Walk in the Park",
+        tagline: "Cooperative Walking Simulator",
+        about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
+        lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
+        images: [
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+                alt: "MonoVirus-1"
+            },
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/Monovirus13x9-e1447699039893.png",
+                alt: "MonoVirus-2"
+            },
+            {
+                link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus2-13x9-e1447698995565.png",
+                alt: "MonoVirus-3"
+            }
+        ],
+        tags: [
+            {
+                name: "coder",
+                text: "Built in C# using XNA and MonoDevelop"
+            },
+            {
+                name: "modeler",
+                text: "Made player and enemy models in Maya"
+            },
+            {
+                name: "ui/ux",
+                text: "Created UI elements using GIMP"
+            }
+        ],
+        downloadType: "Windows",
+        downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPOWQ4MExTWXRYZmc&export=download",
+        bufferType: 'project'
+    },
+};
+
 var project = {
     name: "MonoVirus",
     tagline: "Action RPG Dungeon Crawler Game",
@@ -250,14 +418,19 @@ class App extends React.Component {
         var scrollTop = $(window).scrollTop();
         $('.right-buffer').css({'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
         let rightBuffer = null, bufferType = null;
-        if(link == 'resume') {// TODO: Replace this with AJAX
-            rightBuffer = resume;
-            bufferType = 'resume';
+        if(typeof projects[(link.replace(/-/g, ''))] !== 'undefined'){
+            rightBuffer = projects[(link.replace(/-/g, ''))];
+            bufferType = projects[(link.replace(/-/g, ''))].bufferType;
         }
-        else {
-            rightBuffer = chambara;
-            bufferType = 'project';
-        }
+        // rightBuffer = projects[link]
+        // if(link == 'resume') {// TODO: Replace this with AJAX
+        //     rightBuffer = resume;
+        //     bufferType = 'resume';
+        // }
+        // else {
+        //     rightBuffer = chambara;
+        //     bufferType = 'project';
+        // }
         this.setState({
             currentPage: link,
             activePage: moveTo,
@@ -322,13 +495,15 @@ class App extends React.Component {
             if(event.state.page !== 'resume')
                 this.state.activeLink.setState({active: true});
             let rightBuffer = null, bufferType = null;
-            if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
-                rightBuffer = chambara;
-                bufferType = 'project'
-            } else {
-                rightBuffer = resume;
-                bufferType = 'resume';
-            }
+            rightBuffer = projects[(event.state.page.replace(/-/g, ''))];
+            bufferType = projects[(event.state.page.replace(/-/g, ''))];
+            // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
+            //     rightBuffer = chambara;
+            //     bufferType = 'project'
+            // } else {
+            //     rightBuffer = resume;
+            //     bufferType = 'resume';
+            // }
             this.setState({
                 currentPage: event.state.page,
                 activePage: 'right',
