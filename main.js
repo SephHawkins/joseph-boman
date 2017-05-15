@@ -418,9 +418,9 @@ class App extends React.Component {
         var scrollTop = $(window).scrollTop();
         $('.right-buffer').css({'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
         let rightBuffer = null, bufferType = null;
-        if(typeof projects[(link.replace(/-/g, ''))] !== 'undefined'){
-            rightBuffer = projects[(link.replace(/-/g, ''))];
-            bufferType = projects[(link.replace(/-/g, ''))].bufferType;
+        if(typeof rightBufferDetails[(link.replace(/-/g, ''))] !== 'undefined'){
+            rightBuffer = rightBufferDetails[(link.replace(/-/g, ''))];
+            bufferType = rightBufferDetails[(link.replace(/-/g, ''))].bufferType;
         }
         // rightBuffer = projects[link]
         // if(link == 'resume') {// TODO: Replace this with AJAX
@@ -495,8 +495,8 @@ class App extends React.Component {
             if(event.state.page !== 'resume')
                 this.state.activeLink.setState({active: true});
             let rightBuffer = null, bufferType = null;
-            rightBuffer = projects[(event.state.page.replace(/-/g, ''))];
-            bufferType = projects[(event.state.page.replace(/-/g, ''))];
+            rightBuffer = rightBufferDetails[(event.state.page.replace(/-/g, ''))];
+            bufferType = rightBufferDetails[(event.state.page.replace(/-/g, ''))];
             // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
             //     rightBuffer = chambara;
             //     bufferType = 'project'
