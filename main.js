@@ -268,8 +268,9 @@ class App extends React.Component {
         });
     }
 
-    handleMobileMenu(link, activePage) {
-        this.toggleMobileMenu();
+    handleMobileMenu(link, activePage, mobileLink) {
+        if(mobileLink)
+            this.toggleMobileMenu();
         if(activePage === 'right'){
             NProgress.start();
             if(link !== this.state.currentPage) {
@@ -454,9 +455,9 @@ class HeaderLink extends React.Component {
         NProgress.start();
         e.preventDefault();
         if(this.props.link.indexOf('#') !== -1){
-            this.props.handleClick(this.props.link, 'left');
+            this.props.handleClick(this.props.link, 'left', false);
         } else {
-            this.props.handleClick(this.props.link, 'right');
+            this.props.handleClick(this.props.link, 'right', false);
         }
     }
 
@@ -480,9 +481,9 @@ class BasicLink extends React.Component {
         NProgress.start();
         e.preventDefault();
         if(this.props.link.indexOf('#') !== -1){
-            this.props.handleClick(this.props.link, 'left');
+            this.props.handleClick(this.props.link, 'left', true);
         } else {
-            this.props.handleClick(this.props.link, 'right');
+            this.props.handleClick(this.props.link, 'right', true);
         }
     }
 
