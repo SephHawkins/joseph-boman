@@ -361,7 +361,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Header toggleMobileMenu={this.toggleMobileMenu} />
+                <Header toggleMobileMenu={this.toggleMobileMenu} handleClick={this.handleMobileMenu} />
                 <MobileMenu projects={projectsJSON} handleClick={this.handleMobileMenu} />
                 <div className='main-page'>
                     <FrontPage projects={projectsJSON} handleClick={this.handleNavigation} registerLink={this.registerLink} />
@@ -389,6 +389,12 @@ function Header(props){
                     <img src="http://josephboman.com/wp-content/themes/sephhawkins/images/logo-min.png" />
                     <p><span>oseph</span> oman</p>
                 </a>
+                <div className="desktopMenu">
+                    <HeaderLink text="ABOUT ME" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="#about" />
+                    <HeaderLink text="RESUME" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="resume" />
+                    <HeaderLink text="PROJECTS" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="#projects" />
+                    <HeaderLink text="CONTACT" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="#contact" />
+                </div>
                 <svg onClick={props.toggleMobileMenu} height="60" width="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"></path>
                 </svg>
@@ -436,6 +442,33 @@ function MobileMenu(props) {
             <BasicLink link='#contact' sublink="false" handleClick={props.handleClick} name="CONTACT" />
         </div>
     );
+}
+
+class HeaderLink extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+        NProgress.start();
+        e.preventDefault();
+        if(this.props.link.indexOf('#') !== -1){
+            this.props.handleClick(this.props.link, 'left');
+        } else {
+            this.props.handleClick(this.props.link, 'right');
+        }
+    }
+
+    render() {
+        return (
+            <a href={this.props.link} onClick={this.handleClick} className='headerLink'>
+                <img src={this.props.image} className='headerImg'>
+                <img src={this.props.hoverImage} className='headerHoverImg'>
+                <h5>{this.props.text}</h5>
+            </a>
+        )
+    }
 }
 class BasicLink extends React.Component {
     constructor(props) {

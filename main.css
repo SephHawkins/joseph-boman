@@ -558,6 +558,10 @@ a.project:hover {
     height: 1000px;
 }
 
+.desktopMenu {
+    display: none;
+}
+
 @media only screen and (min-width: 961px) {
     .nav-bar {
         max-width: 1200px;
@@ -565,6 +569,45 @@ a.project:hover {
     }
     .nav-bar svg {
         display: none;
+    }
+
+    .desktopMenu {
+        display: inline-block;
+        float: right;
+    }
+
+    .headerLink {
+        color: var(--light-color);
+        font-family: "Josefin Sans", sans-serif;
+        margin-left: 10px;
+    }
+
+    .headerLink:hover {
+        color: var(--accent-color);
+    }
+
+    .headerLink:hover .headerImg {
+        opacity: 0;
+    }
+
+    .headerLink:hover .headerHoverImg {
+        opacity: 1;
+    }
+
+    .headerImg {
+        position: absolute;
+        opacity: 1;
+        transition: opacity 0.5s ease-out;
+    }
+
+    .headerHoverImg {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+    }
+
+    .headerLink h5 {
+        transition: color 0.5s ease-out;
+        display: inline-block;
     }
 
     footer {
