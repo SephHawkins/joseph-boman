@@ -649,6 +649,7 @@ a.project:hover {
 
     .footer .gitHub {
         margin-left: 20px;
+        margin-right: 0px;
         display: inline-block;
         float: none;
     }
