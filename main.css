@@ -576,10 +576,11 @@ a.project:hover {
         float: right;
     }
 
-    .headerLink {
+    .nav-bar .headerLink {
         color: var(--light-color);
         font-family: "Josefin Sans", sans-serif;
         margin-left: 10px;
+        width: auto;
     }
 
     .headerLink:hover {
