@@ -391,9 +391,9 @@ function Header(props){
                 </a>
                 <div className="desktopMenu">
                     <HeaderLink text="ABOUT ME" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="#about" />
-                    <HeaderLink text="RESUME" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="resume" />
-                    <HeaderLink text="PROJECTS" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="#projects" />
-                    <HeaderLink text="CONTACT" image="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png" handleClick={props.handleClick} link="#contact" />
+                    <HeaderLink text="RESUME" image="http://josephboman.com/wp-content/themes/sephhawkins/images/coding-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/coding.png" handleClick={props.handleClick} link="resume" />
+                    <HeaderLink text="PROJECTS" image="http://josephboman.com/wp-content/themes/sephhawkins/images/video-game.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/video-game-controller.png" handleClick={props.handleClick} link="#projects" />
+                    <HeaderLink text="CONTACT" image="http://josephboman.com/wp-content/themes/sephhawkins/images/d20-none.png" hoverImage="http://josephboman.com/wp-content/themes/sephhawkins/images/d20-2.png" handleClick={props.handleClick} link="#contact" />
                 </div>
                 <svg onClick={props.toggleMobileMenu} height="60" width="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"></path>
