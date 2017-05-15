@@ -400,11 +400,15 @@ function Header(props){
 function Footer(props){
     return (
         <footer id="footer">
-            <p className='copyright'>Created by Joseph Boman - 2017</p>
-            <h4 id='contact'>Contact Me</h4>
-            <a className='text-link email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
-            <a className='text-link linkedIn' href='#'>LinkedIn</a>
-            <a className='text-link gitHub' href='#'>GitHub</a>
+            <div className="footer">
+                <p className='copyright'>Created by Joseph Boman - 2017</p>
+                <h4 id='contact'>Contact Me</h4>
+                <div>
+                    <a className='text-link email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
+                    <a className='text-link linkedIn' href='#'>LinkedIn</a>
+                    <a className='text-link gitHub' href='#'>GitHub</a>
+                </div>
+            </div>
         </footer>
     );
 }

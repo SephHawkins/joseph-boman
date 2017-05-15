@@ -566,6 +566,40 @@ a.project:hover {
     .nav-bar svg {
         display: none;
     }
+
+    footer {
+        height: 60px;
+        padding-top: 0px;
+    }
+
+    .footer {
+        max-width: 1200px;
+        margin: 0 5%;
+    }
+
+    .footer p {
+        display: inline-block;
+        margin: 0;
+        line-height: 60px;
+    }
+
+    #contact {
+        display: none;
+    }
+
+    .footer div {
+        display: inline-block;
+        float: right;
+    }
+
+    .footer .email {
+        margin: 0;
+        line-height: 60px;
+    }
+
+    .page-bottom {
+        margin-bottom: 60px;
+    }
     .page-top > div, .page-bottom > div {
         max-width: 1440px;
         margin: 0px auto;
