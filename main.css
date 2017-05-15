@@ -595,6 +595,18 @@ a.project:hover {
     .footer .email {
         margin: 0;
         line-height: 60px;
+        display: inline-block;
+    }
+
+    .footer .linkedIn {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    .footer .gitHub {
+        margin-left: 20px;
+        display: inline-block;
+        float: none;
     }
 
     .page-bottom {
