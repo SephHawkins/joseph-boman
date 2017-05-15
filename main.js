@@ -463,8 +463,8 @@ class HeaderLink extends React.Component {
     render() {
         return (
             <a href={this.props.link} onClick={this.handleClick} className='headerLink'>
-                <img src={this.props.image} className='headerImg'>
-                <img src={this.props.hoverImage} className='headerHoverImg'>
+                <img src={this.props.image} className='headerImg' />
+                <img src={this.props.hoverImage} className='headerHoverImg' />
                 <h5>{this.props.text}</h5>
             </a>
         )
