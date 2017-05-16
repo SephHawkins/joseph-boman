@@ -351,7 +351,8 @@ class App extends React.Component {
         this.handleMobileMenu = this.handleMobileMenu.bind(this);
         this.registerLink = this.registerLink.bind(this);
         var activePage = 'left';
-        var rightBuffer = project;
+        var rightBuffer = null, bufferType = 'none';
+        console.log(window.location.href.split('/'));
         if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
             activePage = 'right';
             rightBuffer = chambara;
@@ -359,9 +360,9 @@ class App extends React.Component {
         this.state = {
             currentPage: 'Home',
             rightBuffer: rightBuffer,
-            bufferType: 'project', // TODO: This should be defined by the URL
+            bufferType: bufferType, // TODO: This should be defined by the URL
             activePage: activePage,
-            scrollTarget: 0
+            scrollTarget: 0,
         }
         var _this = this;
         window.onpopstate = function(event) {
@@ -370,9 +371,6 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        $('#loader').delay(1000).fadeOut('slow', function(){
-            $(this).remove();
-        });
         if(this.state.activePage === 'right'){
             $('.main-page').css({'display': 'none'});
             $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
@@ -390,6 +388,9 @@ class App extends React.Component {
                 history.replaceState({page: 'main'}, "Main Page", "");
             }
         }
+        $('#loader').delay(1000).fadeOut('slow', function(){
+            $(this).remove();
+        });
     }
 
     componentDidUpdate() {
@@ -794,6 +795,11 @@ class RightBuffer extends React.Component {
                         <DownloadLink type="pdf" link={this.props.data.downloadLink} />
                         <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                         </div>} />
+                </div>
+            );
+            case "none":
+            return (
+                <div className='right-buffer'>
                 </div>
             );
         }

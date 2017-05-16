@@ -292,7 +292,9 @@ var App = function (_React$Component) {
         _this2.handleMobileMenu = _this2.handleMobileMenu.bind(_this2);
         _this2.registerLink = _this2.registerLink.bind(_this2);
         var activePage = 'left';
-        var rightBuffer = project;
+        var rightBuffer = null,
+            bufferType = 'none';
+        console.log(window.location.href.split('/'));
         if (window.location.href.indexOf('chambara') > -1) {
             // TODO: Generalize this check
             activePage = 'right';
@@ -301,7 +303,7 @@ var App = function (_React$Component) {
         _this2.state = {
             currentPage: 'Home',
             rightBuffer: rightBuffer,
-            bufferType: 'project', // TODO: This should be defined by the URL
+            bufferType: bufferType, // TODO: This should be defined by the URL
             activePage: activePage,
             scrollTarget: 0
         };
@@ -315,9 +317,6 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: "componentDidMount",
         value: function componentDidMount() {
-            $('#loader').delay(1000).fadeOut('slow', function () {
-                $(this).remove();
-            });
             if (this.state.activePage === 'right') {
                 $('.main-page').css({ 'display': 'none' });
                 $('.right-buffer').css({ 'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px' });
@@ -335,6 +334,9 @@ var App = function (_React$Component) {
                     history.replaceState({ page: 'main' }, "Main Page", "");
                 }
             }
+            $('#loader').delay(1000).fadeOut('slow', function () {
+                $(this).remove();
+            });
         }
     }, {
         key: "componentDidUpdate",
@@ -954,6 +956,8 @@ var RightBuffer = function (_React$Component6) {
                                 React.createElement(BackArrow, { height: "40", width: "40", handleBack: this.props.handleBack })
                             ) })
                     );
+                case "none":
+                    return React.createElement("div", { className: "right-buffer" });
             }
         }
     }]);
