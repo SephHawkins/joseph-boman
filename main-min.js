@@ -315,6 +315,9 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: "componentDidMount",
         value: function componentDidMount() {
+            $('#loader').fadeOut('slow', function () {
+                $(this).remove();
+            });
             if (this.state.activePage === 'right') {
                 $('.main-page').css({ 'display': 'none' });
                 $('.right-buffer').css({ 'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px' });
