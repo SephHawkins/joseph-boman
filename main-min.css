@@ -173,11 +173,23 @@ footer .gitHub {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .nav-bar a p {
         display: -ms-inline-grid;
+        top: 31px;
+        left: -91px;
+    }
+    .nav-bar a p span {
+        left: 57px;
+        top: -20px;
     }
 }
 @supports (-ms-accelerator:true) {
     .nav-bar a p {
         display: -ms-inline-grid;
+        top: 31px;
+        left: -91px;
+    }
+    .nav-bar a p span {
+        left: 57px;
+        top: -20px;
     }
 }
 .nav-bar a p span {
