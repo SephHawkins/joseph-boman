@@ -383,8 +383,8 @@ var App = function (_React$Component) {
                 currentPage: link,
                 activePage: moveTo,
                 activeLink: activeLink == null ? this.state.activeLink : activeLink,
-                rightBuffer: rightBuffer,
-                bufferType: bufferType,
+                rightBuffer: rightBuffer === null ? this.state.rightBuffer : rightBuffer,
+                bufferType: bufferType === null ? this.state.bufferType : bufferType,
                 scrollTop: scrollTop
             });
         }
