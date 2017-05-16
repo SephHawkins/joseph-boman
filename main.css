@@ -1,13 +1,13 @@
 :root {
-    --dark-color: #3F4851;
+    --dark-color: #232835;
     --light-color: #F1FAEE;
-    --accent-color: #D46A6A;
+    --accent-color: #00A56E;
     --link-hover-color: #1D2630;
-    --blue-tag-color: powderblue;
-    --green-tag-color: darkseagreen;
-    --purple-tag-color: mediumpurple;
-    --red-tag-color: palevioletred;
-    --yellow-tag-color: palegoldenrod;
+    --blue-tag-color: #3D9CCC;
+    --green-tag-color: #35B24E;
+    --purple-tag-color: #9542BF;
+    --red-tag-color: #BF394B;
+    --yellow-tag-color: #FFEF78;
 }
 
 body {
