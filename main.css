@@ -21,7 +21,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--dark-color) url('loading.gif') no-repeat center center;
+    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
 }
 
 header {
