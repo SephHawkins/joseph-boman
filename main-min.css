@@ -637,16 +637,16 @@ a.project:hover {
     .headerImg {
         position: absolute;
         opacity: 1;
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.2s ease-out;
     }
 
     .headerHoverImg {
         opacity: 0;
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.2s ease-out;
     }
 
     .headerLink h5 {
-        transition: color 0.5s ease-out;
+        transition: color 0.2s ease-out;
         display: inline-block;
     }
 
