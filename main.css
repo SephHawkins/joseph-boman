@@ -421,6 +421,7 @@ a {
 
 .block-link {
     color: var(--dark-color);
+    transition: color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .block-link:hover {
