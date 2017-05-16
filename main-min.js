@@ -315,7 +315,7 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: "componentDidMount",
         value: function componentDidMount() {
-            $('#loader').fadeOut('slow', function () {
+            $('#loader').delay(1000).fadeOut('slow', function () {
                 $(this).remove();
             });
             if (this.state.activePage === 'right') {

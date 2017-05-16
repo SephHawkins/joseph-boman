@@ -370,7 +370,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        $('#loader').fadeOut('slow', function(){
+        $('#loader').delay(1000).fadeOut('slow', function(){
             $(this).remove();
         });
         if(this.state.activePage === 'right'){
