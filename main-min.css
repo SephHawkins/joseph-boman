@@ -170,6 +170,12 @@ footer .gitHub {
     display: inline-grid;
     margin: 0;
 }
+.nav-bar a p span {
+    font-style: italic;
+    position: relative;
+    left: -4;
+    top: -2;
+}
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .nav-bar a p {
         display: -ms-inline-grid;
@@ -191,12 +197,6 @@ footer .gitHub {
         left: 57px;
         top: -20px;
     }
-}
-.nav-bar a p span {
-    font-style: italic;
-    position: relative;
-    left: -4;
-    top: -2;
 }
 .nav-bar svg {
     fill: #F1FAEE;
