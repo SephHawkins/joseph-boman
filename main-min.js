@@ -291,17 +291,31 @@ var App = function (_React$Component) {
         _this2.goBack = _this2.goBack.bind(_this2);
         _this2.handleMobileMenu = _this2.handleMobileMenu.bind(_this2);
         _this2.registerLink = _this2.registerLink.bind(_this2);
-        var activePage = 'left';
-        var rightBuffer = null,
-            bufferType = 'none';
-        console.log(window.location.href.split('/'));
-        if (window.location.href.indexOf('chambara') > -1) {
-            // TODO: Generalize this check
-            activePage = 'right';
-            rightBuffer = chambara;
+        var activePage = null;
+        var rightBuffer = null;
+        var bufferType = 'none';
+        var currentPage = 'home';
+        console.log(window.location.pathname.split('/'));
+        switch (window.location.pathname) {
+            case '/joseph-boman/':
+                currentPage = 'home';activePage = 'left';break;
+            case '/joseph-boman/chambara/':
+                currentPage = 'chambara';activePage = 'right';rightBuffer = rightBufferDetails['chambara'];bufferType = 'project';break;
+            case '/joseph-boman/a-walk-in-the-park/':
+                currentPage = 'a-walk-in-the-park';activePage = 'right';rightBuffer = rightBufferDetails['awalkinthepark'];bufferType = 'project';break;
+            case '/joseph-boman/monovirus/':
+                currentPage = 'monovirus';activePage = 'right';rightBuffer = rightBufferDetails['monovirus'];bufferType = 'project';break;
+            case '/joseph-boman/resume/':
+                currentPage = 'Chambara';activePage = 'right';rightBuffer = rightBufferDetails['resume'];bufferType = 'resume';break;
+            default:
+                currentPage = 'home';activePage = 'left';break; //TODO: Redirect to a 404 page
         }
+        // if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
+        //     activePage = 'right';
+        //     rightBuffer = chambara;
+        // }
         _this2.state = {
-            currentPage: 'Home',
+            currentPage: currentPage,
             rightBuffer: rightBuffer,
             bufferType: bufferType, // TODO: This should be defined by the URL
             activePage: activePage,
@@ -446,10 +460,10 @@ var App = function (_React$Component) {
             } else {
                 var scrollTop = $(window).scrollTop();
                 if (event.state.page !== 'resume') this.state.activeLink.setState({ active: true });
-                var rightBuffer = null,
-                    bufferType = null;
-                rightBuffer = rightBufferDetails[event.state.page.replace(/-/g, '')];
-                bufferType = rightBufferDetails[event.state.page.replace(/-/g, '')].bufferType;
+                var _rightBuffer = null,
+                    _bufferType = null;
+                _rightBuffer = rightBufferDetails[event.state.page.replace(/-/g, '')];
+                _bufferType = rightBufferDetails[event.state.page.replace(/-/g, '')].bufferType;
                 // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
                 //     rightBuffer = chambara;
                 //     bufferType = 'project'
@@ -460,9 +474,9 @@ var App = function (_React$Component) {
                 this.setState({
                     currentPage: event.state.page,
                     activePage: 'right',
-                    rightBuffer: rightBuffer,
+                    rightBuffer: _rightBuffer,
                     scrollTop: scrollTop,
-                    bufferType: bufferType
+                    bufferType: _bufferType
                 });
             }
         }

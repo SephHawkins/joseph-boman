@@ -350,15 +350,25 @@ class App extends React.Component {
         this.goBack = this.goBack.bind(this);
         this.handleMobileMenu = this.handleMobileMenu.bind(this);
         this.registerLink = this.registerLink.bind(this);
-        var activePage = 'left';
-        var rightBuffer = null, bufferType = 'none';
-        console.log(window.location.href.split('/'));
-        if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
-            activePage = 'right';
-            rightBuffer = chambara;
+        var activePage = null;
+        var rightBuffer = null;
+        var bufferType = 'none';
+        var currentPage = 'home';
+        console.log(window.location.pathname.split('/'));
+        switch(window.location.pathname){
+            case '/joseph-boman/': currentPage = 'home'; activePage = 'left'; break;
+            case '/joseph-boman/chambara/': currentPage = 'chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['chambara']; bufferType = 'project'; break;
+            case '/joseph-boman/a-walk-in-the-park/': currentPage = 'a-walk-in-the-park'; activePage = 'right'; rightBuffer = rightBufferDetails['awalkinthepark']; bufferType = 'project'; break;
+            case '/joseph-boman/monovirus/': currentPage = 'monovirus'; activePage = 'right'; rightBuffer = rightBufferDetails['monovirus']; bufferType = 'project'; break;
+            case '/joseph-boman/resume/': currentPage = 'Chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['resume']; bufferType = 'resume';  break;
+            default: currentPage = 'home'; activePage = 'left'; break; //TODO: Redirect to a 404 page
         }
+        // if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
+        //     activePage = 'right';
+        //     rightBuffer = chambara;
+        // }
         this.state = {
-            currentPage: 'Home',
+            currentPage: currentPage,
             rightBuffer: rightBuffer,
             bufferType: bufferType, // TODO: This should be defined by the URL
             activePage: activePage,
