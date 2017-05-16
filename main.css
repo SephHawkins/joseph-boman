@@ -170,6 +170,16 @@ footer .gitHub {
     display: inline-grid;
     margin: 0;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .nav-bar a p {
+        display: ms-inline-grid;
+    }
+}
+@supports (-ms-accelerator:true) {
+    .nav-bar a p {
+        display: ms-inline-grid;
+    }
+}
 .nav-bar a p span {
     font-style: italic;
     position: relative;
@@ -273,6 +283,12 @@ svg {
     margin-top: 10px;
     margin-bottom: 100px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@-moz-document url-prefix() {
+    .page-bottom {
+        margin-bottom: 160px;
+    }
 }
 
 .page-bottom h3 {
@@ -668,6 +684,13 @@ a.project:hover {
     .page-bottom {
         margin-bottom: 60px;
     }
+
+    @-moz-document url-prefix() {
+        .page-bottom {
+            margin-bottom: 120px;
+        }
+    }
+
     .page-top > div, .page-bottom > div {
         max-width: 1440px;
         margin: 0px auto;
