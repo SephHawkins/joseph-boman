@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
 }
 
 #loader {
@@ -21,13 +21,13 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
+    background: #232835 url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
 }
 
 header {
     height: 60px;
     width: 100%;
-    background-color: var(--dark-color);
+    background-color: #232835;
     position: fixed;
     top: 0px;
     z-index: 10;
@@ -65,9 +65,9 @@ svg {
 }
 
 .mobile-menu {
-    background-color: var(--dark-color);
+    background-color: #232835;
     margin: 0 5%;
-    color: var(--light-color);
+    color: #F1FAEE;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: fixed;
     width: 90%;
@@ -86,12 +86,12 @@ svg {
 .mobile-menu .text-link {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
-    color: var(--light-color);
+    color: #F1FAEE;
     display: block;
 }
 
 .mobile-menu .text-link:hover {
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 .mobile-menu .sub-link {
@@ -102,11 +102,11 @@ footer {
     height: 100px;
     position: fixed;
     bottom: 0;
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
     z-index: -5;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--dark-color);
+    color: #232835;
     padding-top: 5;
 }
 
@@ -122,12 +122,12 @@ footer h4 {
 }
 
 footer .text-link {
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 footer .text-link:hover {
     font-weight: bold;
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 footer .email {
@@ -160,7 +160,7 @@ footer .gitHub {
     vertical-align: top;
 }
 .nav-bar a p {
-    color: var(--light-color);
+    color: #F1FAEE;
     font-family: "Josefin Sans", sans-serif;
     line-height: 20px;
     top: 11px;
@@ -187,7 +187,7 @@ footer .gitHub {
     top: -2;
 }
 .nav-bar svg {
-    fill: var(--light-color);
+    fill: #F1FAEE;
     display: inline-block;
     vertical-align: top;
     float: right;
@@ -208,7 +208,7 @@ svg {
     z-index: 7;
     left: 100%;
     width: 100%;
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
 }
 
 .arrow-button {
@@ -217,7 +217,7 @@ svg {
     margin-left: 15px;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: var(--accent-color);
+    background-color: #00A56E;
 }
 
 .page-top .arrow-button {
@@ -231,7 +231,7 @@ svg {
 }
 
 .right-buffer .arrow {
-    fill: var(--dark-color);
+    fill: #232835;
     margin: 5px;
 }
 
@@ -245,11 +245,11 @@ svg {
     line-height: 40px;
     vertical-align: middle;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--dark-color);
+    color: #232835;
     font-size: 30px;
     text-align: center;
     width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
+    border-bottom: #232835 1px solid;
 }
 
 .right-buffer h2 {
@@ -277,8 +277,8 @@ svg {
 }
 
 .page-bottom {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: #232835;
+    color: #F1FAEE;
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
@@ -292,7 +292,7 @@ svg {
 }
 
 .page-bottom h3 {
-    color: var(--accent-color);
+    color: #00A56E;
     font-family: "Josefin Sans", sans-serif;
     margin: 20px 10% 5px;
     font-size: 20px;
@@ -327,13 +327,13 @@ svg {
     width: 70%;
     display: block;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: var(--accent-color);
+    background-color: #00A56E;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .downloadLink svg {
-    fill: var(--dark-color);
+    fill: #232835;
 }
 
 .downloadLink .downloadIcon {
@@ -383,7 +383,7 @@ svg {
     width: 12px;
     height: 12px;
     display: inline-block;
-    border: var(--dark-color) 3px solid;
+    border: #232835 3px solid;
     border-radius: 50%;
     margin: 5px 4px;
     cursor: pointer;
@@ -391,7 +391,7 @@ svg {
 }
 
 .dot.current-dot, .dot:hover {
-    background-color: var(--dark-color);
+    background-color: #232835;
     width: 16px;
     height: 16px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -416,7 +416,7 @@ svg {
 
 .page-top h1 {
     width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
+    border-bottom: #232835 1px solid;
 }
 
 .page-top h2 {
@@ -431,7 +431,7 @@ svg {
 
 .projects {
     overflow: hidden;
-    background-color: var(--dark-color);
+    background-color: #232835;
 }
 
 .projects h3 {
@@ -446,7 +446,7 @@ a {
 }
 
 .block-link {
-    color: var(--dark-color);
+    color: #232835;
     transition: color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
@@ -455,16 +455,16 @@ a {
 }
 
 .text-link {
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 .text-link:hover {
-    color: var(--accent-color);
+    color: #00A56E;
     font-weight: bold;
 }
 
 a.project {
-    color: var(--dark-color);
+    color: #232835;
 }
 
 a.project:hover {
@@ -473,7 +473,7 @@ a.project:hover {
 
 .project {
     float: right;
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
     position: relative;
     width: 85%;
     height: 120px;
@@ -481,7 +481,7 @@ a.project:hover {
     white-space: nowrap;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: var(--dark-color);
+    color: #232835;
     margin: 10px 0px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -547,35 +547,35 @@ a.project:hover {
 }
 
 .designer-tag {
-    background-color: var(--red-tag-color);
+    background-color: #BF394B;
 }
 .designer-tag.tag p {
     transform: rotate(-90deg) translate(-33px, 2px);
 }
 
 .coder-tag {
-    background-color: var(--blue-tag-color);
+    background-color: #3D9CCC;
 }
 .coder-tag.tag p {
     transform: rotate(-90deg) translate(-26px, 2px);
 }
 
 .qa-tag {
-    background-color: var(--purple-tag-color);
+    background-color: #9542BF;
 }
 .qa-tag.tag p {
     transform: rotate(-90deg) translate(-15px, 2px);
 }
 
 .modeler-tag {
-    background-color: var(--green-tag-color);
+    background-color: #35B24E;
 }
 .modeler-tag.tag p {
     transform: rotate(-90deg) translate(-33px, 2px);
 }
 
 .ui-tag {
-    background-color: var(--yellow-tag-color);
+    background-color: #FFEF78;
 }
 .ui-tag.tag p {
     transform: rotate(-90deg) translate(-21px, 2px);
@@ -604,14 +604,14 @@ a.project:hover {
     }
 
     .nav-bar .headerLink {
-        color: var(--light-color);
+        color: #F1FAEE;
         font-family: "Josefin Sans", sans-serif;
         margin-left: 10px;
         width: auto;
     }
 
     .headerLink:hover {
-        color: var(--accent-color);
+        color: #00A56E;
     }
 
     .headerLink:hover .headerImg {
@@ -767,7 +767,7 @@ a.project:hover {
     }
 
     .project h4 {
-        background-color: var(--light-color);
+        background-color: #F1FAEE;
         height: 60px;
         margin-left: 15px;
         z-index: 2;
