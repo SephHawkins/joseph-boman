@@ -72,22 +72,19 @@ var rightBufferDetails = {
                 subname: "Kaiser Permanente - Rotation Program",
                 time: "2016-Present",
                 longTime: "July 2016 - Present",
-                details: "Designed and programmed a visual and functional upgrade to an internal dashboard tool. Built new functionality onto existing Java Web Applications.\n" +
-                    "Worked with: Java, PHP, SQL, JavaScript, HTML, CSS, and React",
+                details: "Designed and programmed a visual and functional upgrade to an internal dashboard tool. Built new functionality onto existing Java Web Applications.\n" + "Worked with: Java, PHP, SQL, JavaScript, HTML, CSS, and React"
             }, {
                 name: "Undergraduate Researcher",
                 subname: "Information Sciences Institute - USC",
                 time: "2015",
                 longTime: "May 2015 - December 2015",
-                details: "Automated the creation and initialization of virutal containers and switches to facilitate the creation of large scale virtual networks.\n" +
-                    "Worked with: Chef, Vagrant, OpenvSwitch, Ruby, and Bash",
+                details: "Automated the creation and initialization of virtual containers and switches to facilitate the creation of large scale virtual networks.\n" + "Worked with: Chef, Vagrant, OpenvSwitch, Ruby, and Bash"
             }, {
                 name: "Undergraduate Researcher",
                 subname: "Texas State University",
                 time: "2014",
                 longTime: "May 2014 - August 2014",
-                details: "Created an Internet of Things middleware to draw meaningful conclusions from sensor data. Presented results at the 2014 CollaborateCom CollabCloud Workshop.\n" +
-                    "Worked with: Firebase, Phidget Sensors, and Java",
+                details: "Created an Internet of Things middleware to draw meaningful conclusions from sensor data. Presented results at the 2014 CollaborateCom CollabCloud Workshop.\n" + "Worked with: Firebase, Phidget Sensors, and Java"
             }]
         }, {
             name: "SELECTED PROJECTS",
@@ -96,29 +93,25 @@ var rightBufferDetails = {
                 subname: "Chambara - team ok",
                 time: "2015-2016",
                 longTime: "August 2015 - May 2016",
-                details: "A local multiplayer PS4 stealth-fighting game utilizing a dichromatic scheme. Implemented gameplay logic, developed test suites, managed a ten person QA team, and found and fixed numerous bugs\n" +
-                    "Worked with: Unity, PS4 DevKits/TestKits, Slack, Trello, and Perforce",
+                details: "A local multiplayer PS4 stealth-fighting game utilizing a dichromatic scheme. Implemented gameplay logic, developed test suites, managed a ten person QA team, and found and fixed numerous bugs\n" + "Worked with: Unity, PS4 DevKits/TestKits, Slack, Trello, and Perforce"
             }, {
                 name: "Engineer and Designer",
                 subname: "A Walk in the Park",
                 time: "2014",
                 longTime: "September 2014 - December 2014",
-                details: "A local multiplayer PC cooperative game about a not-quite big enough sidewalk. Designed and programmed gameplay logic, player feedback, and controller support\n" +
-                    "Worked with: Unity",
+                details: "A local multiplayer PC cooperative game about a not-quite big enough sidewalk. Designed and programmed gameplay logic, player feedback, and controller support\n" + "Worked with: Unity"
             }, {
                 name: "Network Engineer",
                 subname: "PrimeEngine",
                 time: "2014",
                 longTime: "January 2014 - May 2014",
-                details: "A game engine built in C++. Programmed server authoritative multiplayer using UDP socket programming and client-side prediction\n" +
-                    "Worked with: C++, Lua",
+                details: "A game engine built in C++. Programmed server authoritative multiplayer using UDP socket programming and client-side prediction\n" + "Worked with: C++, Lua"
             }, {
                 name: "Designer, 3-D Modeler, Engineer",
                 subname: "MonoVirus",
                 time: "2013",
                 longTime: "March 2013 - May 2013",
-                details: "A single player procedurally generated dungeon crawler through the human body. Designed and programmed gameplay logic and systems, created 3-D models, and created and programmed UI elements\n" +
-                    "Worked with: C#, MonoDevelop, XNA, and GIMP",
+                details: "A single player procedurally generated dungeon crawler through the human body. Designed and programmed gameplay logic and systems, created 3-D models, and created and programmed UI elements\n" + "Worked with: C#, MonoDevelop, XNA, and GIMP"
             }]
         }, {
             name: "SKILLS",
@@ -127,25 +120,25 @@ var rightBufferDetails = {
                 subname: "C++, C#, Java, HTML, CSS, JavaScript, PHP, SQL, Python, Ruby, Lua, Shell scripting",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }, {
                 name: "Software",
                 subname: "Eclipse, Visual Studio, MS Office, Photoshop, GIMP, Maya, Unity, Slack, Trello",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }, {
                 name: "Version Control and Other",
                 subname: "Git, Perforce, SVN, React, Chef, Spring",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }, {
                 name: "Operating Systems",
                 subname: "Windows (XP, 7, 8.1, 10), OSX, Linux",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }]
         }, {
             name: "HONORS AND AWARDS",
@@ -154,19 +147,19 @@ var rightBufferDetails = {
                 subname: "Full Tuition Scholarship to USC",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }, {
                 name: "Dean's List - USC",
                 subname: "3.5 GPA or higher - awarded every semester from Fall 2012 - Spring 2016",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }, {
                 name: "Tau Beta Pi - California Delta Chapter - USC",
                 subname: "Engineering Honor society - open to the top 5th of the graduating class",
                 time: "",
                 longTime: "",
-                details: "",
+                details: ""
             }]
         }],
         bufferType: 'resume'
@@ -925,13 +918,13 @@ function ResumeSection(props) {
         null,
         React.createElement(
             "h3",
-            null,
+            { style: { borderBottom: "#00A56E double 3px" } },
             props.name
         ),
         props.data.map(function (section) {
             return React.createElement(
                 "div",
-                { key: section.name + section.subname },
+                { key: section.name },
                 React.createElement(
                     "h4",
                     null,

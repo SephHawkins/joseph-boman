@@ -57,58 +57,119 @@ var rightBufferDetails = {
         name: "Joseph Boman",
         address: "joseph.j.boman@gmail.com",
         tagline: "Technical Associate at Kaiser Permanente",
-        sections: [
-            {
-                name: "EDUCATION",
-                data: [
-                    {
-                        name: "B.S. in Computer Science (Games)",
-                        time: "2012-2016",
-                        longTime: "September 2012 - May 2016",
-                        subname: "University of Southern California",
-                        details: "GPA: 3.92\nViterbi School of Engineering\nW.V.T. Rusch Undergraduate Honors Program",
-                    }
-                ]
-            },
-            {
-                name: "WORK EXPERIENCE",
-                data: [
-                    {
-                        name: "Technical Associate",
-                        subname: "Kaiser Permanente",
-                        time: "2016-Present",
-                        longTime: "July 2016 - Present",
-                        details: "Rotation Program at Kaiser Permanente. Rotated through four teams over two years"
-                    },
-                    {
-                        name: "Undergraduate Researcher",
-                        subname: "Information Sciences Institute",
-                        time: "2015-2016",
-                        longTime: "May 2015 - December 2016",
-                        details: "Worked on various Dev-Ops roles at USC's ISI. Worked under Ted Faber. Cool stuff"
-                    }
-                ]
-            },
-            {
-                name: "PROJECTS",
-                data: [
-                    {
-                        name: "Chambara",
-                        subname: "team ok",
-                        time: "2015-2016",
-                        longTime: "August 2015 - May 2016",
-                        details: "Did a bunch of work for QA stuff. Had a fun time. Tons of fun."
-                    },
-                    {
-                        name: "MonoVirus",
-                        subname: "",
-                        time: "2015",
-                        longTime: "March 2015 - May 2015",
-                        details: "Writing stuff for all of these for testing is hard. Should've just lorum ipsemed it."
-                    }
-                ]
-            }
-        ],
+        sections: [{
+            name: "EDUCATION",
+            data: [{
+                name: "B.S. in Computer Science (Games)",
+                time: "2012-2016",
+                longTime: "September 2012 - May 2016\nGPA: 3.92",
+                subname: "University of Southern California",
+                details: "Viterbi School of Engineering\nW.V.T. Rusch Undergraduate Honors Program"
+            }]
+        }, {
+            name: "WORK EXPERIENCE",
+            data: [{
+                name: "Technical Associate",
+                subname: "Kaiser Permanente - Rotation Program",
+                time: "2016-Present",
+                longTime: "July 2016 - Present",
+                details: "Designed and programmed a visual and functional upgrade to an internal dashboard tool. Built new functionality onto existing Java Web Applications.\n" +
+                    "Worked with: Java, PHP, SQL, JavaScript, HTML, CSS, and React",
+            }, {
+                name: "Undergraduate Researcher",
+                subname: "Information Sciences Institute - USC",
+                time: "2015",
+                longTime: "May 2015 - December 2015",
+                details: "Automated the creation and initialization of virtual containers and switches to facilitate the creation of large scale virtual networks.\n" +
+                    "Worked with: Chef, Vagrant, OpenvSwitch, Ruby, and Bash",
+            }, {
+                name: "Undergraduate Researcher",
+                subname: "Texas State University",
+                time: "2014",
+                longTime: "May 2014 - August 2014",
+                details: "Created an Internet of Things middleware to draw meaningful conclusions from sensor data. Presented results at the 2014 CollaborateCom CollabCloud Workshop.\n" +
+                    "Worked with: Firebase, Phidget Sensors, and Java",
+            }]
+        }, {
+            name: "SELECTED PROJECTS",
+            data: [{
+                name: "QA Lead and Engineer",
+                subname: "Chambara - team ok",
+                time: "2015-2016",
+                longTime: "August 2015 - May 2016",
+                details: "A local multiplayer PS4 stealth-fighting game utilizing a dichromatic scheme. Implemented gameplay logic, developed test suites, managed a ten person QA team, and found and fixed numerous bugs\n" +
+                    "Worked with: Unity, PS4 DevKits/TestKits, Slack, Trello, and Perforce",
+            }, {
+                name: "Engineer and Designer",
+                subname: "A Walk in the Park",
+                time: "2014",
+                longTime: "September 2014 - December 2014",
+                details: "A local multiplayer PC cooperative game about a not-quite big enough sidewalk. Designed and programmed gameplay logic, player feedback, and controller support\n" +
+                    "Worked with: Unity",
+            }, {
+                name: "Network Engineer",
+                subname: "PrimeEngine",
+                time: "2014",
+                longTime: "January 2014 - May 2014",
+                details: "A game engine built in C++. Programmed server authoritative multiplayer using UDP socket programming and client-side prediction\n" +
+                    "Worked with: C++, Lua",
+            }, {
+                name: "Designer, 3-D Modeler, Engineer",
+                subname: "MonoVirus",
+                time: "2013",
+                longTime: "March 2013 - May 2013",
+                details: "A single player procedurally generated dungeon crawler through the human body. Designed and programmed gameplay logic and systems, created 3-D models, and created and programmed UI elements\n" +
+                    "Worked with: C#, MonoDevelop, XNA, and GIMP",
+            }]
+        }, {
+            name: "SKILLS",
+            data: [{
+                name: "Programming Languages",
+                subname: "C++, C#, Java, HTML, CSS, JavaScript, PHP, SQL, Python, Ruby, Lua, Shell scripting",
+                time: "",
+                longTime: "",
+                details: "",
+            }, {
+                name: "Software",
+                subname: "Eclipse, Visual Studio, MS Office, Photoshop, GIMP, Maya, Unity, Slack, Trello",
+                time: "",
+                longTime: "",
+                details: "",
+            }, {
+                name: "Version Control and Other",
+                subname: "Git, Perforce, SVN, React, Chef, Spring",
+                time: "",
+                longTime: "",
+                details: "",
+            }, {
+                name: "Operating Systems",
+                subname: "Windows (XP, 7, 8.1, 10), OSX, Linux",
+                time: "",
+                longTime: "",
+                details: "",
+            }]
+        }, {
+            name: "HONORS AND AWARDS",
+            data: [{
+                name: "Trustee Scholarship - USC",
+                subname: "Full Tuition Scholarship to USC",
+                time: "",
+                longTime: "",
+                details: "",
+            }, {
+                name: "Dean's List - USC",
+                subname: "3.5 GPA or higher - awarded every semester from Fall 2012 - Spring 2016",
+                time: "",
+                longTime: "",
+                details: "",
+            }, {
+                name: "Tau Beta Pi - California Delta Chapter - USC",
+                subname: "Engineering Honor society - open to the top 5th of the graduating class",
+                time: "",
+                longTime: "",
+                details: "",
+            }]
+        }],
         bufferType: 'resume'
     },
     monovirus: {
@@ -651,7 +712,7 @@ class RightBuffer extends React.Component {
 function ResumeSection(props) {
     return (
         <div>
-            <h3>{props.name}</h3>
+            <h3 style={{borderBottom: "#00A56E double 3px"}}>{props.name}</h3>
             {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right time'>{section.time}</span><span className='right longTime'>{section.longTime}</span></h4><h5>{section.subname}</h5><p>{section.details}</p></div>)}
         </div>
     );
