@@ -311,7 +311,7 @@ svg {
 }
 
 .page-bottom h4 {
-    margin: 5px 10% 0px 10%;
+    margin: 5px 10% 5px 10%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
 }
@@ -322,7 +322,7 @@ svg {
 
 .page-bottom h5 {
     font-family: "Josefin Sans", sans-serif;
-    margin: 0 12%;
+    margin: 0 12% 2px 12%;
     font-size: 14px;
 }
 
@@ -330,6 +330,7 @@ svg {
     margin: 0 10% 20 15%;
     font-family: "Lato", sans-serif;
     white-space: pre-line;
+    line-height: 20px;
 }
 
 .downloadLink {
@@ -824,6 +825,7 @@ a.project:hover {
 
     .page-bottom p {
         font-size: 20px;
+        line-height: 28px;
     }
 
     .page-bottom h4 {
