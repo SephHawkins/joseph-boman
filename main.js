@@ -713,7 +713,7 @@ function ResumeSection(props) {
     return (
         <div>
             <h3 style={{borderBottom: "#00A56E double 3px"}}>{props.name}</h3>
-            {props.data.map(section => <div key={section.name}><h4>{section.name}<span className='right time'>{section.time}</span><span className='right longTime'>{section.longTime}</span></h4><h5>{section.subname}</h5><p>{section.details}</p></div>)}
+            {props.data.map(section => <div key={section.name + section.subname}><h4>{section.name}<span className='right time'>{section.time}</span><span className='right longTime'>{section.longTime}</span></h4><h5>{section.subname}</h5><p>{section.details}</p></div>)}
         </div>
     );
 }

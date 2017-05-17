@@ -2,7 +2,7 @@
     --dark-color: #232835;
     --light-color: #F1FAEE;
     --accent-color: #00A56E;
-    --link-hover-color: #1D2630;
+    --dark-link: black;
     --blue-tag-color: #3D9CCC;
     --green-tag-color: #35B24E;
     --purple-tag-color: #9542BF;
@@ -39,13 +39,13 @@ a {
 }
 
 .block-link:hover {
-    color: black;
-    fill: black;
+    color: var(--dark-link);
+    fill: var(--dark-link);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .block-link:hover svg {
-    fill: black;
+    fill: var(--dark-link);
 }
 
 .arrow-button {
@@ -61,7 +61,7 @@ svg {
 }
 
 .arrow-button:hover svg {
-    fill: black;
+    fill: var(--dark-link);
 }
 
 .mobile-menu {
@@ -466,7 +466,7 @@ a {
 }
 
 .block-link:hover {
-    color: black;
+    color: var(--dark-link);
 }
 
 .text-link {
@@ -483,7 +483,7 @@ a.project {
 }
 
 a.project:hover {
-    color: black;
+    color: var(--dark-link);
 }
 
 .project {
