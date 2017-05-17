@@ -11,17 +11,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var projectsJSON = [{
     name: "Chambara",
     link: "chambara",
-    image: "http://josephboman.com/wp-content/uploads/2015/11/Chambara13x9-e1447699049873.png",
+    image: "https://sephhawkins.github.io/joseph-boman/images/chambara-1.png",
     tags: ["qa", "coder"]
 }, {
     name: "A Walk in the Park",
     link: "a-walk-in-the-park",
-    image: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
+    image: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-1.png",
     tags: ["designer", "coder"]
 }, {
     name: "MonoVirus",
     link: "monovirus",
-    image: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+    image: "https://sephhawkins.github.io/joseph-boman/images/monovirus-1.png",
     tags: ["modeler", "coder"]
 }];
 
@@ -32,13 +32,13 @@ var rightBufferDetails = {
         about: "Chambara was first created at the Dare to be Digital game jam, and quickly expanded with the goal of releasing on PlayStation 4. The game was developed by a team of around 25 USC Games students.\n\nChambara is, at its heart, a local multiplayer experience, in which players utilize minimally colored levels to hide their character, attempting to use strategy and stealth to trick and defeat their opponent",
         lookBack: "As one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code\n\nAs one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code\n\nAs one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code",
         images: [{
-            link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara13x9-e1447699049873.png",
+            link: "https://sephhawkins.github.io/joseph-boman/images/chambara-1.png",
             alt: "Chambara-1"
         }, {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara2-13x9-e1447699059560.png",
+            link: "https://sephhawkins.github.io/joseph-boman/images/chambara-2.png",
             alt: "Chambara-2"
         }, {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara3-13x9-e1447699027993.png",
+            link: "https://sephhawkins.github.io/joseph-boman/images/chambara-3.png",
             alt: "Chambara-3"
         }],
         tags: [{
@@ -170,13 +170,13 @@ var rightBufferDetails = {
         about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
         lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
         images: [{
-            link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
+            link: "https://sephhawkins.github.io/joseph-boman/images/monovirus-1.png",
             alt: "MonoVirus-1"
         }, {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/Monovirus13x9-e1447699039893.png",
+            link: "https://sephhawkins.github.io/joseph-boman/images/monovirus-2.png",
             alt: "MonoVirus-2"
         }, {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus2-13x9-e1447698995565.png",
+            link: "https://sephhawkins.github.io/joseph-boman/images/monovirus-3.png",
             alt: "MonoVirus-3"
         }],
         tags: [{
@@ -199,27 +199,24 @@ var rightBufferDetails = {
         about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
         lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
         images: [{
-            link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
-            alt: "MonoVirus-1"
+            link: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-1.png",
+            alt: "A Walk in the Park 1"
         }, {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/Monovirus13x9-e1447699039893.png",
-            alt: "MonoVirus-2"
+            link: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-2.png",
+            alt: "A Walk in the Park 2"
         }, {
-            link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus2-13x9-e1447698995565.png",
-            alt: "MonoVirus-3"
+            link: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-3.png",
+            alt: "A Walk in the Park 3"
         }],
         tags: [{
             name: "coder",
-            text: "Built in C# using XNA and MonoDevelop"
+            text: "Built in Unity using C#"
         }, {
-            name: "modeler",
-            text: "Made player and enemy models in Maya"
-        }, {
-            name: "ui/ux",
-            text: "Created UI elements using GIMP"
+            name: "designer",
+            text: "Designed gameplay mechanics and systems"
         }],
         downloadType: "Windows",
-        downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPOWQ4MExTWXRYZmc&export=download",
+        downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPd1hXRlBVQ3ZWaTQ&export=download",
         bufferType: 'project'
     }
 };
@@ -482,7 +479,7 @@ function Header(props) {
             React.createElement(
                 "a",
                 { href: "/" },
-                React.createElement("img", { src: "http://josephboman.com/wp-content/themes/sephhawkins/images/logo-min.png" }),
+                React.createElement("img", { src: "https://sephhawkins.github.io/joseph-boman/images/logo.png" }),
                 React.createElement(
                     "p",
                     null,
@@ -497,10 +494,10 @@ function Header(props) {
             React.createElement(
                 "div",
                 { className: "desktopMenu" },
-                React.createElement(HeaderLink, { text: "ABOUT ME", image: "http://josephboman.com/wp-content/themes/sephhawkins/images/about-2-none.png", hoverImage: "http://josephboman.com/wp-content/themes/sephhawkins/images/about-2.png", handleClick: props.handleClick, link: "#about" }),
-                React.createElement(HeaderLink, { text: "RESUME", image: "http://josephboman.com/wp-content/themes/sephhawkins/images/coding-none.png", hoverImage: "http://josephboman.com/wp-content/themes/sephhawkins/images/coding.png", handleClick: props.handleClick, link: "resume" }),
-                React.createElement(HeaderLink, { text: "PROJECTS", image: "http://josephboman.com/wp-content/themes/sephhawkins/images/video-game.png", hoverImage: "http://josephboman.com/wp-content/themes/sephhawkins/images/video-game-controller.png", handleClick: props.handleClick, link: "#projects" }),
-                React.createElement(HeaderLink, { text: "CONTACT", image: "http://josephboman.com/wp-content/themes/sephhawkins/images/d20-none.png", hoverImage: "http://josephboman.com/wp-content/themes/sephhawkins/images/d20-2.png", handleClick: props.handleClick, link: "#contact" })
+                React.createElement(HeaderLink, { text: "ABOUT ME", image: "https://sephhawkins.github.io/joseph-boman/images/about.png", hoverImage: "https://sephhawkins.github.io/joseph-boman/images/about-glow.png", handleClick: props.handleClick, link: "#about" }),
+                React.createElement(HeaderLink, { text: "RESUME", image: "https://sephhawkins.github.io/joseph-boman/images/resume.png", hoverImage: "https://sephhawkins.github.io/joseph-boman/images/resume-glow.png", handleClick: props.handleClick, link: "resume" }),
+                React.createElement(HeaderLink, { text: "PROJECTS", image: "https://sephhawkins.github.io/joseph-boman/images/projects.png", hoverImage: "https://sephhawkins.github.io/joseph-boman/images/projects-glow.png", handleClick: props.handleClick, link: "#projects" }),
+                React.createElement(HeaderLink, { text: "CONTACT", image: "https://sephhawkins.github.io/joseph-boman/images/contact.png", hoverImage: "https://sephhawkins.github.io/joseph-boman/images/contact-glow.png", handleClick: props.handleClick, link: "#contact" })
             ),
             React.createElement(
                 "svg",
@@ -666,7 +663,7 @@ function FrontPageTop(props) {
     return React.createElement(
         "div",
         null,
-        React.createElement("img", { className: "front-img", src: "http://josephboman.com/wp-content/themes/sephhawkins/images/joseph-boman.png" }),
+        React.createElement("img", { className: "front-img", src: "https://sephhawkins.github.io/joseph-boman/images/joseph-boman.png" }),
         React.createElement(
             "h1",
             null,
