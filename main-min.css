@@ -854,6 +854,8 @@ a.project:hover {
 
     .longTime {
         display: inline;
+        white-space: pre-line;
+        text-align: right;
     }
 
     .time {
