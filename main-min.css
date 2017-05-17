@@ -48,6 +48,10 @@ a {
     fill: var(--link-hover);
 }
 
+.downloadLink:hover svg {
+    fill: black;
+}
+
 .arrow-button {
     transition: box-shadow 0.5s ease-out;
 }
