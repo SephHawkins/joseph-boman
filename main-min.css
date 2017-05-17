@@ -390,7 +390,7 @@ svg {
     border-radius: 5px;
     padding: 0px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    color: var(--light-color);
+    color: var(--dark-color);
 }
 
 .tag-details p {
@@ -570,6 +570,7 @@ a.project:hover {
     font-size: 13;
     font-family: 'NTR', sans-serif;
     font-weight: bold;
+    color: var(--dark-color);
 }
 
 .designer-tag {
