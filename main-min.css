@@ -7,7 +7,7 @@
     --green-tag-color: #35B24E;
     --purple-tag-color: #9542BF;
     --red-tag-color: #BF394B;
-    --yellow-tag-color: #FFEF78;
+    --orange-tag-color: #E29610;
 }
 
 body {
@@ -572,35 +572,35 @@ a.project:hover {
     background-color: #BF394B;
 }
 .designer-tag.tag p {
-    transform: rotate(-90deg) translate(-33px, 2px);
+    transform: rotate(-90deg) translate(-38px, 2px);
 }
 
 .coder-tag {
     background-color: #3D9CCC;
 }
 .coder-tag.tag p {
-    transform: rotate(-90deg) translate(-26px, 2px);
+    transform: rotate(-90deg) translate(-30px, 2px);
 }
 
 .qa-tag {
     background-color: #9542BF;
 }
 .qa-tag.tag p {
-    transform: rotate(-90deg) translate(-15px, 2px);
+    transform: rotate(-90deg) translate(-18px, 2px);
 }
 
 .modeler-tag {
     background-color: #35B24E;
 }
 .modeler-tag.tag p {
-    transform: rotate(-90deg) translate(-33px, 2px);
+    transform: rotate(-90deg) translate(-38px, 2px);
 }
 
 .ui-tag {
-    background-color: #FFEF78;
+    background-color: #E29610;
 }
 .ui-tag.tag p {
-    transform: rotate(-90deg) translate(-21px, 2px);
+    transform: rotate(-90deg) translate(-25px, 2px);
 }
 
 .testing-scroll {
