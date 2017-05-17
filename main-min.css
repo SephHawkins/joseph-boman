@@ -2,7 +2,7 @@
     --dark-color: #232835;
     --light-color: #F1FAEE;
     --accent-color: #00A56E;
-    --link-hover: black;
+    --link-hover: white;
     --blue-tag-color: #3D9CCC;
     --green-tag-color: #35B24E;
     --purple-tag-color: #9542BF;
@@ -21,7 +21,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--light-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
+    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
 }
 
 header {
@@ -448,6 +448,7 @@ svg {
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     margin: 5px 0px 0px 0px;
+    color: var(--light-color);
 }
 
 .projects {
@@ -472,7 +473,7 @@ a {
 }
 
 .block-link:hover {
-    color: var(--dark-link);
+    color: var(--link-hover);
 }
 
 .text-link {
@@ -489,7 +490,7 @@ a.project {
 }
 
 a.project:hover {
-    color: var(--dark-link);
+    color: var(--link-hover);
 }
 
 .project {
