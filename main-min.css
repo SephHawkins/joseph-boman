@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #F1FAEE;
+    background-color: var(--light-color);
 }
 
 #loader {
@@ -21,13 +21,13 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: #232835 url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
+    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
 }
 
 header {
     height: 60px;
     width: 100%;
-    background-color: #232835;
+    background-color: var(--dark-color);
     position: fixed;
     top: 0px;
     z-index: 10;
@@ -65,9 +65,9 @@ svg {
 }
 
 .mobile-menu {
-    background-color: #232835;
+    background-color: var(--dark-color);
     margin: 0 5%;
-    color: #F1FAEE;
+    color: var(--light-color);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: fixed;
     width: 90%;
@@ -86,12 +86,12 @@ svg {
 .mobile-menu .text-link {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
-    color: #F1FAEE;
+    color: var(--light-color);
     display: block;
 }
 
 .mobile-menu .text-link:hover {
-    color: #00A56E;
+    color: var(--accent-color);
 }
 
 .mobile-menu .sub-link {
@@ -102,11 +102,11 @@ footer {
     height: 100px;
     position: fixed;
     bottom: 0;
-    background-color: #F1FAEE;
+    background-color: var(--light-color);
     z-index: -5;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color: #232835;
+    color: var(--dark-color);
     padding-top: 5;
 }
 
@@ -122,12 +122,12 @@ footer h4 {
 }
 
 footer .text-link {
-    color: #00A56E;
+    color: var(--accent-color);
 }
 
 footer .text-link:hover {
     font-weight: bold;
-    color: #00A56E;
+    color: var(--accent-color);
 }
 
 footer .email {
@@ -160,7 +160,7 @@ footer .gitHub {
     vertical-align: top;
 }
 .nav-bar a p {
-    color: #F1FAEE;
+    color: var(--light-color);
     font-family: "Josefin Sans", sans-serif;
     line-height: 20px;
     top: 11px;
@@ -199,7 +199,7 @@ footer .gitHub {
     }
 }
 .nav-bar svg {
-    fill: #F1FAEE;
+    fill: var(--light-color);
     display: inline-block;
     vertical-align: top;
     float: right;
@@ -220,7 +220,7 @@ svg {
     z-index: 7;
     left: 100%;
     width: 100%;
-    background-color: #F1FAEE;
+    background-color: var(--light-color);
 }
 
 .arrow-button {
@@ -229,7 +229,7 @@ svg {
     margin-left: 15px;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: #00A56E;
+    background-color: var(--accent-color);
 }
 
 .page-top .arrow-button {
@@ -243,7 +243,7 @@ svg {
 }
 
 .right-buffer .arrow {
-    fill: #232835;
+    fill: var(--dark-color);
     margin: 5px;
 }
 
@@ -257,11 +257,11 @@ svg {
     line-height: 40px;
     vertical-align: middle;
     font-family: 'Josefin Sans', sans-serif;
-    color: #232835;
+    color: var(--dark-color);
     font-size: 30px;
     text-align: center;
     width: 80%;
-    border-bottom: #232835 1px solid;
+    border-bottom: var(--dark-color) 1px solid;
 }
 
 .right-buffer h2 {
@@ -289,8 +289,8 @@ svg {
 }
 
 .page-bottom {
-    background-color: #232835;
-    color: #F1FAEE;
+    background-color: var(--dark-color);
+    color: var(--light-color);
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
@@ -304,7 +304,7 @@ svg {
 }
 
 .page-bottom h3 {
-    color: #00A56E;
+    color: var(--accent-color);
     font-family: "Josefin Sans", sans-serif;
     margin: 20px 10% 5px;
     font-size: 20px;
@@ -340,13 +340,13 @@ svg {
     width: 70%;
     display: block;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: #00A56E;
+    background-color: var(--accent-color);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .downloadLink svg {
-    fill: #232835;
+    fill: var(--dark-color);
 }
 
 .downloadLink .downloadIcon {
@@ -380,7 +380,7 @@ svg {
     border-radius: 5px;
     padding: 0px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    color: #232835;
+    color: var(--dark-color);
 }
 
 .tag-details p {
@@ -397,7 +397,7 @@ svg {
     width: 12px;
     height: 12px;
     display: inline-block;
-    border: #232835 3px solid;
+    border: var(--dark-color) 3px solid;
     border-radius: 50%;
     margin: 5px 4px;
     cursor: pointer;
@@ -405,7 +405,7 @@ svg {
 }
 
 .dot.current-dot, .dot:hover {
-    background-color: #232835;
+    background-color: var(--dark-color);
     width: 16px;
     height: 16px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -426,12 +426,12 @@ svg {
     margin: 0 auto;
     font-family: "Josefin Sans", sans-serif;
     display: block;
-    color: #232835;
+    color: var(--dark-color);
 }
 
 .page-top h1 {
     width: 80%;
-    border-bottom: #232835 1px solid;
+    border-bottom: var(--dark-color) 1px solid;
 }
 
 .page-top h2 {
@@ -446,7 +446,7 @@ svg {
 
 .projects {
     overflow: hidden;
-    background-color: #232835;
+    background-color: var(--dark-color);
 }
 
 .projects h3 {
@@ -461,7 +461,7 @@ a {
 }
 
 .block-link {
-    color: #232835;
+    color: var(--dark-color);
     transition: color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
@@ -470,16 +470,16 @@ a {
 }
 
 .text-link {
-    color: #00A56E;
+    color: var(--accent-color);
 }
 
 .text-link:hover {
-    color: #00A56E;
+    color: var(--accent-color);
     font-weight: bold;
 }
 
 a.project {
-    color: #232835;
+    color: var(--dark-color);
 }
 
 a.project:hover {
@@ -488,7 +488,7 @@ a.project:hover {
 
 .project {
     float: right;
-    background-color: #F1FAEE;
+    background-color: var(--light-color);
     position: relative;
     width: 85%;
     height: 120px;
@@ -496,7 +496,7 @@ a.project:hover {
     white-space: nowrap;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: #232835;
+    color: var(--dark-color);
     margin: 10px 0px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -619,14 +619,14 @@ a.project:hover {
     }
 
     .nav-bar .headerLink {
-        color: #F1FAEE;
+        color: var(--light-color);
         font-family: "Josefin Sans", sans-serif;
         margin-left: 10px;
         width: auto;
     }
 
     .headerLink:hover {
-        color: #00A56E;
+        color: var(--accent-color);
     }
 
     .headerLink:hover .headerImg {
@@ -782,7 +782,7 @@ a.project:hover {
     }
 
     .project h4 {
-        background-color: #F1FAEE;
+        background-color: var(--light-color);
         height: 60px;
         margin-left: 15px;
         z-index: 2;
