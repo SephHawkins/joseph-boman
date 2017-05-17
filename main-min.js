@@ -61,9 +61,9 @@ var rightBufferDetails = {
             data: [{
                 name: "B.S. in Computer Science (Games)",
                 time: "2012-2016",
-                longTime: "September 2012 - May 2016",
+                longTime: "September 2012 - May 2016\nGPA: 3.92",
                 subname: "University of Southern California",
-                details: "GPA: 3.92\nViterbi School of Engineering\nW.V.T. Rusch Undergraduate Honors Program"
+                details: "Viterbi School of Engineering\nW.V.T. Rusch Undergraduate Honors Program"
             }]
         }, {
             name: "WORK EXPERIENCE",
