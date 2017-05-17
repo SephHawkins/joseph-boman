@@ -59,11 +59,11 @@ var rightBufferDetails = {
         sections: [{
             name: "EDUCATION",
             data: [{
-                name: "University of Southern California",
+                name: "B.S. in Computer Science (Games)",
                 time: "2012-2016",
                 longTime: "September 2012 - May 2016",
-                subname: "B.S. in Computer Science (Games)",
-                details: ""
+                subname: "University of Southern California",
+                details: "GPA: 3.92\nViterbi School of Engineering\nW.V.T. Rusch Undergraduate Honors Program"
             }]
         }, {
             name: "WORK EXPERIENCE",
@@ -158,127 +158,6 @@ var rightBufferDetails = {
     }
 };
 
-var project = {
-    name: "MonoVirus",
-    tagline: "Action RPG Dungeon Crawler Game",
-    about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
-    lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
-    images: [{
-        link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
-        alt: "MonoVirus-1"
-    }, {
-        link: "http://josephboman.com/wp-content/uploads/2015/11/Monovirus13x9-e1447699039893.png",
-        alt: "MonoVirus-2"
-    }, {
-        link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus2-13x9-e1447698995565.png",
-        alt: "MonoVirus-3"
-    }],
-    tags: [{
-        name: "coder",
-        text: "Built in C# using XNA and MonoDevelop"
-    }, {
-        name: "modeler",
-        text: "Made player and enemy models in Maya"
-    }, {
-        name: "ui/ux",
-        text: "Created UI elements using GIMP"
-    }],
-    downloadType: "Windows",
-    downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPOWQ4MExTWXRYZmc&export=download"
-};
-var chambara = {
-    name: "Chambara",
-    tagline: "Two-color Stealth Action PS4 Game",
-    about: "Chambara was first created at the Dare to be Digital game jam, and quickly expanded with the goal of releasing on PlayStation 4. The game was developed by a team of around 25 USC Games students.\n\nChambara is, at its heart, a local multiplayer experience, in which players utilize minimally colored levels to hide their character, attempting to use strategy and stealth to trick and defeat their opponent",
-    lookBack: "As one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code\n\nAs one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code\n\nAs one of the engineers and the QA lead, my primary goal was finding and fixing bugs. I managed a team of eight QA testers, planning out the testing that they would do, organizing their responses and helping the engineering team to determine and fix the root cause. In addition, I fixed many of the bugs, since I was very familiar with the source code",
-    images: [{
-        link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara13x9-e1447699049873.png",
-        alt: "Chambara-1"
-    }, {
-        link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara2-13x9-e1447699059560.png",
-        alt: "Chambara-2"
-    }, {
-        link: "http://josephboman.com/wp-content/uploads/2015/11/Chambara3-13x9-e1447699027993.png",
-        alt: "Chambara-3"
-    }],
-    tags: [{
-        name: "coder",
-        text: "Built gameplay systems and controller logic in Unity for PS4"
-    }, {
-        name: "qa",
-        text: "Ran a ten person QA team and passed Sony's TRC"
-    }],
-    downloadType: "PlayStation",
-    downloadLink: "https://store.playstation.com/#!/en-us/games/chambara/cid=UP1279-CUSA05224_00-CHAMBARA00000000"
-};
-
-var resume = {
-    name: "Joseph Boman",
-    address: "joseph.j.boman@gmail.com",
-    tagline: "Technical Associate at Kaiser Permanente",
-    sections: [{
-        name: "EDUCATION",
-        data: [{
-            name: "University of Southern California",
-            time: "2012-2016",
-            longTime: "September 2012 - May 2016",
-            subname: "B.S. in Computer Science (Games)",
-            details: ""
-        }]
-    }, {
-        name: "WORK EXPERIENCE",
-        data: [{
-            name: "Technical Associate",
-            subname: "Kaiser Permanente",
-            time: "2016-Present",
-            longTime: "July 2016 - Present",
-            details: "Rotation Program at Kaiser Permanente. Rotated through four teams over two years"
-        }, {
-            name: "Undergraduate Researcher",
-            subname: "Information Sciences Institute",
-            time: "2015-2016",
-            longTime: "May 2015 - December 2016",
-            details: "Worked on various Dev-Ops roles at USC's ISI. Worked under Ted Faber. Cool stuff"
-        }]
-    }, {
-        name: "PROJECTS",
-        data: [{
-            name: "Chambara",
-            subname: "team ok",
-            time: "2015-2016",
-            longTime: "August 2015 - May 2016",
-            details: "Did a bunch of work for QA stuff. Had a fun time. Tons of fun."
-        }, {
-            name: "MonoVirus",
-            subname: "",
-            time: "2015",
-            longTime: "March 2015 - May 2015",
-            details: "Writing stuff for all of these for testing is hard. Should've just lorum ipsemed it."
-        }]
-    }]
-};
-var images = [{
-    link: "http://josephboman.com/wp-content/uploads/2015/11/MonoVirus3-13x9-e1447698985342.png",
-    alt: "Chambara-1"
-}, {
-    link: "http://josephboman.com/wp-content/uploads/2015/11/AWITP13x9-e1447699066395.png",
-    alt: "Chambara-2"
-}, {
-    link: "https://s.aolcdn.com/hss/storage/midas/bbb2a9e25ec0f36f3cbf6c35135be19f/204153271/0Wxvj1e.jpg",
-    alt: "Chambara-3"
-}];
-
-var tagDetails = [{
-    name: "coder",
-    text: "Built in C# using XNA and MonoDevelop"
-}, {
-    name: "modeler",
-    text: "Made player and enemy models in Maya"
-}, {
-    name: "ui/ux",
-    text: "Created UI elements using GIMP"
-}];
-
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
@@ -310,17 +189,13 @@ var App = function (_React$Component) {
             default:
                 currentPage = 'home';activePage = 'left';break; //TODO: Redirect to a 404 page
         }
-        // if(window.location.href.indexOf('chambara') > -1) { // TODO: Generalize this check
-        //     activePage = 'right';
-        //     rightBuffer = chambara;
-        // }
         _this2.state = {
             currentPage: currentPage,
             rightBuffer: rightBuffer,
-            bufferType: bufferType, // TODO: This should be defined by the URL
+            bufferType: bufferType,
             activePage: activePage,
-            scrollTarget: 0
-        };
+            scrollTarget: 0,
+            projects: projectsJSON };
         var _this = _this2;
         window.onpopstate = function (event) {
             _this.handleBack(event);
@@ -386,18 +261,10 @@ var App = function (_React$Component) {
             var rightBuffer = null,
                 bufferType = null;
             if (typeof rightBufferDetails[link.replace(/-/g, '')] !== 'undefined') {
+                // TODO: Replace with AJAX
                 rightBuffer = rightBufferDetails[link.replace(/-/g, '')];
                 bufferType = rightBufferDetails[link.replace(/-/g, '')].bufferType;
             }
-            // rightBuffer = projects[link]
-            // if(link == 'resume') {// TODO: Replace this with AJAX
-            //     rightBuffer = resume;
-            //     bufferType = 'resume';
-            // }
-            // else {
-            //     rightBuffer = chambara;
-            //     bufferType = 'project';
-            // }
             this.setState({
                 currentPage: link,
                 activePage: moveTo,
@@ -462,7 +329,7 @@ var App = function (_React$Component) {
                 if (event.state.page !== 'resume') this.state.activeLink.setState({ active: true });
                 var _rightBuffer = null,
                     _bufferType = null;
-                _rightBuffer = rightBufferDetails[event.state.page.replace(/-/g, '')];
+                _rightBuffer = rightBufferDetails[event.state.page.replace(/-/g, '')]; // TODO: Replace with AJAX
                 _bufferType = rightBufferDetails[event.state.page.replace(/-/g, '')].bufferType;
                 // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
                 //     rightBuffer = chambara;
@@ -511,11 +378,11 @@ var App = function (_React$Component) {
                 "div",
                 null,
                 React.createElement(Header, { toggleMobileMenu: this.toggleMobileMenu, handleClick: this.handleMobileMenu }),
-                React.createElement(MobileMenu, { projects: projectsJSON, handleClick: this.handleMobileMenu }),
+                React.createElement(MobileMenu, { projects: this.state.projects, handleClick: this.handleMobileMenu }),
                 React.createElement(
                     "div",
                     { className: "main-page" },
-                    React.createElement(FrontPage, { projects: projectsJSON, handleClick: this.handleNavigation, registerLink: this.registerLink })
+                    React.createElement(FrontPage, { projects: this.state.projects, handleClick: this.handleNavigation, registerLink: this.registerLink })
                 ),
                 React.createElement(RightBuffer, { type: this.state.bufferType, data: this.state.rightBuffer, handleBack: this.goBack }),
                 React.createElement(Footer, null)
