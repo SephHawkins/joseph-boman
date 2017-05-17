@@ -924,7 +924,7 @@ function ResumeSection(props) {
         props.data.map(function (section) {
             return React.createElement(
                 "div",
-                { key: section.name },
+                { key: section.name + section.subname },
                 React.createElement(
                     "h4",
                     null,
