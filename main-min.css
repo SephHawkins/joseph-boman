@@ -2,7 +2,7 @@
     --dark-color: #232835;
     --light-color: #F1FAEE;
     --accent-color: #00A56E;
-    --dark-link: black;
+    --link-hover: black;
     --blue-tag-color: #3D9CCC;
     --green-tag-color: #35B24E;
     --purple-tag-color: #9542BF;
@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
 }
 
 #loader {
@@ -21,7 +21,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
+    background: var(--light-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
 }
 
 header {
@@ -39,13 +39,13 @@ a {
 }
 
 .block-link:hover {
-    color: var(--dark-link);
-    fill: var(--dark-link);
+    color: var(--link-hover);
+    fill: var(--link-hover);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .block-link:hover svg {
-    fill: var(--dark-link);
+    fill: var(--link-hover);
 }
 
 .arrow-button {
@@ -61,13 +61,13 @@ svg {
 }
 
 .arrow-button:hover svg {
-    fill: var(--dark-link);
+    fill: black;
 }
 
 .mobile-menu {
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     margin: 0 5%;
-    color: var(--light-color);
+    color: var(--dark-color);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: fixed;
     width: 90%;
@@ -86,7 +86,7 @@ svg {
 .mobile-menu .text-link {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
-    color: var(--light-color);
+    color: var(--dark-color);
     display: block;
 }
 
@@ -102,11 +102,11 @@ footer {
     height: 100px;
     position: fixed;
     bottom: 0;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     z-index: -5;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--dark-color);
+    color: var(--light-color);
     padding-top: 5;
 }
 
@@ -220,7 +220,7 @@ svg {
     z-index: 7;
     left: 100%;
     width: 100%;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
 }
 
 .arrow-button {
@@ -257,11 +257,11 @@ svg {
     line-height: 40px;
     vertical-align: middle;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--dark-color);
+    color: var(--light-color);
     font-size: 30px;
     text-align: center;
     width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
+    border-bottom: var(--light-color) 1px solid;
 }
 
 .right-buffer h2 {
@@ -289,8 +289,8 @@ svg {
 }
 
 .page-bottom {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--dark-color);
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
@@ -366,6 +366,12 @@ svg {
     font-family: "Josefin Sans", sans-serif;
     display: inline-block;
     position: relative;
+    color: var(--dark-color);
+}
+
+.downloadLink:hover {
+    color: black;
+    fill: black;
 }
 
 .img-selector {
@@ -380,7 +386,7 @@ svg {
     border-radius: 5px;
     padding: 0px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 .tag-details p {
@@ -397,7 +403,7 @@ svg {
     width: 12px;
     height: 12px;
     display: inline-block;
-    border: var(--dark-color) 3px solid;
+    border: var(--light-color) 3px solid;
     border-radius: 50%;
     margin: 5px 4px;
     cursor: pointer;
@@ -405,7 +411,7 @@ svg {
 }
 
 .dot.current-dot, .dot:hover {
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     width: 16px;
     height: 16px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -426,12 +432,12 @@ svg {
     margin: 0 auto;
     font-family: "Josefin Sans", sans-serif;
     display: block;
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 .page-top h1 {
     width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
+    border-bottom: var(--light-color) 1px solid;
 }
 
 .page-top h2 {
@@ -446,7 +452,7 @@ svg {
 
 .projects {
     overflow: hidden;
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
 .projects h3 {
@@ -461,7 +467,7 @@ a {
 }
 
 .block-link {
-    color: var(--dark-color);
+    color: var(--light-color);
     transition: color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
@@ -479,7 +485,7 @@ a {
 }
 
 a.project {
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 a.project:hover {
@@ -488,7 +494,7 @@ a.project:hover {
 
 .project {
     float: right;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     position: relative;
     width: 85%;
     height: 120px;
@@ -496,7 +502,7 @@ a.project:hover {
     white-space: nowrap;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: var(--dark-color);
+    color: var(--light-color);
     margin: 10px 0px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -782,7 +788,7 @@ a.project:hover {
     }
 
     .project h4 {
-        background-color: var(--light-color);
+        background-color: var(--dark-color);
         height: 60px;
         margin-left: 15px;
         z-index: 2;
