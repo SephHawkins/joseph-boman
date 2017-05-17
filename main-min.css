@@ -158,6 +158,9 @@ footer .gitHub {
     display: inline-block;
     white-space: nowrap;
 }
+.nav-bar a:hover {
+    font-weight: bold;
+}
 .nav-bar a img {
     height: 60px;
     display: inline-block;
