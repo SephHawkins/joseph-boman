@@ -497,6 +497,10 @@ a.project:hover {
     color: var(--link-hover);
 }
 
+a.project:hover .tag {
+    color: black;
+}
+
 .project {
     float: right;
     background-color: var(--dark-color);
