@@ -2,19 +2,19 @@ var projectsJSON = [
     {
         name: "Chambara",
         link: "chambara",
-        image: "https://sephhawkins.github.io/joseph-boman/images/chambara-1.png",
+        image: "http://josephboman.com/images/chambara-1.png",
         tags: ["qa","coder"]
     },
     {
         name: "A Walk in the Park",
         link: "a-walk-in-the-park",
-        image: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-1.png",
+        image: "http://josephboman.com/images/a-walk-in-the-park-1.png",
         tags: ["designer","coder"]
     },
     {
         name: "MonoVirus",
         link: "monovirus",
-        image: "https://sephhawkins.github.io/joseph-boman/images/monovirus-1.png",
+        image: "http://josephboman.com/images/monovirus-1.png",
         tags: ["modeler", "coder"]
     }
 ];
@@ -31,15 +31,15 @@ var rightBufferDetails = {
         "All in all, Chambara was a great learning experience, and contained a number of firsts for me. It was my first time shipping a game, working with consoles, managing a QA team, and working with a team of that size. I learned a great deal and would welcome the chance to work with any of the people who worked on Chambara again.",
         images: [
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/chambara-1.png",
+                link: "http://josephboman.com/images/chambara-1.png",
                 alt: "Chambara-1"
             },
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/chambara-2.png",
+                link: "http://josephboman.com/images/chambara-2.png",
                 alt: "Chambara-2"
             },
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/chambara-3.png",
+                link: "http://josephboman.com/images/chambara-3.png",
                 alt: "Chambara-3"
             }
         ],
@@ -183,15 +183,15 @@ var rightBufferDetails = {
         lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
         images: [
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/monovirus-1.png",
+                link: "http://josephboman.com/images/monovirus-1.png",
                 alt: "MonoVirus-1"
             },
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/monovirus-2.png",
+                link: "http://josephboman.com/images/monovirus-2.png",
                 alt: "MonoVirus-2"
             },
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/monovirus-3.png",
+                link: "http://josephboman.com/images/monovirus-3.png",
                 alt: "MonoVirus-3"
             }
         ],
@@ -220,15 +220,15 @@ var rightBufferDetails = {
         lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
         images: [
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-1.png",
+                link: "http://josephboman.com/images/a-walk-in-the-park-1.png",
                 alt: "A Walk in the Park 1"
             },
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-2.png",
+                link: "http://josephboman.com/images/a-walk-in-the-park-2.png",
                 alt: "A Walk in the Park 2"
             },
             {
-                link: "https://sephhawkins.github.io/joseph-boman/images/a-walk-in-the-park-3.png",
+                link: "http://josephboman.com/images/a-walk-in-the-park-3.png",
                 alt: "A Walk in the Park 3"
             }
         ],
@@ -261,12 +261,12 @@ class App extends React.Component {
         var currentPage = 'home';
         console.log(window.location.pathname.split('/'));
         switch(window.location.pathname){
-            case '/joseph-boman/': currentPage = 'home'; activePage = 'left'; break;
-            case '/joseph-boman/chambara/': currentPage = 'chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['chambara']; bufferType = 'project'; break;
-            case '/joseph-boman/a-walk-in-the-park/': currentPage = 'a-walk-in-the-park'; activePage = 'right'; rightBuffer = rightBufferDetails['awalkinthepark']; bufferType = 'project'; break;
-            case '/joseph-boman/monovirus/': currentPage = 'monovirus'; activePage = 'right'; rightBuffer = rightBufferDetails['monovirus']; bufferType = 'project'; break;
-            case '/joseph-boman/resume/': currentPage = 'Chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['resume']; bufferType = 'resume';  break;
-            default: currentPage = 'home'; activePage = 'left'; break; //TODO: Redirect to a 404 page
+            case '/': currentPage = 'home'; activePage = 'left'; break;
+            case '/chambara': currentPage = 'chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['chambara']; bufferType = 'project'; break;
+            case '/a-walk-in-the-park': currentPage = 'a-walk-in-the-park'; activePage = 'right'; rightBuffer = rightBufferDetails['awalkinthepark']; bufferType = 'project'; break;
+            case '/monovirus': currentPage = 'monovirus'; activePage = 'right'; rightBuffer = rightBufferDetails['monovirus']; bufferType = 'project'; break;
+            case '/resume': currentPage = 'Chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['resume']; bufferType = 'resume';  break;
+            default: currentPage = '404'; activePage = 'right'; bufferType='404'; break; //TODO: Redirect to a 404 page
         }
         this.state = {
             currentPage: currentPage,
@@ -354,7 +354,7 @@ class App extends React.Component {
         if(activePage === 'right'){
             NProgress.start();
             if(link !== this.state.currentPage) {
-                history.pushState({page: link}, link, '/joseph-boman/' + link);
+                history.pushState({page: link}, link, '/' + link);
                 if(typeof this.state.activeLink !== 'undefined') {
                     $('.active').css({'left': '0%'});
                     this.state.activeLink.setState({active: false});
@@ -366,7 +366,7 @@ class App extends React.Component {
             this.handleNavigation(link, activePage, ((typeof this.state[link] != 'undefined') ? this.state[link] : null));
         } else {
             NProgress.start();
-            history.pushState({page: link}, link, '/joseph-boman/' + link);
+            history.pushState({page: link}, link, '/' + link);
             $('.main-page').css({'display': 'block'});
             var scrollTarget = $(link).offset().top - 80;
             if(link === '#contact')
@@ -427,7 +427,7 @@ class App extends React.Component {
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
         $('.main-page').css({'display': 'block'});
         //$(window).scrollTop(this.state.scrollTarget);
-        history.pushState({page: 'main'}, 'main-page', '/joseph-boman/');
+        history.pushState({page: 'main'}, 'main-page', '/');
         this.setState({
             currentPage: 'main',
             activePage: 'left'
@@ -470,14 +470,14 @@ function Header(props){
         <header id="header">
             <nav className="nav-bar">
                 <a href="/">
-                    <img src="https://sephhawkins.github.io/joseph-boman/images/logo.png" />
+                    <img src="http://josephboman.com/images/logo.png" />
                     <p><span>oseph</span> oman</p>
                 </a>
                 <div className="desktopMenu">
-                    <HeaderLink text="ABOUT ME" image="https://sephhawkins.github.io/joseph-boman/images/about.png" hoverImage="https://sephhawkins.github.io/joseph-boman/images/about-glow.png" handleClick={props.handleClick} link="#about" />
-                    <HeaderLink text="RESUME" image="https://sephhawkins.github.io/joseph-boman/images/resume.png" hoverImage="https://sephhawkins.github.io/joseph-boman/images/resume-glow.png" handleClick={props.handleClick} link="resume" />
-                    <HeaderLink text="PROJECTS" image="https://sephhawkins.github.io/joseph-boman/images/projects.png" hoverImage="https://sephhawkins.github.io/joseph-boman/images/projects-glow.png" handleClick={props.handleClick} link="#projects" />
-                    <HeaderLink text="CONTACT" image="https://sephhawkins.github.io/joseph-boman/images/contact.png" hoverImage="https://sephhawkins.github.io/joseph-boman/images/contact-glow.png" handleClick={props.handleClick} link="#contact" />
+                    <HeaderLink text="ABOUT ME" image="http://josephboman.com/images/about.png" hoverImage="http://josephboman.com/images/about-glow.png" handleClick={props.handleClick} link="#about" />
+                    <HeaderLink text="RESUME" image="http://josephboman.com/images/resume.png" hoverImage="http://josephboman.com/images/resume-glow.png" handleClick={props.handleClick} link="resume" />
+                    <HeaderLink text="PROJECTS" image="http://josephboman.com/images/projects.png" hoverImage="http://josephboman.com/images/projects-glow.png" handleClick={props.handleClick} link="#projects" />
+                    <HeaderLink text="CONTACT" image="http://josephboman.com/images/contact.png" hoverImage="http://josephboman.com/images/contact-glow.png" handleClick={props.handleClick} link="#contact" />
                 </div>
                 <svg onClick={props.toggleMobileMenu} height="60" width="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"></path>
@@ -580,7 +580,7 @@ class BasicLink extends React.Component {
 function FrontPageTop(props){
     return (
         <div>
-            <img className='front-img' src='https://sephhawkins.github.io/joseph-boman/images/joseph-boman.png' />
+            <img className='front-img' src='http://josephboman.com/images/joseph-boman.png' />
             <h1>Joseph Boman</h1>
             <h2>Programmer + Designer</h2>
         </div>
@@ -598,7 +598,7 @@ class About extends React.Component{
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
         //$(window).scrollTop(0);
-        history.pushState({page: 'resume'}, 'Resume', '/joseph-boman/resume');
+        history.pushState({page: 'resume'}, 'Resume', '/resume');
         //$(window).scrollTop(scrollTop);
         this.props.handleClick('resume', "right", this);
     }
@@ -607,7 +607,7 @@ class About extends React.Component{
         return (
         <div id='about'>
             <h3>ABOUT ME</h3>
-            <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a className='text-link' href='/joseph-boman/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
+            <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a className='text-link' href='/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
         </div>
         );
     }
@@ -700,6 +700,20 @@ class RightBuffer extends React.Component {
                         </div>} />
                 </div>
             );
+			case "404":
+			return (
+				<div className='right-buffer'>
+					<PageBody topSection={<div>
+                    <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                    <img className='img404' src="http://josephboman.com/images/404.jpg" />
+                    </div>}
+                    bottomSection={<div>
+                    <h1 style={{marginTop: "10px", paddingTop: "20px"}}>404 Error: Page not Found</h1>
+                    <h2>The page you requested does not exist.<br /><br />Please navigate to another page via the header, back buttons, or another URL</h2>
+                    <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                    </div>} />
+				</div>
+			);
             case "none":
             return (
                 <div className='right-buffer'>
@@ -771,7 +785,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <a href={"/joseph-boman/" + this.state.href} className={"block-link project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
+            <a href={"/" + this.state.href} className={"block-link project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 className={((this.props.name.length >= 10 ) ? 'thin-margin' : 'thick-margin')}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />

@@ -14,6 +14,11 @@ body {
     background-color: var(--dark-color);
 }
 
+::selection, body {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
 #loader {
     width: 100%;
     height: 100%;
@@ -21,7 +26,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
+    background: var(--dark-color) url('http://josephboman.com/images/loading.gif') no-repeat center center;
 }
 
 header {
@@ -70,12 +75,12 @@ svg {
 
 .mobile-menu {
     background-color: var(--light-color);
-    margin: 0 5%;
+    margin: 0px 5%;
     color: var(--dark-color);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: fixed;
     width: 90%;
-    top: -200;
+    top: -200px;
     z-index: 9;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -111,7 +116,7 @@ footer {
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--light-color);
-    padding-top: 5;
+    padding-top: 5px;
 }
 
 footer p {
@@ -154,7 +159,7 @@ footer .gitHub {
 }
 
 .nav-bar a {
-    width: 90;
+    width: 90px;
     display: inline-block;
     white-space: nowrap;
 }
@@ -175,13 +180,13 @@ footer .gitHub {
     font-size: 20px;
     left: -32px;
     display: inline-grid;
-    margin: 0;
+    margin: 0px;
 }
 .nav-bar a p span {
     font-style: italic;
     position: relative;
-    left: -4;
-    top: -2;
+    left: -4px;
+    top: -2px;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .nav-bar a p {
@@ -230,6 +235,15 @@ svg {
     background-color: var(--dark-color);
 }
 
+.img404 {
+	height:300px;
+	margin: 20px auto;
+	display: block;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border-radius: 10px;
+	
+}
+
 .arrow-button {
     width: 50px;
     height: 50px;
@@ -256,25 +270,6 @@ svg {
 
 .right-buffer .page-bottom {
     margin-bottom: 0px;
-}
-
-.right-buffer h1 {
-    display: inline-block;
-    margin: 10px 10%;
-    line-height: 40px;
-    vertical-align: middle;
-    font-family: 'Josefin Sans', sans-serif;
-    color: var(--light-color);
-    font-size: 30px;
-    text-align: center;
-    width: 80%;
-    border-bottom: var(--light-color) 1px solid;
-}
-
-.right-buffer h2 {
-    font-family: "Josefin Sans", sans-serif;
-    text-align: center;
-    margin: 0px;
 }
 
 .circle-img {
@@ -329,19 +324,19 @@ svg {
 
 .page-bottom h5 {
     font-family: "Josefin Sans", sans-serif;
-    margin: 0 12% 2px 12%;
+    margin: 0px 12% 2px 12%;
     font-size: 14px;
 }
 
 .page-bottom p {
-    margin: 0 10% 20 15%;
+    margin: 0px 10% 20px 15%;
     font-family: "Lato", sans-serif;
     white-space: pre-line;
     line-height: 20px;
 }
 
 .downloadLink {
-    margin: 15 auto 15 auto;
+    margin: 15px auto 15px auto;
     padding: 5px;
     white-space: nowrap;
     width: 70%;
@@ -367,7 +362,7 @@ svg {
 }
 
 .downloadLink p {
-    margin: 0 5px;
+    margin: 0px 5px;
     top: 15px;
     left: -21px;
     font-family: "Josefin Sans", sans-serif;
@@ -389,7 +384,7 @@ svg {
 
 
 .tag-details {
-    margin: 0 10%;
+    margin: 0px 10%;
     border-radius: 5px;
     padding: 0px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -436,7 +431,7 @@ svg {
 
 .page-top h1, .page-top h2 {
     text-align: center;
-    margin: 0 auto;
+    margin: 0px auto;
     font-family: "Josefin Sans", sans-serif;
     display: block;
     color: var(--light-color);
@@ -447,8 +442,21 @@ svg {
     border-bottom: var(--light-color) 1px solid;
 }
 
-.page-top h2 {
+.page-top h2, .page-bottom h2 {
     margin-top: 5px;
+}
+
+.page-bottom h1, .page-bottom h2 {
+    text-align: center;
+    margin: 0px auto;
+    font-family: "Josefin Sans", sans-serif;
+    display: block;
+    color: var(--dark-color);
+}
+
+.page-bottom h1 {
+    width: 80%;
+    border-bottom: var(--dark-color) 1px solid;
 }
 
 .page-top h4 {
@@ -523,10 +531,10 @@ a.project:hover .tag {
     display: inline-block;
     line-height: 40px;
     width: 140px;
-    margin: 0 10px;
+    margin: 0px 10px;
     font-size: 30px;
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
     white-space: normal;
 }
@@ -560,11 +568,13 @@ a.project:hover .tag {
 .details {
     display: inline-block;
     vertical-align: top;
+	height: 100%;
 }
 
 .col-1, .col-2 {
     display: inline-block;
     float: left;
+	height: 100%;
 }
 
 .tag {
@@ -573,8 +583,8 @@ a.project:hover .tag {
 }
 
 .tag p {
-    margin: 0;
-    font-size: 13;
+    margin: 0px;
+    font-size: 13px;
     font-family: 'NTR', sans-serif;
     font-weight: bold;
     color: var(--dark-color);
@@ -613,10 +623,6 @@ a.project:hover .tag {
 }
 .ui-tag.tag p {
     transform: rotate(-90deg) translate(-25px, 2px);
-}
-
-.testing-scroll {
-    height: 1000px;
 }
 
 .desktopMenu {
@@ -668,7 +674,6 @@ a.project:hover .tag {
     }
 
     .headerLink h5 {
-        transition: color 0.2s ease-out;
         display: inline-block;
     }
 
@@ -679,12 +684,12 @@ a.project:hover .tag {
 
     .footer {
         max-width: 1200px;
-        margin: 0 5%;
+        margin: 0px 5%;
     }
 
     .footer p {
         display: inline-block;
-        margin: 0;
+        margin: 0px;
         line-height: 60px;
     }
 
@@ -698,7 +703,7 @@ a.project:hover .tag {
     }
 
     .footer .email {
-        margin: 0;
+        margin: 0px;
         line-height: 60px;
         display: inline-block;
     }
@@ -732,7 +737,7 @@ a.project:hover .tag {
     .project {
         width: 35%;
         float: left;
-        margin: 10 0 40 10%;
+        margin: 10px 0px 40px 10%;
         border-radius: 0px;
         height: 300px;
         transition: box-shadow 0.5s ease-out, color 0.5s ease-out;
@@ -778,6 +783,7 @@ a.project:hover .tag {
     .details {
         position: relative;
         z-index: 3;
+		height: 100%;
     }
 
     .tag {
