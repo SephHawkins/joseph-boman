@@ -11,12 +11,12 @@
 }
 
 body {
-    background-color: var(--dark-color);
+    background-color: #232835;
 }
 
 ::selection, body {
-    background: var(--dark-color);
-    color: var(--light-color);
+    background: #232835;
+    color: #F1FAEE;
 }
 
 #loader {
@@ -26,13 +26,13 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--dark-color) url('http://josephboman.com/images/loading.gif') no-repeat center center;
+    background: #232835 url('http://josephboman.com/images/loading.gif') no-repeat center center;
 }
 
 header {
     height: 60px;
     width: 100%;
-    background-color: var(--dark-color);
+    background-color: #232835;
     position: fixed;
     top: 0px;
     z-index: 10;
@@ -44,13 +44,13 @@ a {
 }
 
 .block-link:hover {
-    color: var(--link-hover);
-    fill: var(--link-hover);
+    color: white;
+    fill: white;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .block-link:hover svg {
-    fill: var(--link-hover);
+    fill: white;
 }
 
 .downloadLink:hover svg {
@@ -74,9 +74,9 @@ svg {
 }
 
 .mobile-menu {
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
     margin: 0px 5%;
-    color: var(--dark-color);
+    color: #232835;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: fixed;
     width: 90%;
@@ -95,12 +95,12 @@ svg {
 .mobile-menu .text-link {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
-    color: var(--dark-color);
+    color: #232835;
     display: block;
 }
 
 .mobile-menu .text-link:hover {
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 .mobile-menu .sub-link {
@@ -111,11 +111,11 @@ footer {
     height: 100px;
     position: fixed;
     bottom: 0;
-    background-color: var(--dark-color);
+    background-color: #232835;
     z-index: -5;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--light-color);
+    color: #F1FAEE;
     padding-top: 5px;
 }
 
@@ -131,12 +131,12 @@ footer h4 {
 }
 
 footer .text-link {
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 footer .text-link:hover {
     font-weight: bold;
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 footer .email {
@@ -172,7 +172,7 @@ footer .gitHub {
     vertical-align: top;
 }
 .nav-bar a p {
-    color: var(--light-color);
+    color: #F1FAEE;
     font-family: "Josefin Sans", sans-serif;
     line-height: 20px;
     top: 11px;
@@ -211,7 +211,7 @@ footer .gitHub {
     }
 }
 .nav-bar svg {
-    fill: var(--light-color);
+    fill: #F1FAEE;
     display: inline-block;
     vertical-align: top;
     float: right;
@@ -232,16 +232,15 @@ svg {
     z-index: 7;
     left: 100%;
     width: 100%;
-    background-color: var(--dark-color);
+    background-color: #232835;
 }
 
 .img404 {
-	height:300px;
+	width: 80%;
 	margin: 20px auto;
 	display: block;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	border-radius: 10px;
-	
 }
 
 .arrow-button {
@@ -250,7 +249,11 @@ svg {
     margin-left: 15px;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: var(--accent-color);
+    background-color: #00A56E;
+}
+
+.page {
+    background-color: #232835;
 }
 
 .page-top .arrow-button {
@@ -264,7 +267,7 @@ svg {
 }
 
 .right-buffer .arrow {
-    fill: var(--dark-color);
+    fill: #232835;
     margin: 5px;
 }
 
@@ -286,13 +289,12 @@ svg {
     position: relative;
     width: 260px;
     height: auto;
-    z-index: -1;
     display: inline-block;
 }
 
 .page-bottom {
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: #F1FAEE;
+    color: #232835;
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
@@ -306,14 +308,14 @@ svg {
 }
 
 .page-bottom h3 {
-    color: var(--accent-color);
+    color: #00A56E;
     font-family: "Josefin Sans", sans-serif;
-    margin: 20px 10% 5px;
+    margin: 20px 5% 5px;
     font-size: 20px;
 }
 
 .page-bottom h4 {
-    margin: 5px 10% 5px 10%;
+    margin: 5px 5% 5px 5%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
 }
@@ -324,12 +326,12 @@ svg {
 
 .page-bottom h5 {
     font-family: "Josefin Sans", sans-serif;
-    margin: 0px 12% 2px 12%;
+    margin: 0px 7% 2px 7%;
     font-size: 14px;
 }
 
 .page-bottom p {
-    margin: 0px 10% 20px 15%;
+    margin: 0px 5% 20px 10%;
     font-family: "Lato", sans-serif;
     white-space: pre-line;
     line-height: 20px;
@@ -342,13 +344,13 @@ svg {
     width: 70%;
     display: block;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    background-color: var(--accent-color);
+    background-color: #00A56E;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .downloadLink svg {
-    fill: var(--dark-color);
+    fill: #232835;
 }
 
 .downloadLink .downloadIcon {
@@ -368,7 +370,7 @@ svg {
     font-family: "Josefin Sans", sans-serif;
     display: inline-block;
     position: relative;
-    color: var(--dark-color);
+    color: #232835;
 }
 
 .downloadLink:hover {
@@ -388,7 +390,7 @@ svg {
     border-radius: 5px;
     padding: 0px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    color: var(--dark-color);
+    color: #232835;
 }
 
 .tag-details p {
@@ -405,7 +407,7 @@ svg {
     width: 12px;
     height: 12px;
     display: inline-block;
-    border: var(--light-color) 3px solid;
+    border: #F1FAEE 3px solid;
     border-radius: 50%;
     margin: 5px 4px;
     cursor: pointer;
@@ -413,7 +415,7 @@ svg {
 }
 
 .dot.current-dot, .dot:hover {
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
     width: 16px;
     height: 16px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -434,12 +436,12 @@ svg {
     margin: 0px auto;
     font-family: "Josefin Sans", sans-serif;
     display: block;
-    color: var(--light-color);
+    color: #F1FAEE;
 }
 
 .page-top h1 {
     width: 80%;
-    border-bottom: var(--light-color) 1px solid;
+    border-bottom: #F1FAEE 1px solid;
 }
 
 .page-top h2, .page-bottom h2 {
@@ -451,24 +453,24 @@ svg {
     margin: 0px auto;
     font-family: "Josefin Sans", sans-serif;
     display: block;
-    color: var(--dark-color);
+    color: #232835;
 }
 
 .page-bottom h1 {
     width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
+    border-bottom: #232835 1px solid;
 }
 
 .page-top h4 {
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     margin: 5px 0px 0px 0px;
-    color: var(--light-color);
+    color: #F1FAEE;
 }
 
 .projects {
     overflow: hidden;
-    background-color: var(--light-color);
+    background-color: #F1FAEE;
 }
 
 .projects h3 {
@@ -483,29 +485,29 @@ a {
 }
 
 .block-link {
-    color: var(--light-color);
+    color: #F1FAEE;
     transition: color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .block-link:hover {
-    color: var(--link-hover);
+    color: white;
 }
 
 .text-link {
-    color: var(--accent-color);
+    color: #00A56E;
 }
 
 .text-link:hover {
-    color: var(--accent-color);
+    color: #00A56E;
     font-weight: bold;
 }
 
 a.project {
-    color: var(--light-color);
+    color: #F1FAEE;
 }
 
 a.project:hover {
-    color: var(--link-hover);
+    color: white;
 }
 
 a.project:hover .tag {
@@ -514,7 +516,7 @@ a.project:hover .tag {
 
 .project {
     float: right;
-    background-color: var(--dark-color);
+    background-color: #232835;
     position: relative;
     width: 85%;
     height: 120px;
@@ -522,12 +524,12 @@ a.project:hover .tag {
     white-space: nowrap;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: var(--light-color);
+    color: #F1FAEE;
     margin: 10px 0px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.project h4 {
+.page-bottom .project h4 {
     display: inline-block;
     line-height: 40px;
     width: 140px;
@@ -539,11 +541,11 @@ a.project:hover .tag {
     white-space: normal;
 }
 
-.project h4.thin-margin {
+.page-bottom .project h4.thin-margin {
     margin-top: 20px;
 }
 
-.project h4.thick-margin {
+.page-bottom .project h4.thick-margin {
     margin-top: 40px;
 }
 
@@ -587,7 +589,7 @@ a.project:hover .tag {
     font-size: 13px;
     font-family: 'NTR', sans-serif;
     font-weight: bold;
-    color: var(--dark-color);
+    color: #232835;
 }
 
 .designer-tag {
@@ -644,14 +646,14 @@ a.project:hover .tag {
     }
 
     .nav-bar .headerLink {
-        color: var(--light-color);
+        color: #F1FAEE;
         font-family: "Josefin Sans", sans-serif;
         margin-left: 10px;
         width: auto;
     }
 
     .headerLink:hover {
-        color: var(--accent-color);
+        color: #00A56E;
     }
 
     .headerLink:hover .headerImg {
@@ -806,8 +808,8 @@ a.project:hover .tag {
         transform: rotate(-90deg) translate(-82px, 1px);
     }
 
-    .project h4 {
-        background-color: var(--dark-color);
+    .page-bottom .project h4 {
+        background-color: #232835;
         height: 60px;
         margin-left: 15px;
         z-index: 2;
@@ -818,11 +820,11 @@ a.project:hover .tag {
         line-height: 60px;
     }
 
-    .project h4.thin-margin {
+    .page-bottom .project h4.thin-margin {
         margin-top: 0px;
     }
 
-    .project h4.thick-margin {
+    .page-bottom .project h4.thick-margin {
         margin-top: 0px;
     }
 
@@ -846,19 +848,23 @@ a.project:hover .tag {
 
     .page-bottom h3 {
         font-size: 28px;
+        margin: 20px 10% 5px;
     }
 
     .page-bottom p {
         font-size: 20px;
         line-height: 28px;
+        margin: 0px 12% 2px 12%;
     }
 
     .page-bottom h4 {
         font-size: 24px;
+        margin: 5px 10% 5px 10%;
     }
 
     .page-bottom h5 {
         font-size: 18px;
+        margin: 0px 12% 2px 12%;
     }
 
     .page-top h1 {
@@ -887,6 +893,11 @@ a.project:hover .tag {
 
     .time {
         display: none;
+    }
+
+    .img404 {
+        width: auto;
+        height: 300px;
     }
 }
 

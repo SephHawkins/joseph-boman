@@ -1,0 +1,33 @@
+{
+   "name":"A Walk in the Park",
+   "tagline":"Cooperative Walking Simulator",
+   "about":"MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
+   "lookBack":"Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
+   "images":[
+      {
+         "link":"http://josephboman.com/images/a-walk-in-the-park-1.png",
+         "alt":"A Walk in the Park 1"
+      },
+      {
+         "link":"http://josephboman.com/images/a-walk-in-the-park-2.png",
+         "alt":"A Walk in the Park 2"
+      },
+      {
+         "link":"http://josephboman.com/images/a-walk-in-the-park-3.png",
+         "alt":"A Walk in the Park 3"
+      }
+   ],
+   "tags":[
+      {
+         "name":"coder",
+         "text":"Built in Unity using C#"
+      },
+      {
+         "name":"designer",
+         "text":"Designed gameplay mechanics and systems"
+      }
+   ],
+   "downloadType":"Windows",
+   "downloadLink":"https://docs.google.com/uc?id=0BwZrt8zDIOLPd1hXRlBVQ3ZWaTQ&export=download",
+   "bufferType":"project"
+}

@@ -19,235 +19,6 @@ var projectsJSON = [
     }
 ];
 
-var rightBufferDetails = {
-    chambara: {
-        name: "Chambara",
-        tagline: "Two-color Stealth Action PS4 Game",
-        about: "Chambara was first created at the Dare to be Digital game jam, and quickly expanded with the goal of releasing on PlayStation 4. The game was developed by a team of around 25 USC Games students.\n\nChambara is, at its heart, a local multiplayer experience, in which players utilize minimally colored levels to hide their character, attempting to use strategy and stealth to trick and defeat their opponent",
-        lookBack: "Chambara was my first time working on a team of that size (~30 people) and as such, presented a new set of difficulties that I hadn't encountered before. While I had previously used version control, this was the first time that it truly became necessary, with multiple rollbacks, meetings to solve merge conflicts, and branches. Perforce saved Chambara numerous times. The large team also brought members who were not as familiar with Unity and Perforce, and explaining those programs to them was a new experience for a number of us.\n\n" +
-        "From an engineering standpoint, since Chambara was written for a game jam, a large amount of the codebase was thrown together quickly, without much thought for reuse or expansion. While the engineering team tried to refactor the code where we could, the deadlines we were given meant that we spent more time writing new code than we spent refactoring. This led to some very strange instances of spaghetti code. Files regularly reached upwards of thousands of lines. Each file was taken by a couple of engineers, who understood the convoluted flow and were the quickest to be able to make changes.\n\n" +
-        "When we originally started working on Chambara, the plan was to have networked multiplayer. We spent a large portion of the first semester working on networked multiplayer, however it ended up getting scrapped. Due to the visual stealth nature of the game, the net-code needed to be exceptionally tight, and we were not able to get it to that point. Additionally, adding networked features would have dramatically increased the number of technical requirements that Microsoft and Sony demanded of the game, and we were very intent on releasing on one of those consoles. So, scope had to be reduced, and networking was removed.\n\n" +
-        "Finally, Chambara was interesting for me specifically, since I was asked to become the QA lead when we started the QA process. I was fortunate that Jesse Vigil stepped in and mentored me, giving me advice about how to run a QA team. With that in mind, I created a series of test suites that the QA team followed, and an intake form which populated the Google Sheet where we were storing the bugs. In hindsight, I would have saved myself time (which I spent managing the sheet) had I used an off-the-shelf QA solution, however, I was more interested in interfacing with what the team already used. I studied the PlayStation Technical Requirements extensively, and worked with the QA team to insure that we passed them the first time we submitted Chambara to Sony.\n\n" +
-        "All in all, Chambara was a great learning experience, and contained a number of firsts for me. It was my first time shipping a game, working with consoles, managing a QA team, and working with a team of that size. I learned a great deal and would welcome the chance to work with any of the people who worked on Chambara again.",
-        images: [
-            {
-                link: "http://josephboman.com/images/chambara-1.png",
-                alt: "Chambara-1"
-            },
-            {
-                link: "http://josephboman.com/images/chambara-2.png",
-                alt: "Chambara-2"
-            },
-            {
-                link: "http://josephboman.com/images/chambara-3.png",
-                alt: "Chambara-3"
-            }
-        ],
-        tags: [
-            {
-                name: "coder",
-                text: "Built gameplay systems and controller logic in Unity for PS4"
-            },
-            {
-                name: "qa",
-                text: "Ran a ten person QA team and passed Sony's TRC"
-            }
-        ],
-        downloadType: "PlayStation",
-        downloadLink: "https://store.playstation.com/#!/en-us/games/chambara/cid=UP1279-CUSA05224_00-CHAMBARA00000000",
-        bufferType: 'project'
-    },
-    resume: {
-        name: "Joseph Boman",
-        address: "joseph.j.boman@gmail.com",
-        tagline: "Technical Associate at Kaiser Permanente",
-        sections: [{
-            name: "EDUCATION",
-            data: [{
-                name: "B.S. in Computer Science (Games)",
-                time: "2012-2016",
-                longTime: "September 2012 - May 2016\nGPA: 3.92",
-                subname: "University of Southern California",
-                details: "Viterbi School of Engineering\nW.V.T. Rusch Undergraduate Honors Program"
-            }]
-        }, {
-            name: "WORK EXPERIENCE",
-            data: [{
-                name: "Technical Associate",
-                subname: "Kaiser Permanente - Rotation Program",
-                time: "2016-Present",
-                longTime: "July 2016 - Present",
-                details: "Designed and programmed a visual and functional upgrade to an internal dashboard tool. Built new functionality onto existing Java Web Applications.\n" +
-                    "Worked with: Java, PHP, SQL, JavaScript, HTML, CSS, and React",
-            }, {
-                name: "Undergraduate Researcher",
-                subname: "Information Sciences Institute - USC",
-                time: "2015",
-                longTime: "May 2015 - December 2015",
-                details: "Automated the creation and initialization of virtual containers and switches to facilitate the creation of large scale virtual networks.\n" +
-                    "Worked with: Chef, Vagrant, OpenvSwitch, Ruby, and Bash",
-            }, {
-                name: "Undergraduate Researcher",
-                subname: "Texas State University",
-                time: "2014",
-                longTime: "May 2014 - August 2014",
-                details: "Created an Internet of Things middleware to draw meaningful conclusions from sensor data. Presented results at the 2014 CollaborateCom CollabCloud Workshop.\n" +
-                    "Worked with: Firebase, Phidget Sensors, and Java",
-            }]
-        }, {
-            name: "SELECTED PROJECTS",
-            data: [{
-                name: "QA Lead and Engineer",
-                subname: "Chambara - team ok",
-                time: "2015-2016",
-                longTime: "August 2015 - May 2016",
-                details: "A local multiplayer PS4 stealth-fighting game utilizing a dichromatic scheme. Implemented gameplay logic, developed test suites, managed a ten person QA team, and found and fixed numerous bugs\n" +
-                    "Worked with: Unity, PS4 DevKits/TestKits, Slack, Trello, and Perforce",
-            }, {
-                name: "Engineer and Designer",
-                subname: "A Walk in the Park",
-                time: "2014",
-                longTime: "September 2014 - December 2014",
-                details: "A local multiplayer PC cooperative game about a not-quite big enough sidewalk. Designed and programmed gameplay logic, player feedback, and controller support\n" +
-                    "Worked with: Unity",
-            }, {
-                name: "Network Engineer",
-                subname: "PrimeEngine",
-                time: "2014",
-                longTime: "January 2014 - May 2014",
-                details: "A game engine built in C++. Programmed server authoritative multiplayer using UDP socket programming and client-side prediction\n" +
-                    "Worked with: C++, Lua",
-            }, {
-                name: "Designer, 3-D Modeler, Engineer",
-                subname: "MonoVirus",
-                time: "2013",
-                longTime: "March 2013 - May 2013",
-                details: "A single player procedurally generated dungeon crawler through the human body. Designed and programmed gameplay logic and systems, created 3-D models, and created and programmed UI elements\n" +
-                    "Worked with: C#, MonoDevelop, XNA, and GIMP",
-            }]
-        }, {
-            name: "SKILLS",
-            data: [{
-                name: "Programming Languages",
-                subname: "C++, C#, Java, HTML, CSS, JavaScript, PHP, SQL, Python, Ruby, Lua, Shell scripting",
-                time: "",
-                longTime: "",
-                details: "",
-            }, {
-                name: "Software",
-                subname: "Eclipse, Visual Studio, MS Office, Photoshop, GIMP, Maya, Unity, Slack, Trello",
-                time: "",
-                longTime: "",
-                details: "",
-            }, {
-                name: "Version Control and Other",
-                subname: "Git, Perforce, SVN, React, Chef, Spring",
-                time: "",
-                longTime: "",
-                details: "",
-            }, {
-                name: "Operating Systems",
-                subname: "Windows (XP, 7, 8.1, 10), OSX, Linux",
-                time: "",
-                longTime: "",
-                details: "",
-            }]
-        }, {
-            name: "HONORS AND AWARDS",
-            data: [{
-                name: "Trustee Scholarship - USC",
-                subname: "Full Tuition Scholarship to USC",
-                time: "",
-                longTime: "",
-                details: "",
-            }, {
-                name: "Dean's List - USC",
-                subname: "3.5 GPA or higher - awarded every semester from Fall 2012 - Spring 2016",
-                time: "",
-                longTime: "",
-                details: "",
-            }, {
-                name: "Tau Beta Pi - California Delta Chapter - USC",
-                subname: "Engineering Honor society - open to the top 5th of the graduating class",
-                time: "",
-                longTime: "",
-                details: "",
-            }]
-        }],
-        bufferType: 'resume'
-    },
-    monovirus: {
-        name: "MonoVirus",
-        tagline: "Action RPG Dungeon Crawler Game",
-        about: "MonoVirus was a project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
-        lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
-        images: [
-            {
-                link: "http://josephboman.com/images/monovirus-1.png",
-                alt: "MonoVirus-1"
-            },
-            {
-                link: "http://josephboman.com/images/monovirus-2.png",
-                alt: "MonoVirus-2"
-            },
-            {
-                link: "http://josephboman.com/images/monovirus-3.png",
-                alt: "MonoVirus-3"
-            }
-        ],
-        tags: [
-            {
-                name: "coder",
-                text: "Built in C# using XNA and MonoDevelop"
-            },
-            {
-                name: "modeler",
-                text: "Made player and enemy models in Maya"
-            },
-            {
-                name: "ui/ux",
-                text: "Created UI elements using GIMP"
-            }
-        ],
-        downloadType: "Windows",
-        downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPOWQ4MExTWXRYZmc&export=download",
-        bufferType: 'project'
-    },
-    awalkinthepark: {
-        name: "A Walk in the Park",
-        tagline: "Cooperative Walking Simulator",
-        about: "MonoVirus was a semester long project that I worked on with three other engineers – Zach Vega-Perkins, Mathew Schacher, and Cherys Fair. Together we wanted to create a dungeon crawler with a bit of a darker twist, much like games like Pandemic.\n\nTo do this, we created a procedurally generated dungeon that gave the appearance of blood vessels, and crafted our player character and our enemy characters as if they were a virus and human cells (respectively).",
-        lookBack: "Since the team was composed entirely of engineers, I ended up doing a great deal of design work over the course of the project. I created all of the UI elements in the game, using primarily GIMP, and also created all of the 3D models for the various characters in the game.\n\nDespite that, I still found plenty of time to work with the code, which was a great learning experience for me, as it was my first time working with C#, MonoGame, and XNA.",
-        images: [
-            {
-                link: "http://josephboman.com/images/a-walk-in-the-park-1.png",
-                alt: "A Walk in the Park 1"
-            },
-            {
-                link: "http://josephboman.com/images/a-walk-in-the-park-2.png",
-                alt: "A Walk in the Park 2"
-            },
-            {
-                link: "http://josephboman.com/images/a-walk-in-the-park-3.png",
-                alt: "A Walk in the Park 3"
-            }
-        ],
-        tags: [
-            {
-                name: "coder",
-                text: "Built in Unity using C#"
-            },
-            {
-                name: "designer",
-                text: "Designed gameplay mechanics and systems"
-            }
-        ],
-        downloadType: "Windows",
-        downloadLink: "https://docs.google.com/uc?id=0BwZrt8zDIOLPd1hXRlBVQ3ZWaTQ&export=download",
-        bufferType: 'project'
-    },
-};
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -262,10 +33,10 @@ class App extends React.Component {
         console.log(window.location.pathname.split('/'));
         switch(window.location.pathname){
             case '/': currentPage = 'home'; activePage = 'left'; break;
-            case '/chambara': currentPage = 'chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['chambara']; bufferType = 'project'; break;
-            case '/a-walk-in-the-park': currentPage = 'a-walk-in-the-park'; activePage = 'right'; rightBuffer = rightBufferDetails['awalkinthepark']; bufferType = 'project'; break;
-            case '/monovirus': currentPage = 'monovirus'; activePage = 'right'; rightBuffer = rightBufferDetails['monovirus']; bufferType = 'project'; break;
-            case '/resume': currentPage = 'Chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['resume']; bufferType = 'resume';  break;
+            // case '/chambara': currentPage = 'chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['chambara']; bufferType = 'project'; break;
+            // case '/a-walk-in-the-park': currentPage = 'a-walk-in-the-park'; activePage = 'right'; rightBuffer = rightBufferDetails['awalkinthepark']; bufferType = 'project'; break;
+            // case '/monovirus': currentPage = 'monovirus'; activePage = 'right'; rightBuffer = rightBufferDetails['monovirus']; bufferType = 'project'; break;
+            // case '/resume': currentPage = 'Chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['resume']; bufferType = 'resume';  break;
             default: currentPage = '404'; activePage = 'right'; bufferType='404'; break; //TODO: Redirect to a 404 page
         }
         this.state = {
@@ -287,8 +58,28 @@ class App extends React.Component {
             $('.main-page').css({'display': 'none'});
             $('.right-buffer').css({'position': 'relative', 'top': '0px', 'left': '0%', 'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
             var arr = window.location.href.split('/');
-            history.replaceState({page: arr[arr.length - 2]}, "Right Page", "");
-            this.state.activeLink = this.state[arr[arr.length - 2]];
+            history.replaceState({page: arr[arr.length - 1]}, "Right Page", "");
+            this.state.activeLink = this.state[arr[arr.length - 1]];
+            var _this = this;
+            var url = "http://josephboman.com/json/" + arr[arr.length - 1] + ".json";
+            $.ajax({
+              dataType: 'json',
+              url: url,
+              success: function(data){
+                  _this.setState({
+                      rightBuffer: data,
+                      bufferType: data.bufferType,
+                  });
+                  $('#loader').delay(500).fadeOut('slow', function(){
+                      $(this).remove();
+                  });
+              },
+              error: function(data){
+                  $('#loader').delay(1000).fadeOut('slow', function(){
+                      $(this).remove();
+                  });
+              }
+            });
         } else {
             if(window.location.href.indexOf('#') != -1){
                 var link = '#' + window.location.href.split('#')[1];
@@ -299,10 +90,10 @@ class App extends React.Component {
             } else {
                 history.replaceState({page: 'main'}, "Main Page", "");
             }
+            $('#loader').delay(1000).fadeOut('slow', function(){
+                $(this).remove();
+            });
         }
-        $('#loader').delay(1000).fadeOut('slow', function(){
-            $(this).remove();
-        });
     }
 
     componentDidUpdate() {
@@ -310,14 +101,20 @@ class App extends React.Component {
         var _this = this;
         if(this.state.activePage === 'right'){
             $('.active').animate({'left': '-100%'}, 1000);
-            $('.right-buffer').animate({'left': '0%'}, 990, function(){
-                $('.main-page').css({'display': 'none'});
+            if($('.main-page').css('display') == 'block'){
+                $('.right-buffer').animate({'left': '0%'}, 990, function(){
+                    $('.main-page').css({'display': 'none'});
+                    $('.right-buffer').css({'position': 'relative', 'top': '0px'});
+                    window.scrollTo(0, 0);
+                });
+            } else {
                 $('.right-buffer').css({'position': 'relative', 'top': '0px'});
                 window.scrollTo(0, 0);
-            });
+            }
         } else {
             $('.active').animate({'left': '0%'}, 990, function(){
-                _this.state.activeLink.setState({active: false});
+                if(typeof _this.state.activeLink !== 'undefined' && _this.state.activeLink !== null)
+                    _this.state.activeLink.setState({active: false});
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
@@ -334,18 +131,36 @@ class App extends React.Component {
         var scrollTop = $(window).scrollTop();
         $('.right-buffer').css({'box-shadow': 'rgba(0, 0, 0, 0.247059) 0px 14px 28px, rgba(0, 0, 0, 0.219608) 0px 10px 10px'});
         let rightBuffer = null, bufferType = null;
-        if(typeof rightBufferDetails[(link.replace(/-/g, ''))] !== 'undefined'){ // TODO: Replace with AJAX
-            rightBuffer = rightBufferDetails[(link.replace(/-/g, ''))];
-            bufferType = rightBufferDetails[(link.replace(/-/g, ''))].bufferType;
+        var url = "http://josephboman.com/json/" + link + ".json";
+        var _this = this;
+        if(typeof this.state.activeLink !== 'undefined' && activeLink === null){
+            activeLink = this.state.activeLink;
         }
-        this.setState({
-            currentPage: link,
-            activePage: moveTo,
-            activeLink: (activeLink == null ? this.state.activeLink : activeLink),
-            rightBuffer: (rightBuffer === null ? this.state.rightBuffer : rightBuffer),
-            bufferType: (bufferType === null ? this.state.bufferType : bufferType),
-            scrollTop: scrollTop
-        });
+        if(moveTo === 'right'){
+            $.ajax({
+              dataType: 'json',
+              url: url,
+              success: function(data){
+                  _this.setState({
+                      currentPage: link,
+                      activePage: moveTo,
+                      activeLink: activeLink,
+                      rightBuffer: data,
+                      bufferType: data.bufferType,
+                      scrollTop: scrollTop
+                  });
+              }
+            });
+        } else {
+            this.setState({
+                currentPage: link,
+                activePage: moveTo,
+                activeLink: activeLink,
+                rightBuffer: (rightBuffer === null ? this.state.rightBuffer : rightBuffer),
+                bufferType: (bufferType === null ? this.state.bufferType : bufferType),
+                scrollTop: scrollTop
+            });
+        }
     }
 
     handleMobileMenu(link, activePage, mobileLink) {
@@ -354,8 +169,8 @@ class App extends React.Component {
         if(activePage === 'right'){
             NProgress.start();
             if(link !== this.state.currentPage) {
-                history.pushState({page: link}, link, '/' + link);
-                if(typeof this.state.activeLink !== 'undefined') {
+                history.pushState({page: link}, link, link);
+                if(typeof this.state.activeLink !== 'undefined' && this.state.activeLink !== null) {
                     $('.active').css({'left': '0%'});
                     this.state.activeLink.setState({active: false});
                 }
@@ -366,7 +181,7 @@ class App extends React.Component {
             this.handleNavigation(link, activePage, ((typeof this.state[link] != 'undefined') ? this.state[link] : null));
         } else {
             NProgress.start();
-            history.pushState({page: link}, link, '/' + link);
+            history.pushState({page: link}, link, "http://josephboman.com/" + link);
             $('.main-page').css({'display': 'block'});
             var scrollTarget = $(link).offset().top - 80;
             if(link === '#contact')
@@ -392,31 +207,37 @@ class App extends React.Component {
             var windowTop = $(window).scrollTop();
             $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
             $('.main-page').css({'display': 'block'});
-            //$(window).scrollTop(this.state.scrollTarget);
             this.setState({
                 currentPage: 'main',
                 activePage: 'left'
             });
         } else {
             var scrollTop = $(window).scrollTop();
-            if(event.state.page !== 'resume')
+            if(typeof this.state.activeLink !== 'undefined' && this.state.activeLink !== null)
                 this.state.activeLink.setState({active: true});
             let rightBuffer = null, bufferType = null;
-            rightBuffer = rightBufferDetails[(event.state.page.replace(/-/g, ''))]; // TODO: Replace with AJAX
-            bufferType = rightBufferDetails[(event.state.page.replace(/-/g, ''))].bufferType;
-            // if(event.state.page == 'chambara') {// TODO: Replace this with AJAX
-            //     rightBuffer = chambara;
-            //     bufferType = 'project'
-            // } else {
-            //     rightBuffer = resume;
-            //     bufferType = 'resume';
-            // }
-            this.setState({
-                currentPage: event.state.page,
-                activePage: 'right',
-                rightBuffer: rightBuffer,
-                scrollTop: scrollTop,
-                bufferType: bufferType
+            var _this = this;
+            var url = "http://josephboman.com/json/" + event.state.page + ".json";
+            $.ajax({
+              dataType: 'json',
+              url: url,
+              success: function(data){
+                  _this.setState({
+                      currentPage: event.state.page,
+                      activePage: 'right',
+                      rightBuffer: data,
+                      scrollTop: scrollTop,
+                      bufferType: data.bufferType
+                  });
+              },
+              error: function(data){
+                  _this.setState({
+                      currentPage: event.state.page,
+                      activePage: 'right',
+                      scrollTop: scrollTop,
+                      bufferType: '404'
+                  });
+              }
             });
         }
     }
@@ -426,7 +247,6 @@ class App extends React.Component {
         var windowTop = $(window).scrollTop();
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
         $('.main-page').css({'display': 'block'});
-        //$(window).scrollTop(this.state.scrollTarget);
         history.pushState({page: 'main'}, 'main-page', '/');
         this.setState({
             currentPage: 'main',
@@ -598,7 +418,7 @@ class About extends React.Component{
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
         //$(window).scrollTop(0);
-        history.pushState({page: 'resume'}, 'Resume', '/resume');
+        history.pushState({page: 'resume'}, 'Resume', 'resume');
         //$(window).scrollTop(scrollTop);
         this.props.handleClick('resume', "right", this);
     }
@@ -607,7 +427,7 @@ class About extends React.Component{
         return (
         <div id='about'>
             <h3>ABOUT ME</h3>
-            <p>This is the part where I talk about myself. There's a few lines about things I enjoy and what I've done in the past. And maybe there's a link to my resume in here. <a className='text-link' href='/resume' onClick={this.handleClick}>Resume</a> And that's about it</p>
+            <p>I love learning new things, immersing myself in books and games, and sharing my favorite things with others. While I'm analytical and logical when it comes to solving puzzles, I'm creative and enjoy solving design problems as much as programming ones. I can talk for hours about books, games, shows, and movies that I love - if it's a form of fictional media, I'm a huge fan of it - but sci-fi and fantasy are my favorites, especially when they have darker elements. Exploring created worlds is a great passion of mine, and Earth is no exception; if I have a chance to spend time in nature, I will seize the opportunity.<br /><br />I graduated from USC - where I studied Computer Science (Games) - in 2016, and have worked at Kaiser Permanente since then. While at USC, I worked on various games, including one that shipped on PS4, and a couple of research projects, which you can see more about by looking at their pages, or my <a className='text-link' href='resume' onClick={this.handleClick}>Resume</a>. When I'm not immersed in some form of fictional media or outdoors, I enjoy playing piano, spending time with friends, and learning about whatever topic peaks my interest. If you are interested in working with me in some capacity, feel free to send me an e-mail and I'll get back to you as soon as possible.</p>
         </div>
         );
     }
@@ -700,7 +520,7 @@ class RightBuffer extends React.Component {
                         </div>} />
                 </div>
             );
-			case "404":
+            case "404":
 			return (
 				<div className='right-buffer'>
 					<PageBody topSection={<div>
@@ -785,7 +605,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <a href={"/" + this.state.href} className={"block-link project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
+            <a href={this.state.href} className={"block-link project" + ((this.state.active) ? " active" : "")} onClick={this.handleClick}>
                 <Tags tags={this.props.tags} />
                 <h4 className={((this.props.name.length >= 10 ) ? 'thin-margin' : 'thick-margin')}>{this.props.name}</h4>
                 <img src={this.props.image} alt={this.props.name} />

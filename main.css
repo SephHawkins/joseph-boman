@@ -2,16 +2,21 @@
     --dark-color: #232835;
     --light-color: #F1FAEE;
     --accent-color: #00A56E;
-    --link-hover-color: #1D2630;
+    --link-hover: white;
     --blue-tag-color: #3D9CCC;
     --green-tag-color: #35B24E;
     --purple-tag-color: #9542BF;
     --red-tag-color: #BF394B;
-    --yellow-tag-color: #FFEF78;
+    --orange-tag-color: #E29610;
 }
 
 body {
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+::selection, body {
+    background: var(--dark-color);
+    color: var(--light-color);
 }
 
 #loader {
@@ -21,7 +26,7 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--dark-color) url('https://sephhawkins.github.io/joseph-boman/loading.gif') no-repeat center center;
+    background: var(--dark-color) url('http://josephboman.com/images/loading.gif') no-repeat center center;
 }
 
 header {
@@ -39,12 +44,16 @@ a {
 }
 
 .block-link:hover {
-    color: black;
-    fill: black;
+    color: var(--link-hover);
+    fill: var(--link-hover);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .block-link:hover svg {
+    fill: var(--link-hover);
+}
+
+.downloadLink:hover svg {
     fill: black;
 }
 
@@ -65,13 +74,13 @@ svg {
 }
 
 .mobile-menu {
-    background-color: var(--dark-color);
-    margin: 0 5%;
-    color: var(--light-color);
+    background-color: var(--light-color);
+    margin: 0px 5%;
+    color: var(--dark-color);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: fixed;
     width: 90%;
-    top: -200;
+    top: -200px;
     z-index: 9;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -86,7 +95,7 @@ svg {
 .mobile-menu .text-link {
     margin: 15px 0px 5px 10%;
     font-family: "Josefin Sans", sans-serif;
-    color: var(--light-color);
+    color: var(--dark-color);
     display: block;
 }
 
@@ -102,12 +111,12 @@ footer {
     height: 100px;
     position: fixed;
     bottom: 0;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     z-index: -5;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--dark-color);
-    padding-top: 5;
+    color: var(--light-color);
+    padding-top: 5px;
 }
 
 footer p {
@@ -150,9 +159,12 @@ footer .gitHub {
 }
 
 .nav-bar a {
-    width: 90;
+    width: 90px;
     display: inline-block;
     white-space: nowrap;
+}
+.nav-bar a:hover {
+    font-weight: bold;
 }
 .nav-bar a img {
     height: 60px;
@@ -168,23 +180,35 @@ footer .gitHub {
     font-size: 20px;
     left: -32px;
     display: inline-grid;
-    margin: 0;
+    margin: 0px;
+}
+.nav-bar a p span {
+    font-style: italic;
+    position: relative;
+    left: -4px;
+    top: -2px;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .nav-bar a p {
         display: -ms-inline-grid;
+        top: 31px;
+        left: -91px;
+    }
+    .nav-bar a p span {
+        left: 57px;
+        top: -20px;
     }
 }
 @supports (-ms-accelerator:true) {
     .nav-bar a p {
         display: -ms-inline-grid;
+        top: 31px;
+        left: -91px;
     }
-}
-.nav-bar a p span {
-    font-style: italic;
-    position: relative;
-    left: -4;
-    top: -2;
+    .nav-bar a p span {
+        left: 57px;
+        top: -20px;
+    }
 }
 .nav-bar svg {
     fill: var(--light-color);
@@ -208,7 +232,15 @@ svg {
     z-index: 7;
     left: 100%;
     width: 100%;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+.img404 {
+	width: 80%;
+	margin: 20px auto;
+	display: block;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border-radius: 10px;
 }
 
 .arrow-button {
@@ -218,6 +250,10 @@ svg {
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color: var(--accent-color);
+}
+
+.page {
+    background-color: var(--dark-color);
 }
 
 .page-top .arrow-button {
@@ -239,25 +275,6 @@ svg {
     margin-bottom: 0px;
 }
 
-.right-buffer h1 {
-    display: inline-block;
-    margin: 10px 10%;
-    line-height: 40px;
-    vertical-align: middle;
-    font-family: 'Josefin Sans', sans-serif;
-    color: var(--dark-color);
-    font-size: 30px;
-    text-align: center;
-    width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
-}
-
-.right-buffer h2 {
-    font-family: "Josefin Sans", sans-serif;
-    text-align: center;
-    margin: 0px;
-}
-
 .circle-img {
     border-radius: 10%;
     margin: 20px auto 0px auto;
@@ -272,13 +289,12 @@ svg {
     position: relative;
     width: 260px;
     height: auto;
-    z-index: -1;
     display: inline-block;
 }
 
 .page-bottom {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--dark-color);
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 100px;
@@ -294,12 +310,12 @@ svg {
 .page-bottom h3 {
     color: var(--accent-color);
     font-family: "Josefin Sans", sans-serif;
-    margin: 20px 10% 5px;
+    margin: 20px 5% 5px;
     font-size: 20px;
 }
 
 .page-bottom h4 {
-    margin: 5px 10% 0px 10%;
+    margin: 5px 5% 5px 5%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
 }
@@ -310,18 +326,19 @@ svg {
 
 .page-bottom h5 {
     font-family: "Josefin Sans", sans-serif;
-    margin: 0 12%;
+    margin: 0px 7% 2px 7%;
     font-size: 14px;
 }
 
 .page-bottom p {
-    margin: 0 10% 20 15%;
+    margin: 0px 5% 20px 10%;
     font-family: "Lato", sans-serif;
     white-space: pre-line;
+    line-height: 20px;
 }
 
 .downloadLink {
-    margin: 15 auto 15 auto;
+    margin: 15px auto 15px auto;
     padding: 5px;
     white-space: nowrap;
     width: 70%;
@@ -347,12 +364,18 @@ svg {
 }
 
 .downloadLink p {
-    margin: 0 5px;
+    margin: 0px 5px;
     top: 15px;
     left: -21px;
     font-family: "Josefin Sans", sans-serif;
     display: inline-block;
     position: relative;
+    color: var(--dark-color);
+}
+
+.downloadLink:hover {
+    color: black;
+    fill: black;
 }
 
 .img-selector {
@@ -363,10 +386,11 @@ svg {
 
 
 .tag-details {
-    margin: 0 10%;
+    margin: 0px 10%;
     border-radius: 5px;
     padding: 0px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: var(--dark-color);
 }
 
 .tag-details p {
@@ -383,7 +407,7 @@ svg {
     width: 12px;
     height: 12px;
     display: inline-block;
-    border: var(--dark-color) 3px solid;
+    border: var(--light-color) 3px solid;
     border-radius: 50%;
     margin: 5px 4px;
     cursor: pointer;
@@ -391,7 +415,7 @@ svg {
 }
 
 .dot.current-dot, .dot:hover {
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     width: 16px;
     height: 16px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -409,29 +433,44 @@ svg {
 
 .page-top h1, .page-top h2 {
     text-align: center;
-    margin: 0 auto;
+    margin: 0px auto;
     font-family: "Josefin Sans", sans-serif;
     display: block;
+    color: var(--light-color);
 }
 
 .page-top h1 {
     width: 80%;
-    border-bottom: var(--dark-color) 1px solid;
+    border-bottom: var(--light-color) 1px solid;
 }
 
-.page-top h2 {
+.page-top h2, .page-bottom h2 {
     margin-top: 5px;
+}
+
+.page-bottom h1, .page-bottom h2 {
+    text-align: center;
+    margin: 0px auto;
+    font-family: "Josefin Sans", sans-serif;
+    display: block;
+    color: var(--dark-color);
+}
+
+.page-bottom h1 {
+    width: 80%;
+    border-bottom: var(--dark-color) 1px solid;
 }
 
 .page-top h4 {
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     margin: 5px 0px 0px 0px;
+    color: var(--light-color);
 }
 
 .projects {
     overflow: hidden;
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
 .projects h3 {
@@ -446,12 +485,12 @@ a {
 }
 
 .block-link {
-    color: var(--dark-color);
+    color: var(--light-color);
     transition: color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .block-link:hover {
-    color: black;
+    color: var(--link-hover);
 }
 
 .text-link {
@@ -464,16 +503,20 @@ a {
 }
 
 a.project {
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 a.project:hover {
+    color: var(--link-hover);
+}
+
+a.project:hover .tag {
     color: black;
 }
 
 .project {
     float: right;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     position: relative;
     width: 85%;
     height: 120px;
@@ -481,28 +524,28 @@ a.project:hover {
     white-space: nowrap;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: var(--dark-color);
+    color: var(--light-color);
     margin: 10px 0px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.project h4 {
+.page-bottom .project h4 {
     display: inline-block;
     line-height: 40px;
     width: 140px;
-    margin: 0 10px;
+    margin: 0px 10px;
     font-size: 30px;
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
     white-space: normal;
 }
 
-.project h4.thin-margin {
+.page-bottom .project h4.thin-margin {
     margin-top: 20px;
 }
 
-.project h4.thick-margin {
+.page-bottom .project h4.thick-margin {
     margin-top: 40px;
 }
 
@@ -527,11 +570,13 @@ a.project:hover {
 .details {
     display: inline-block;
     vertical-align: top;
+	height: 100%;
 }
 
 .col-1, .col-2 {
     display: inline-block;
     float: left;
+	height: 100%;
 }
 
 .tag {
@@ -540,49 +585,46 @@ a.project:hover {
 }
 
 .tag p {
-    margin: 0;
-    font-size: 13;
+    margin: 0px;
+    font-size: 13px;
     font-family: 'NTR', sans-serif;
     font-weight: bold;
+    color: var(--dark-color);
 }
 
 .designer-tag {
-    background-color: var(--red-tag-color);
+    background-color: #BF394B;
 }
 .designer-tag.tag p {
-    transform: rotate(-90deg) translate(-33px, 2px);
+    transform: rotate(-90deg) translate(-38px, 2px);
 }
 
 .coder-tag {
-    background-color: var(--blue-tag-color);
+    background-color: #3D9CCC;
 }
 .coder-tag.tag p {
-    transform: rotate(-90deg) translate(-26px, 2px);
+    transform: rotate(-90deg) translate(-30px, 2px);
 }
 
 .qa-tag {
-    background-color: var(--purple-tag-color);
+    background-color: #9542BF;
 }
 .qa-tag.tag p {
-    transform: rotate(-90deg) translate(-15px, 2px);
+    transform: rotate(-90deg) translate(-18px, 2px);
 }
 
 .modeler-tag {
-    background-color: var(--green-tag-color);
+    background-color: #35B24E;
 }
 .modeler-tag.tag p {
-    transform: rotate(-90deg) translate(-33px, 2px);
+    transform: rotate(-90deg) translate(-38px, 2px);
 }
 
 .ui-tag {
-    background-color: var(--yellow-tag-color);
+    background-color: #E29610;
 }
 .ui-tag.tag p {
-    transform: rotate(-90deg) translate(-21px, 2px);
-}
-
-.testing-scroll {
-    height: 1000px;
+    transform: rotate(-90deg) translate(-25px, 2px);
 }
 
 .desktopMenu {
@@ -625,16 +667,15 @@ a.project:hover {
     .headerImg {
         position: absolute;
         opacity: 1;
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.2s ease-out;
     }
 
     .headerHoverImg {
         opacity: 0;
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.2s ease-out;
     }
 
     .headerLink h5 {
-        transition: color 0.5s ease-out;
         display: inline-block;
     }
 
@@ -645,12 +686,12 @@ a.project:hover {
 
     .footer {
         max-width: 1200px;
-        margin: 0 5%;
+        margin: 0px 5%;
     }
 
     .footer p {
         display: inline-block;
-        margin: 0;
+        margin: 0px;
         line-height: 60px;
     }
 
@@ -664,7 +705,7 @@ a.project:hover {
     }
 
     .footer .email {
-        margin: 0;
+        margin: 0px;
         line-height: 60px;
         display: inline-block;
     }
@@ -698,7 +739,7 @@ a.project:hover {
     .project {
         width: 35%;
         float: left;
-        margin: 10 0 40 10%;
+        margin: 10px 0px 40px 10%;
         border-radius: 0px;
         height: 300px;
         transition: box-shadow 0.5s ease-out, color 0.5s ease-out;
@@ -744,6 +785,7 @@ a.project:hover {
     .details {
         position: relative;
         z-index: 3;
+		height: 100%;
     }
 
     .tag {
@@ -766,8 +808,8 @@ a.project:hover {
         transform: rotate(-90deg) translate(-82px, 1px);
     }
 
-    .project h4 {
-        background-color: var(--light-color);
+    .page-bottom .project h4 {
+        background-color: var(--dark-color);
         height: 60px;
         margin-left: 15px;
         z-index: 2;
@@ -778,11 +820,11 @@ a.project:hover {
         line-height: 60px;
     }
 
-    .project h4.thin-margin {
+    .page-bottom .project h4.thin-margin {
         margin-top: 0px;
     }
 
-    .project h4.thick-margin {
+    .page-bottom .project h4.thick-margin {
         margin-top: 0px;
     }
 
@@ -806,18 +848,23 @@ a.project:hover {
 
     .page-bottom h3 {
         font-size: 28px;
+        margin: 20px 10% 5px;
     }
 
     .page-bottom p {
         font-size: 20px;
+        line-height: 28px;
+        margin: 0px 12% 2px 12%;
     }
 
     .page-bottom h4 {
         font-size: 24px;
+        margin: 5px 10% 5px 10%;
     }
 
     .page-bottom h5 {
         font-size: 18px;
+        margin: 0px 12% 2px 12%;
     }
 
     .page-top h1 {
@@ -840,10 +887,17 @@ a.project:hover {
 
     .longTime {
         display: inline;
+        white-space: pre-line;
+        text-align: right;
     }
 
     .time {
         display: none;
+    }
+
+    .img404 {
+        width: auto;
+        height: 300px;
     }
 }
 
