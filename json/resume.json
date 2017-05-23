@@ -63,14 +63,14 @@
                "subname":"PrimeEngine",
                "time":"2014",
                "longTime":"January 2014 - May 2014",
-               "details":"A game engine built in C++. Programmed server authoritative multiplayer using UDP socket programming and client-side prediction\nWorked with: C++, Lua"
+               "details":"A game engine built in C++. Programmed server authoritative multiplayer using UDP socket programming and client-side prediction\nWorked with: C++, Lua, Perforce"
             },
             {
                "name":"Designer, 3-D Modeler, Engineer",
                "subname":"MonoVirus",
                "time":"2013",
                "longTime":"March 2013 - May 2013",
-               "details":"A single player procedurally generated dungeon crawler through the human body. Designed and programmed gameplay logic and systems, created 3-D models, and created and programmed UI elements\nWorked with: C#, MonoDevelop, XNA, and GIMP"
+               "details":"A single player procedurally generated dungeon crawler through the human body. Designed and programmed gameplay logic and systems, created 3-D models, and created and programmed UI elements\nWorked with: C#, MonoDevelop, SVN, XNA, and GIMP"
             }
          ]
       },

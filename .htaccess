@@ -4,5 +4,6 @@ RewriteRule ^/?resume?.$ / [L]
 RewriteRule ^/?chambara?.$ / [L]
 RewriteRule ^/?a-walk-in-the-park?.$ / [L]
 RewriteRule ^/?monovirus?.$ / [L]
+RewriteRule ^/?portfolio?.$ / [L]
 
 ErrorDocument 404 /index.html

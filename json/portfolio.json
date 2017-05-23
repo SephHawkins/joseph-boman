@@ -1,0 +1,45 @@
+{
+   "name":"Portfolio Website",
+   "tagline":"React-Based Single Page Application",
+   "sections": [
+        {
+            "name": "DESIGN PROCESS",
+            "details": "I created the first version of my portfolio website by creating a custom WordPress theme, which I developed using a desktop first approach. The website had some really interesting features, but failed to function well on mobile, where it barely functioned. Most of the first website was scrapped, however, I kept the following features: the header icons, the light background color, most of the images, and the concept of highlighting both my design and programming work.\n\nWhen I started working on the new website, I knew I wanted it to be more responsive, work well on mobile, and have quick load times. For those reasons, I decided on a React-Based, Mobile-First, Single Page Application. Since I was new to the concept of SLAs, I decided to ignore react-router and do the routing myself, to better understand how it worked. Building it was a learning process, with entire days of work getting removed as I realized there were better ways to do things, but it gradually came together.\n\nThe color was another iterative process. I knew that I liked the light, slightly green color, but the dark color was initially lighter, and the accent color was gold. After changing the dark color to the current, darker color, it looked better, however, the gold seemed out of place and too bright. So, after trying a couple of different, more pastel colors, I settled on green, which works well with the background colors.\n\nRegarding the two sides, I knew I wanted the pages to slide over when on mobile, similar to pulling a file out of a file cabinet. Once I decided on that, it made sense to have a static main page, with a separate page that would change when a specific project or section was selected. Having built all that, it didn't make sense to change that for the desktop version, so I left that the same, even though the desktop version is less reminiscent of a file cabinet"
+        },
+        {
+            "name": "THE BACKEND",
+            "details": "Initially, the backend of the site was WordPress, however, when I changed to an entirely custom site, I removed WordPress, since there was no reason to keep it. I was then going to create the backend using Node, and learned some Node to determine how that could be achieved, however, I quickly learned that adding Node to BlueHost would have been a difficult project. Instead, I decided to just use the .htaccess file to return the same html file for each of the existing files, and on 404 errors. Then, once the same html file is loaded, the JavaScript is able to use the URL to determine which content needs to be loaded. All of the content itself is stored in json files, since there isn't enough of it to require a full database"
+        }
+   ],
+   "images":[
+      {
+         "link":"http://josephboman.com/images/website-1.png",
+         "alt":"Website-1"
+      },
+      {
+         "link":"http://josephboman.com/images/website-2.png",
+         "alt":"Website-2"
+      },
+      {
+         "link":"http://josephboman.com/images/website-3.png",
+         "alt":"Website-3"
+      },
+      {
+         "link":"http://josephboman.com/images/website-4.png",
+         "alt":"Website-4"
+      }
+   ],
+   "tags":[
+      {
+         "name":"coder",
+         "text":"Built using React and custom SLA code"
+      },
+      {
+         "name":"designer",
+         "text":"Mobile first design with similarity to Material UI"
+      }
+   ],
+   "downloadType":"none",
+   "downloadLink":"",
+   "bufferType":"project"
+}

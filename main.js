@@ -8,7 +8,7 @@ var projectsJSON = [
     {
         name: "A Walk in the Park",
         link: "a-walk-in-the-park",
-        image: "http://josephboman.com/images/a-walk-in-the-park-1.png",
+        image: "http://josephboman.com/images/a-walk-in-the-park-4.png",
         tags: ["designer","coder"]
     },
     {
@@ -16,6 +16,12 @@ var projectsJSON = [
         link: "monovirus",
         image: "http://josephboman.com/images/monovirus-1.png",
         tags: ["modeler", "coder"]
+    },
+    {
+        name: "Portfolio Website",
+        link: "portfolio",
+        image: "http://josephboman.com/images/website-1.png",
+        tags: ["designer","coder"]
     }
 ];
 
@@ -30,14 +36,9 @@ class App extends React.Component {
         var rightBuffer = null;
         var bufferType = 'none';
         var currentPage = 'home';
-        console.log(window.location.pathname.split('/'));
         switch(window.location.pathname){
             case '/': currentPage = 'home'; activePage = 'left'; break;
-            // case '/chambara': currentPage = 'chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['chambara']; bufferType = 'project'; break;
-            // case '/a-walk-in-the-park': currentPage = 'a-walk-in-the-park'; activePage = 'right'; rightBuffer = rightBufferDetails['awalkinthepark']; bufferType = 'project'; break;
-            // case '/monovirus': currentPage = 'monovirus'; activePage = 'right'; rightBuffer = rightBufferDetails['monovirus']; bufferType = 'project'; break;
-            // case '/resume': currentPage = 'Chambara'; activePage = 'right'; rightBuffer = rightBufferDetails['resume']; bufferType = 'resume';  break;
-            default: currentPage = '404'; activePage = 'right'; bufferType='404'; break; //TODO: Redirect to a 404 page
+            default: currentPage = '404'; activePage = 'right'; bufferType='404'; break;
         }
         this.state = {
             currentPage: currentPage,
@@ -45,7 +46,7 @@ class App extends React.Component {
             bufferType: bufferType,
             activePage: activePage,
             scrollTarget: 0,
-            projects: projectsJSON, // TODO: This should be grabbed by AJAX?
+            projects: projectsJSON,
         }
         var _this = this;
         window.onpopstate = function(event) {
@@ -120,7 +121,6 @@ class App extends React.Component {
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
                 if(typeof _this.state.scrollTarget !== 'undefined' && _this.state.scrollTarget !== null) {
                     $('html, body').animate({scrollTop: _this.state.scrollTarget}, 500);
-                    //$(window).scrollTop(_this.state.scrollTarget);
                     _this.state.scrollTarget = null;
                 }
             });
@@ -190,11 +190,9 @@ class App extends React.Component {
                 this.state.scrollTarget = scrollTarget;
                 var windowTop = $(window).scrollTop();
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
-                //window.scrollTo(0, scrollTarget);
                 this.handleNavigation(link, activePage, null);
             } else {
                 $('html, body').animate({scrollTop: scrollTarget}, 500);
-                //window.scrollTo(0, scrollTarget);
                 this.state.scrollTarget = scrollTarget;
                 NProgress.done();
             }
@@ -417,9 +415,7 @@ class About extends React.Component{
         NProgress.start();
         e.preventDefault();
         var scrollTop = $(window).scrollTop();
-        //$(window).scrollTop(0);
         history.pushState({page: 'resume'}, 'Resume', 'resume');
-        //$(window).scrollTop(scrollTop);
         this.props.handleClick('resume', "right", this);
     }
 
@@ -495,10 +491,7 @@ class RightBuffer extends React.Component {
                         </div>
                     </div>}
                     bottomSection={<div>
-                        <h3>ABOUT</h3>
-                        <p>{this.props.data.about}</p>
-                        <h3>LOOKING BACK</h3>
-                        <p>{this.props.data.lookBack}</p>
+                        {this.props.data.sections.map(section => <ProjectSection key={section.name} name={section.name} data={section.details} />)}
                         <DownloadLink type={this.props.data.downloadType} link={this.props.data.downloadLink} />
                         <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                     </div>} />
@@ -541,6 +534,38 @@ class RightBuffer extends React.Component {
             );
         }
     }
+}
+
+function AddLinks(data) {
+    var arr = data.split('<a>');
+    for(var i = 0; i < arr.length; i+=2)
+    {
+
+    }
+    return (
+        <p>
+            {arr.map(function(stringPart, index) {
+                if(index % 2 === 0)
+                    return stringPart;
+                else {
+                    var arr = stringPart.split("--");
+                    return (
+                        <a key={arr[0] + arr[1]} href={arr[0]} alt={arr[1]} target="_blank">{arr[1]}</a>
+                    );
+                }
+            })}
+        </p>
+    );
+}
+
+function ProjectSection(props){
+    var sectionText = AddLinks(props.data);
+    return (
+        <div>
+            <h3>{props.name}</h3>
+            {sectionText}
+        </div>
+    );
 }
 
 function ResumeSection(props) {
@@ -641,6 +666,10 @@ function DownloadLink(props) {
             </svg>;
             linkText = <p>Download as PDF</p>;
             break;
+        case "none":
+            return (
+                <div></div>
+            );
         default:
             miniIcon = <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 88 88" width="20" className="downloadMiniIcon">
             </svg>;
