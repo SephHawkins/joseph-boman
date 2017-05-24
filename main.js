@@ -47,6 +47,7 @@ class App extends React.Component {
             activePage: activePage,
             scrollTarget: 0,
             projects: projectsJSON,
+            clearingBuffer: false
         }
         var _this = this;
         window.onpopstate = function(event) {
@@ -100,6 +101,10 @@ class App extends React.Component {
     componentDidUpdate() {
         NProgress.done();
         var _this = this;
+        if(this.state.clearingBuffer){
+            this.state.clearingBuffer = false;
+            return;
+        }
         if(this.state.activePage === 'right'){
             $('.active').animate({'left': '-100%'}, 1000);
             if($('.main-page').css('display') == 'block'){
@@ -119,10 +124,11 @@ class App extends React.Component {
             });
             $('.right-buffer').animate({'left': '100%'}, 1000, function(){
                 $('.right-buffer').css({'top': '60px', 'box-shadow': 'none'});
-                if(typeof _this.state.scrollTarget !== 'undefined' && _this.state.scrollTarget !== null) {
-                    $('html, body').animate({scrollTop: _this.state.scrollTarget}, 500);
-                    _this.state.scrollTarget = null;
-                }
+                _this.setState({
+                    bufferType: 'none',
+                    rightBuffer: null,
+                    clearingBuffer: true
+                });
             });
         }
     }
@@ -166,6 +172,8 @@ class App extends React.Component {
     handleMobileMenu(link, activePage, mobileLink) {
         if(mobileLink)
             this.toggleMobileMenu();
+        $('.modal').css({"display":"none"});
+        $('body').removeClass("modal-open");
         if(activePage === 'right'){
             NProgress.start();
             if(link !== this.state.currentPage) {
@@ -190,6 +198,7 @@ class App extends React.Component {
                 this.state.scrollTarget = scrollTarget;
                 var windowTop = $(window).scrollTop();
                 $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
+                $('html, body').animate({scrollTop: scrollTarget}, 500);
                 this.handleNavigation(link, activePage, null);
             } else {
                 $('html, body').animate({scrollTop: scrollTarget}, 500);
@@ -245,10 +254,11 @@ class App extends React.Component {
         var windowTop = $(window).scrollTop();
         $('.right-buffer').css({'position': 'fixed', 'top': (60 - windowTop) + "px"});
         $('.main-page').css({'display': 'block'});
+        window.scrollTo(0, this.state.scrollTop);
         history.pushState({page: 'main'}, 'main-page', '/');
         this.setState({
             currentPage: 'main',
-            activePage: 'left'
+            activePage: 'left',
         });
     }
 
@@ -312,9 +322,9 @@ function Footer(props){
                 <p className='copyright'>Created by Joseph Boman - 2017</p>
                 <h4 id='contact'>Contact Me</h4>
                 <div>
-                    <a className='text-link email' href="mailto:joseph.j.boman@gmail.com">E-Mail: joseph.j.boman@gmail.com</a>
-                    <a className='text-link linkedIn' href='#'>LinkedIn</a>
-                    <a className='text-link gitHub' href='#'>GitHub</a>
+                    <a className='text-link email' href='mailto:joseph.j.boman@gmail.com'>E-Mail: joseph.j.boman@gmail.com</a>
+                    <a className='text-link linkedIn' href='https://www.linkedin.com/in/joseph-boman-3a579896/'>LinkedIn</a>
+                    <a className='text-link gitHub' href='https://github.com/SephHawkins/'>GitHub</a>
                 </div>
             </div>
         </footer>
@@ -443,24 +453,42 @@ class ImageSlideshow extends React.Component {
     constructor(props){
         super(props);
         this.switchImage = this.switchImage.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.state = {
             activeImage: 0,
+            cycleImage: true,
+            setInterval: setInterval(this.cycleImage, 3000, this)
         }
     }
 
-    switchImage(activeImage){
+    componentWillUnmount(){
+        clearInterval(this.state.setInterval);
+    }
+
+    handleClick(){
+        this.props.handleClick(this.state.activeImage);
+    }
+
+    switchImage(activeImage, manual){
         var leftValue = (-100) * activeImage + "%";
         $('.circle-img img').animate({'left': leftValue});
         this.setState({
-            activeImage: activeImage
+            activeImage: activeImage,
+            cycleImage: (!manual)
         });
+    }
+
+    cycleImage(slideshow){
+        if(slideshow.state.cycleImage) {
+            slideshow.switchImage((slideshow.state.activeImage + 1) % slideshow.props.images.length, false);
+        }
     }
 
     render() {
         const images = this.props.images;
         return (
             <div className="img-slideshow">
-                <div className="circle-img">
+                <div className="circle-img" onClick={this.handleClick}>
                     {images.map((image, index) => <img key={image.link} src={image.link} alt={image.alt} />)}
                 </div>
                 <div className="img-selector">
@@ -474,16 +502,58 @@ class ImageSlideshow extends React.Component {
 class RightBuffer extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            activeImage: 0
+        }
+        this.openModal = this.openModal.bind(this);
+    }
+
+    openModal(activeImage){
+        this.setState({
+            activeImage: activeImage
+        });
+        $('.modal').css({display:"block"});
+        $('body').addClass('modal-open');
+        var width = $('.modal-content img').width();
+        var leftMargin = width/2;
+        var topMargin = $('.modal-content').height()/2;
+        $('.modal-content').css({
+            "margin-top": "-" + topMargin + "px"
+        });
+        if($('.modal-content').position().left > 50){
+            $('.modal-content').css({
+                "margin-left": "-" + leftMargin + "px",
+                "max-width": width + "px"
+            });
+        } else {
+            $('.modal-content').css({
+                "margin-left": 0,
+                "max-width": "90%"
+            });
+        }
+    }
+
+    closeModal(){
+        $('.modal').css({display:"none"});
+        $('body').removeClass('modal-open');
     }
 
     render() {
         switch(this.props.type) {
             case "project":
             return (
-                <div className='right-buffer'>
+                <div className='right-buffer' type={this.props.type}>
+                    <span className='hidden'>{this.props.type}</span>
+                    <div className='modal'>
+                        <div className='modal-content'>
+                            <span className='close' onClick={this.closeModal}>×</span>
+                            <img src={this.props.data.images[this.state.activeImage].link} alt={this.props.data.images[this.state.activeImage].alt} />
+                            <p className='caption'>{this.props.data.images[this.state.activeImage].alt}</p>
+                        </div>
+                    </div>
                     <PageBody topSection={<div>
                         <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
-                        <ImageSlideshow images={this.props.data.images} />
+                        <ImageSlideshow images={this.props.data.images} handleClick={this.openModal} />
                         <div className={"project-header" + ((this.props.data.tags.length > 2) ? " thin-margin" : " thick-margin")}>
                             <h1>{this.props.data.name}</h1>
                             <h2>{this.props.data.tagline}</h2>
@@ -500,6 +570,7 @@ class RightBuffer extends React.Component {
             case "resume":
             return (
                 <div className='right-buffer'>
+                    <span className='hidden'>{this.props.type}</span>
                     <PageBody topSection={<div>
                     <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                     <h1 style={{marginTop: "10px", paddingTop: "20px"}}>{this.props.data.name}</h1>
@@ -515,7 +586,8 @@ class RightBuffer extends React.Component {
             );
             case "404":
 			return (
-				<div className='right-buffer'>
+                <div className='right-buffer'>
+                    <span className='hidden'>{this.props.type}</span>
 					<PageBody topSection={<div>
                     <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
                     <img className='img404' src="http://josephboman.com/images/404.jpg" />
@@ -528,8 +600,10 @@ class RightBuffer extends React.Component {
 				</div>
 			);
             case "none":
+            this.state.activeImage = 0;
             return (
                 <div className='right-buffer'>
+                    <span className='hidden'>{this.props.type}</span>
                 </div>
             );
         }
@@ -538,10 +612,6 @@ class RightBuffer extends React.Component {
 
 function AddLinks(data) {
     var arr = data.split('<a>');
-    for(var i = 0; i < arr.length; i+=2)
-    {
-
-    }
     return (
         <p>
             {arr.map(function(stringPart, index) {
@@ -598,7 +668,7 @@ class Dot extends React.Component {
     }
 
     handleClick(e){
-        this.props.handleClick(this.state.number);
+        this.props.handleClick(this.state.number, true);
     }
 
     render() {
