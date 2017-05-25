@@ -35,9 +35,9 @@ class App extends React.Component {
         var activePage = null;
         var rightBuffer = null;
         var bufferType = 'none';
-        var currentPage = 'home';
+        var currentPage = 'main';
         switch(window.location.pathname){
-            case '/': currentPage = 'home'; activePage = 'left'; break;
+            case '/': currentPage = 'main'; activePage = 'left'; break;
             default: currentPage = '404'; activePage = 'right'; bufferType='404'; break;
         }
         this.state = {
@@ -206,7 +206,7 @@ class App extends React.Component {
                 NProgress.done();
             }
         }
-}
+    }
 
     handleBack(event) {
         NProgress.start();
@@ -382,6 +382,7 @@ class HeaderLink extends React.Component {
         )
     }
 }
+
 class BasicLink extends React.Component {
     constructor(props) {
         super(props);
