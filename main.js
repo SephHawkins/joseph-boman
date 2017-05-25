@@ -193,7 +193,7 @@ class App extends React.Component {
             $('.main-page').css({'display': 'block'});
             var scrollTarget = $(link).offset().top - 80;
             if(link === '#contact')
-                scrollTarget = document.body.scrollHeight;
+                scrollTarget = document.body.scrollHeight + 200;
             if(this.state.activePage === 'right'){
                 this.state.scrollTarget = scrollTarget;
                 var windowTop = $(window).scrollTop();
@@ -276,7 +276,7 @@ class App extends React.Component {
                 <Header toggleMobileMenu={this.toggleMobileMenu} handleClick={this.handleMobileMenu} />
                 <MobileMenu projects={this.state.projects} handleClick={this.handleMobileMenu} />
                 <div className='main-page'>
-                    <FrontPage projects={this.state.projects} handleClick={this.handleNavigation} registerLink={this.registerLink} />
+                    <FrontPage projects={this.state.projects} mobileMenu={this.handleMobileMenu} handleClick={this.handleNavigation} registerLink={this.registerLink} />
                 </div>
                 <RightBuffer type={this.state.bufferType} data={this.state.rightBuffer} handleBack={this.goBack} />
                 <Footer />
@@ -288,7 +288,7 @@ class App extends React.Component {
 function FrontPage(props){
     return (
         <div>
-            <PageBody topSection={<FrontPageTop />} bottomSection={<div><About handleClick={props.handleClick} /><Projects projects={props.projects} handleClick={props.handleClick} registerLink={props.registerLink} /></div>} />
+            <PageBody topSection={<FrontPageTop />} bottomSection={<div><About handleClick={props.mobileMenu} /><Projects projects={props.projects} handleClick={props.handleClick} registerLink={props.registerLink} /></div>} />
         </div>
     );
 }
@@ -418,22 +418,29 @@ function FrontPageTop(props){
 class About extends React.Component{
     constructor(props){
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        this.toContact = this.toContact.bind(this);
+        this.toResume = this.toResume.bind(this);
     }
 
-    handleClick(e){
+    toContact(e){
         NProgress.start();
         e.preventDefault();
-        var scrollTop = $(window).scrollTop();
+        history.pushState({page: '#contact'}, '#contact', '#contact');
+        this.props.handleClick('#contact', "left", false);
+    }
+
+    toResume(e){
+        NProgress.start();
+        e.preventDefault();
         history.pushState({page: 'resume'}, 'Resume', 'resume');
-        this.props.handleClick('resume', "right", this);
+        this.props.handleClick('resume', "right", false);
     }
 
     render() {
         return (
         <div id='about'>
             <h3>ABOUT ME</h3>
-            <p>I love learning new things, immersing myself in books and games, and sharing my favorite things with others. While I'm analytical and logical when it comes to solving puzzles, I'm creative and enjoy solving design problems as much as programming ones. I can talk for hours about books, games, shows, and movies that I love - if it's a form of fictional media, I'm a huge fan of it - but sci-fi and fantasy are my favorites, especially when they have darker elements. Exploring created worlds is a great passion of mine, and Earth is no exception; if I have a chance to spend time in nature, I will seize the opportunity.<br /><br />I graduated from USC - where I studied Computer Science (Games) - in 2016, and have worked at Kaiser Permanente since then. While at USC, I worked on various games, including one that shipped on PS4, and a couple of research projects, which you can see more about by looking at their pages, or my <a className='text-link' href='resume' onClick={this.handleClick}>Resume</a>. When I'm not immersed in some form of fictional media or outdoors, I enjoy playing piano, spending time with friends, and learning about whatever topic peaks my interest. If you are interested in working with me in some capacity, feel free to send me an e-mail and I'll get back to you as soon as possible.</p>
+            <p>Programming and Games have long been two of my greatest passions, and my skill at them has only increased my interest. Both allow me to be both logical and creative, to solve tricky design and programming problems, and to explore the limits of imagination.<br /><br />I graduated from USC, where I studied Computer Science (Games), in 2016, and have worked at Kaiser Permanente since then. While at USC, I got the chance to work on several board games and video games, including one that shipped on PS4. I also worked on a couple of research projects, which you can see more about by looking at the project pages or my <a class="text-link" href="resume" onClick={this.toResume}>Resume</a>.<br /><br />When I'm not immersed in some form of fictional media or outdoors, I enjoy playing piano, spending time with friends, and learning about whatever topic piques my interest. Exploring created worlds is a great passion of mine, and Earth is no exception; if I have a chance to spend time in nature, I will seize the opportunity. If you are interested in working with me, feel free to <a class="text-link" href="#contact" onClick={this.toContact}>contact me</a> and I'll get back to you as soon as possible.</p>
         </div>
         );
     }
@@ -457,7 +464,7 @@ class ImageSlideshow extends React.Component {
         this.state = {
             activeImage: 0,
             cycleImage: true,
-            setInterval: setInterval(this.cycleImage, 3000, this)
+            setInterval: setInterval(this.cycleImage, 6000, this)
         }
     }
 
@@ -469,12 +476,12 @@ class ImageSlideshow extends React.Component {
         this.props.handleClick(this.state.activeImage);
     }
 
-    switchImage(activeImage, manual){
+    switchImage(activeImage, stopCycle){
         var leftValue = (-100) * activeImage + "%";
         $('.circle-img img').animate({'left': leftValue});
         this.setState({
             activeImage: activeImage,
-            cycleImage: (!manual)
+            cycleImage: (!stopCycle)
         });
     }
 
@@ -544,7 +551,7 @@ class RightBuffer extends React.Component {
             return (
                 <div className='right-buffer' type={this.props.type}>
                     <span className='hidden'>{this.props.type}</span>
-                    <div className='modal'>
+                    <div className='modal' onClick={this.closeModal}>
                         <div className='modal-content'>
                             <span className='close' onClick={this.closeModal}>×</span>
                             <img src={this.props.data.images[this.state.activeImage].link} alt={this.props.data.images[this.state.activeImage].alt} />
@@ -569,10 +576,10 @@ class RightBuffer extends React.Component {
             );
             case "resume":
             return (
-                <div className='right-buffer'>
+                <div className='right-buffer resume'>
                     <span className='hidden'>{this.props.type}</span>
                     <PageBody topSection={<div>
-                    <BackArrow height="40" width="40" handleBack={this.props.handleBack} />
+                    <BackArrow height="40" width="40" handleBack={this.props.handleBack}/>
                     <h1 style={{marginTop: "10px", paddingTop: "20px"}}>{this.props.data.name}</h1>
                     <h2>{this.props.data.tagline}</h2>
                     <h4>{this.props.data.address}</h4>
@@ -668,7 +675,7 @@ class Dot extends React.Component {
     }
 
     handleClick(e){
-        this.props.handleClick(this.state.number, true);
+        this.props.handleClick(this.state.number, false);
     }
 
     render() {
